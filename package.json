@@ -1,0 +1,34 @@
+{
+  "name": "hslu-web-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node esbuild.js",
+    "format": "prettier --write .",
+    "check": "prettier --check .",
+    "lint": "eslint .",
+    "postinstall": "patch-package"
+  },
+  "author": "Alain Siegrist",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/chrome": "^0.0.268",
+    "@types/eslint__js": "^8.42.3",
+    "@types/firefox-webext-browser": "^120.0.3",
+    "esbuild": "0.20.2",
+    "esbuild-plugin-solid": "^0.6.0",
+    "eslint": "^8.57.0",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.0"
+  },
+  "dependencies": {
+    "@fluent/bundle": "^0.18.0",
+    "ag-grid-solid": "^31.1.1",
+    "pdfjs-dist": "^4.2.67",
+    "solid-js": "^1.8.17"
+  }
+}

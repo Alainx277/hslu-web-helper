@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "HSLU Web Helper",
+  "description": "Extra features for HSLU websites used by students",
+  "version": "0.1.0",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["build/overview/content.js"],
+      "css": ["build/overview/content.css"],
+      "matches": [
+        "https://mycampus.hslu.ch/*/stud-i/mein-studium/meine-anmeldungen",
+        "https://mycampus.hslu.ch/*/stud-i/mein-studium/meine-anmeldungen*"
+      ]
+    },
+    {
+      "js": ["build/registration/content.js"],
+      "css": ["build/registration/content.css"],
+      "matches": [
+        "https://moduleinschreibung.hslu.ch/",
+        "https://moduleinschreibung.hslu.ch/*"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["build/background.js"]
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://mycampus.hslu.ch/*/stud-i/mein-studium/meine-anmeldungen*",
+      "https://moduleinschreibung.hslu.ch/*"
+    ]
+  },
+  "permissions": ["storage"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{b9c298ee-85d6-4656-b9e8-b0354dbfe665}",
+      "strict_min_version": "106.0"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+:root {
+  --ggs: 0.7;
+}
+
+progress[data-fulfilled="true"] {
+  accent-color: green;
+}
+
+/* Icons */
+.gg-remove-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+.gg-remove-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 5px;
+  top: 8px;
+  left: 4px;
+}
+
+/* Table style */
+
+table.requirements {
+  border: 1px solid #1c6ea4;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.requirements td,
+table.requirements th {
+  border: 1px solid #aaaaaa;
+  padding: 3px 2px;
+}
+table.requirements tr:nth-child(even) {
+  background: #eeeeee;
+}
+table.requirements thead {
+  border-bottom: 2px solid #444444;
+}
+table.requirements thead th {
+  font-weight: bold;
+}
+table.requirements tfoot td {
+  font-size: 14px;
+}
+table.requirements tfoot .links {
+  text-align: right;
+}
+table.requirements tfoot .links a {
+  display: inline-block;
+  background: #1c6ea4;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+/* Override styles already on the page that are too general */
+
+div input.ag-input-field-input {
+  height: auto;
+}
+
+div button.ag-button {
+  margin: auto;
+}

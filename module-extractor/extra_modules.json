@@ -1,0 +1,30 @@
+{
+  "LCCNA": {
+    "ComputerScience": {
+      "type": "Extension",
+      "obligatory": false
+    },
+    "CyberSecurity": {
+      "type": "Extension",
+      "obligatory": false
+    }
+  },
+  "LGIS": {
+    "ArtificialIntelligence": {
+      "type": "Extension",
+      "obligatory": false
+    },
+    "ComputerScience": {
+      "type": "Extension",
+      "obligatory": false
+    },
+    "CyberSecurity": {
+      "type": "Extension",
+      "obligatory": false
+    },
+    "Economics": {
+      "type": "Extension",
+      "obligatory": false
+    }
+  }
+}
