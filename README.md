@@ -6,7 +6,9 @@ The module listing page now shows the requirements for your bachelors degree and
 
 ### Installation
 
-TBD
+[Install on Firefox](https://github.com/Alainx277/hslu-web-helper/releases/download/0.1.1/hslu_web_helper-0.1.1.xpi)
+
+[Install on Chrome](https://chromewebstore.google.com/detail/hslu-web-helper/jmmmhflieajgaepocgkhdemnaakmedki)
 
 ### Screenshots
 
