@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "HSLU Web Helper",
   "description": "Extra features for HSLU websites used by students",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
@@ -38,7 +38,8 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "{b9c298ee-85d6-4656-b9e8-b0354dbfe665}",
-      "strict_min_version": "109.0"
+      "strict_min_version": "109.0",
+      "update_url": "https://raw.githubusercontent.com/Alainx277/hslu-web-helper/main/updates.json"
     }
   }
 }
