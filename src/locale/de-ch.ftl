@@ -38,3 +38,4 @@ remove-edit = Zurücksetzen
 export-csv = Als CSV exportieren
 
 completed = bestanden
+ongoing = laufend

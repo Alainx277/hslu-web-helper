@@ -2,6 +2,7 @@ import { initI18n, t } from "../i18n";
 import {
   BACHELOR_REQUIREMENTS,
   creditStatistics,
+  ModuleState,
   ModuleType,
   moduleTypeToCreditsKey,
   parseModuleId,
@@ -27,13 +28,20 @@ class ModuleElement {
     this.titleElement.insertAdjacentElement("afterend", newSpan);
   }
 
-  markCompleted(): void {
-    if (this.element.dataset.completed) {
+  markState(state: ModuleState): void {
+    if (this.element.dataset.state) {
       return;
     }
 
-    this.addTitleText(` (${t("completed")})`);
-    this.element.dataset.completed = "true";
+    if (state == ModuleState.Passed) {
+      this.addTitleText(` (${t("completed")})`);
+      this.element.dataset.completed = "true";
+    } else if (state == ModuleState.Ongoing) {
+      this.addTitleText(` (${t("ongoing")})`);
+      this.element.dataset.ongoing = "true";
+    }
+
+    this.element.dataset.state = "true";
   }
 }
 
@@ -54,7 +62,7 @@ async function handleTabChanged(): Promise<void> {
   for (const module of modules) {
     tabModules
       .filter((x) => parseModuleId(x.fullId)?.shortName == module.shortName)
-      .forEach((x) => x.markCompleted());
+      .forEach((x) => x.markState(module.state));
   }
 
   // Add indicator for required credits
@@ -165,7 +173,7 @@ function observeTabs(): void {
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const debounce = (func: (...args: any[]) => void, delay: number) => {
-  let timeoutId: number;
+  let timeoutId: NodeJS.Timeout;
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   return (...args: any[]) => {
     clearTimeout(timeoutId);
