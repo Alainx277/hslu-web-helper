@@ -14,11 +14,21 @@ class ModuleElement {
   element: HTMLElement;
   titleElement: HTMLElement;
   fullId: string;
+  ects?: number;
 
   constructor(element: HTMLElement) {
     this.element = element;
     this.titleElement = this.element.querySelector(".item-title span")!;
     this.fullId = this.titleElement.textContent?.trim() ?? "";
+
+    // Try to parse ECTS if present
+    const ectsLabel = Array.from(element.querySelectorAll<HTMLElement>(".anlass-label")).find((x) => x.textContent?.toLowerCase()?.includes("ects"));
+    if (ectsLabel) {
+      const ects = Number.parseInt(ectsLabel.nextElementSibling?.textContent || "");
+      if (!isNaN(ects)) {
+        this.ects = ects;
+      }
+    }
   }
 
   private addTitleText(text: string): void {
@@ -45,22 +55,33 @@ class ModuleElement {
   }
 }
 
-function getTabModules(): ModuleElement[] {
-  const anlassInfoElements =
-    document.querySelectorAll<HTMLElement>(".anlass-info");
-  return Array.from(anlassInfoElements).map(
+function getTabModules(): [ModuleElement[], ModuleElement[]] {
+  const activeTab = document.querySelector(".wizard-tab-container:not([aria-hidden])");
+  if (activeTab == null) {
+    throw "Cannot parse page content";
+  }
+
+  const available =
+    activeTab.querySelectorAll<HTMLElement>(".available-modules .anlass-info");
+  const selected =
+    activeTab.querySelectorAll<HTMLElement>(".main-modules .anlass-info-non-unique");
+
+  return [Array.from(available).map(
     (element) => new ModuleElement(element),
-  );
+  ),
+  Array.from(selected).map(
+    (element) => new ModuleElement(element),
+  )];
 }
 
 // Function to handle wizard navigation changes
 async function handleTabChanged(): Promise<void> {
-  const tabModules = getTabModules();
+  const [availableModules, selectedModules] = getTabModules();
   const { modules, bachelor } = localData();
 
-  // Process all modules
+  // Process all available modules
   for (const module of modules) {
-    tabModules
+    availableModules
       .filter((x) => parseModuleId(x.fullId)?.shortName == module.shortName)
       .forEach((x) => x.markState(module.state));
   }
@@ -89,8 +110,13 @@ async function handleTabChanged(): Promise<void> {
         break;
     }
     if (type != null) {
-      const { ongoing } = creditStatistics(modules, bachelor);
-      const current = ongoing[moduleTypeToCreditsKey(type)];
+      const { ongoing, done } = creditStatistics(modules, bachelor);
+
+      // Check if we are in the "Moduländerungen" phase
+      // If we are, we should only consider the done modules in our existing credits calculation,
+      // because the ongoing list may already contain modules from the coming semester
+      const isRegistrationChange = document.documentElement.textContent?.includes("Online-Moduländerungen") ?? false;
+      let current = (isRegistrationChange ? done : ongoing)[moduleTypeToCreditsKey(type)];
       const required =
         BACHELOR_REQUIREMENTS[bachelor][moduleTypeToCreditsKey(type)];
 
@@ -118,15 +144,7 @@ async function handleTabChanged(): Promise<void> {
         ".wizard-tab-container:not([aria-hidden]) .main-modules",
       );
       if (selectedModulesContainer != null) {
-        const additionalCredits = Array.from(
-          selectedModulesContainer.querySelectorAll(
-            ".anlass-info-non-unique .anlass-label",
-          ),
-        )
-          .filter((x) => x.textContent?.toLowerCase()?.includes("ects"))
-          .flatMap((x) => x.nextElementSibling?.textContent ?? [])
-          .map((x) => Number.parseInt(x))
-          .reduce((a, b) => a + b, 0);
+        const additionalCredits = selectedModules.reduce((a, b) => a + (b.ects || 0), 0);
         const selectedSubtitle =
           selectedModulesContainer.querySelector(".callout h4");
         if (selectedSubtitle != null) {
