@@ -77,7 +77,7 @@ function getTabModules(): [ModuleElement[], ModuleElement[]] {
 // Function to handle wizard navigation changes
 async function handleTabChanged(): Promise<void> {
   const [availableModules, selectedModules] = getTabModules();
-  const { modules, bachelor } = localData();
+  const { modules, bachelor, major } = localData();
 
   // Process all available modules
   for (const module of modules) {
@@ -110,15 +110,24 @@ async function handleTabChanged(): Promise<void> {
         break;
     }
     if (type != null) {
-      const { ongoing, done } = creditStatistics(modules, bachelor);
+      const { ongoing, done } = creditStatistics(modules, bachelor, major);
 
       // Check if we are in the "Moduländerungen" phase
       // If we are, we should only consider the done modules in our existing credits calculation,
       // because the ongoing list may already contain modules from the coming semester
-      const isRegistrationChange = document.documentElement.textContent?.includes("Online-Moduländerungen") ?? false;
-      let current = (isRegistrationChange ? done : ongoing)[moduleTypeToCreditsKey(type)];
+      const isRegistrationChange =
+        document.documentElement.textContent?.includes(
+          "Online-Moduländerungen",
+        ) ?? false;
+      const current = (isRegistrationChange ? done : ongoing)[
+        moduleTypeToCreditsKey(type)
+      ];
       const required =
         BACHELOR_REQUIREMENTS[bachelor][moduleTypeToCreditsKey(type)];
+      // Don't need any of this type, show no indicator
+      if (!required) {
+        return;
+      }
 
       const reportProgress = (
         after: Element,
@@ -191,7 +200,7 @@ function observeTabs(): void {
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const debounce = (func: (...args: any[]) => void, delay: number) => {
-  let timeoutId: NodeJS.Timeout;
+  let timeoutId: number;
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   return (...args: any[]) => {
     clearTimeout(timeoutId);

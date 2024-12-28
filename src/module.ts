@@ -94,16 +94,16 @@ export function nextSemester(current: Semester): Semester {
 
 export interface BachelorRequirement {
   // Kernmodul
-  coreCredits: number;
+  coreCredits?: number;
   // Projektmodul
-  projectCredits: number;
+  projectCredits?: number;
   // Erweiterungsmodul
-  extensionCredits: number;
+  extensionCredits?: number;
   // Zusatzmodul
-  miscCredits: number;
+  miscCredits?: number;
 
   // Majormodul, optional
-  majorCredits: number;
+  majorCredits?: number;
   totalCredits: number;
 
   mandatoryModules?: string[];
@@ -114,6 +114,7 @@ export enum BachelorType {
   ComputerScience,
   Economics,
   ArtificialIntelligence,
+  DigitalIdeation,
 }
 
 type EnumDictionary<T extends string | symbol | number, U> = {
@@ -156,6 +157,9 @@ export const BACHELOR_REQUIREMENTS: EnumDictionary<
     majorCredits: 15,
     totalCredits: 180,
   },
+  [BachelorType.DigitalIdeation]: {
+    totalCredits: 180,
+  },
 };
 
 export enum ModuleType {
@@ -170,6 +174,97 @@ export enum ModuleType {
   // Majormodul
   Major,
 }
+
+export enum MajorType {
+  // AI
+  InformationCyberSecurity,
+  SoftwareEngineering,
+  MedtechHealthcare,
+  ArtificialIntelligenceRoboticsMinor,
+
+  // IT
+  ArtificialIntelligenceVisualComputing,
+  ArtificialIntelligenceRobotics,
+  SoftwareDevelopment,
+  SoftwareEngineeringDevops,
+
+  // Cybersecurity
+  InformationSecurityTechnologie,
+  InformationSecurityManagement,
+  DigitalForensic,
+  AttackPentester,
+  CloudMobileIot,
+
+  // Economics
+  BusinessAnalysis,
+  DigitalBusiness,
+
+  // IT & Economics
+  AugmentedVirtualReality,
+  DataScienceDataEngineering,
+  HumanComputerInteractionDesign,
+  ItOperationSecurity,
+}
+
+export const MAJOR_NAMES: EnumDictionary<MajorType, string> = {
+  [MajorType.InformationCyberSecurity]: "Information & Cyber-Security",
+  [MajorType.SoftwareEngineering]: "Software Engineering",
+  [MajorType.MedtechHealthcare]: "Medtech & Healthcare",
+  [MajorType.ArtificialIntelligenceRoboticsMinor]: "Robotics",
+  [MajorType.ArtificialIntelligenceVisualComputing]:
+    "Artificial Intelligence & Visual Computing",
+  [MajorType.ArtificialIntelligenceRobotics]: "Robotics",
+  [MajorType.SoftwareDevelopment]: "Software Development",
+  [MajorType.SoftwareEngineeringDevops]: "Software Engineering & Devops",
+  [MajorType.InformationSecurityTechnologie]:
+    "Information Security Technologie",
+  [MajorType.InformationSecurityManagement]: "Information Security Management",
+  [MajorType.DigitalForensic]: "Digital Forensic & Incident Response",
+  [MajorType.AttackPentester]: "Attack Specialist & Penetration Testing",
+  [MajorType.CloudMobileIot]: "Security of Cloud, Mobile & IoT",
+  [MajorType.BusinessAnalysis]: "Business Analysis",
+  [MajorType.DigitalBusiness]: "Digital Business",
+  [MajorType.AugmentedVirtualReality]: "Augmented & Virtual Reality",
+  [MajorType.DataScienceDataEngineering]: "Data Engineering & Data Science",
+  [MajorType.HumanComputerInteractionDesign]:
+    "Human Computer Interaction Design",
+  [MajorType.ItOperationSecurity]: "IT Operation & Security",
+};
+
+export const BACHELOR_MAJORS: EnumDictionary<BachelorType, MajorType[]> = {
+  [BachelorType.CyberSecurity]: [
+    MajorType.InformationSecurityTechnologie,
+    MajorType.InformationSecurityManagement,
+    MajorType.DigitalForensic,
+    MajorType.AttackPentester,
+    MajorType.CloudMobileIot,
+  ],
+  [BachelorType.ComputerScience]: [
+    MajorType.ArtificialIntelligenceVisualComputing,
+    MajorType.ArtificialIntelligenceRobotics,
+    MajorType.SoftwareDevelopment,
+    MajorType.SoftwareEngineeringDevops,
+    MajorType.AugmentedVirtualReality,
+    MajorType.DataScienceDataEngineering,
+    MajorType.HumanComputerInteractionDesign,
+    MajorType.ItOperationSecurity,
+  ],
+  [BachelorType.Economics]: [
+    MajorType.BusinessAnalysis,
+    MajorType.DigitalBusiness,
+    MajorType.AugmentedVirtualReality,
+    MajorType.DataScienceDataEngineering,
+    MajorType.HumanComputerInteractionDesign,
+    MajorType.ItOperationSecurity,
+  ],
+  [BachelorType.ArtificialIntelligence]: [
+    MajorType.InformationCyberSecurity,
+    MajorType.SoftwareEngineering,
+    MajorType.MedtechHealthcare,
+    MajorType.ArtificialIntelligenceRoboticsMinor,
+  ],
+  [BachelorType.DigitalIdeation]: [],
+};
 
 export const BACHELOR_CREDITS: number = 180;
 
@@ -191,6 +286,7 @@ export interface CreditsStatistic {
 export function creditStatistics(
   modules: Module[],
   bachelor: BachelorType,
+  major: MajorType | undefined,
 ): CreditsStatistic {
   const ongoing: Credits = {
     coreCredits: 0,
@@ -207,7 +303,7 @@ export function creditStatistics(
       continue;
     }
 
-    const type = getModuleType(module, bachelor);
+    const type = getModuleType(module, bachelor, major);
     if (type == null) {
       continue;
     }

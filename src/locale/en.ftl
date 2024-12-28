@@ -12,6 +12,7 @@ total = Total
 
 requirement-ongoing = with current semester
 requirement-completed = actual
+requirement-not-needed = not required
 
 module-type-core = Core
 module-type-project = Project

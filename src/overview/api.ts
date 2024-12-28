@@ -1,5 +1,8 @@
 import {
+  BACHELOR_MAJORS,
   BachelorType,
+  MAJOR_NAMES,
+  MajorType,
   Module,
   ModuleState,
   nextSemester,
@@ -107,13 +110,18 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
 
 export interface StudyInfo {
   bachelor: BachelorType;
+  major: MajorType | undefined;
   partTime: boolean;
 }
 
 const BACHELOR_NAME: [string, BachelorType][] = [
-  ["artificial intelligence & machine learning", BachelorType.ComputerScience],
+  [
+    "artificial intelligence & machine learning",
+    BachelorType.ArtificialIntelligence,
+  ],
   ["information & cyber security", BachelorType.CyberSecurity],
   ["wirtschaftsinformatik", BachelorType.Economics],
+  ["digital ideation", BachelorType.DigitalIdeation],
 ];
 
 export async function getStudyInfo(): Promise<StudyInfo> {
@@ -132,8 +140,19 @@ export async function getStudyInfo(): Promise<StudyInfo> {
     }
   }
 
+  // Try to find the major
+  let major = undefined;
+  for (const majorType of BACHELOR_MAJORS[bachelor]) {
+    const name = MAJOR_NAMES[majorType];
+    if (text.includes(name.toLowerCase())) {
+      major = majorType;
+      break;
+    }
+  }
+
   return {
     partTime: text.includes("berufsbegleitend"),
     bachelor,
+    major,
   };
 }

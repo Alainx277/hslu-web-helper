@@ -6,6 +6,7 @@ import {
   BachelorType,
   Credits,
   creditStatistics,
+  MajorType,
   Module,
   ModuleState,
   ModuleType,
@@ -51,6 +52,7 @@ export const App = () => {
     const localData = storage.localData();
     localData.modules = moduleList;
     localData.bachelor = info.bachelor;
+    localData.major = info.major;
     storage.updateLocalData(localData);
   });
 
@@ -63,11 +65,13 @@ export const App = () => {
         <h2>{t("requirements")}</h2>
         <Requirements
           bachelor={studyInfo()!.bachelor}
+          major={studyInfo()!.major}
           modules={modules()!}
         ></Requirements>
         <h2>{t("modules")}</h2>
         <ModulesTableNew
           bachelor={studyInfo()!.bachelor}
+          major={studyInfo()!.major}
           modules={modules()!}
         ></ModulesTableNew>
       </Show>
@@ -75,10 +79,14 @@ export const App = () => {
   );
 };
 
-const Requirements = (props: { bachelor: BachelorType; modules: Module[] }) => {
+const Requirements = (props: {
+  bachelor: BachelorType;
+  major: MajorType | undefined;
+  modules: Module[];
+}) => {
   const reqs = BACHELOR_REQUIREMENTS[props.bachelor];
   const statistics = createMemo(() =>
-    creditStatistics(props.modules, props.bachelor),
+    creditStatistics(props.modules, props.bachelor, props.major),
   );
 
   return (
@@ -118,26 +126,51 @@ const RequirementRow = (props: {
   return (
     <tr>
       <td>{props.label}</td>
-      <RequirementCell
-        value={props.credits.coreCredits}
-        required={props.reqs.coreCredits}
-      />
-      <RequirementCell
-        value={props.credits.projectCredits}
-        required={props.reqs.projectCredits}
-      />
-      <RequirementCell
-        value={props.credits.majorCredits}
-        required={props.reqs.majorCredits}
-      />
-      <RequirementCell
-        value={props.credits.extensionCredits}
-        required={props.reqs.extensionCredits}
-      />
-      <RequirementCell
-        value={props.credits.miscCredits}
-        required={props.reqs.miscCredits}
-      />
+      <Show
+        when={props.reqs.coreCredits != undefined}
+        fallback={<p>{t("requirement-not-needed")}</p>}
+      >
+        <RequirementCell
+          value={props.credits.coreCredits}
+          required={props.reqs.coreCredits!}
+        />
+      </Show>
+      <Show
+        when={props.reqs.projectCredits != undefined}
+        fallback={<p>{t("requirement-not-needed")}</p>}
+      >
+        <RequirementCell
+          value={props.credits.projectCredits}
+          required={props.reqs.projectCredits!}
+        />
+      </Show>
+      <Show
+        when={props.reqs.majorCredits != undefined}
+        fallback={<p>{t("requirement-not-needed")}</p>}
+      >
+        <RequirementCell
+          value={props.credits.majorCredits}
+          required={props.reqs.majorCredits!}
+        />
+      </Show>
+      <Show
+        when={props.reqs.extensionCredits != undefined}
+        fallback={<p>{t("requirement-not-needed")}</p>}
+      >
+        <RequirementCell
+          value={props.credits.extensionCredits}
+          required={props.reqs.extensionCredits!}
+        />
+      </Show>
+      <Show
+        when={props.reqs.miscCredits != undefined}
+        fallback={<p>{t("requirement-not-needed")}</p>}
+      >
+        <RequirementCell
+          value={props.credits.miscCredits}
+          required={props.reqs.miscCredits!}
+        />
+      </Show>
       <RequirementCell
         value={props.credits.totalCredits}
         required={BACHELOR_CREDITS}
@@ -164,6 +197,7 @@ const RequirementCell = (props: { value: number; required: number }) => {
 
 const ModulesTableNew = (props: {
   bachelor: BachelorType;
+  major: MajorType | undefined;
   modules: Module[];
 }) => {
   let grid: AgGridSolidRef;
@@ -254,14 +288,14 @@ const ModulesTableNew = (props: {
       filter: "agTextColumnFilter",
       floatingFilter: true,
       valueGetter(params: { data: Module }) {
-        const type = getModuleType(params.data, props.bachelor);
+        const type = getModuleType(params.data, props.bachelor, props.major);
         if (type == null) {
           return "";
         }
         return t(`module-type-${ModuleType[type].toLowerCase()}`);
       },
       filterValueGetter(params: { data: Module }) {
-        const type = getModuleType(params.data, props.bachelor);
+        const type = getModuleType(params.data, props.bachelor, props.major);
         if (type == null) {
           return "";
         }

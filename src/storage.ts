@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import { BachelorType, Module, ModuleType } from "./module";
+import { BachelorType, MajorType, Module, ModuleType } from "./module";
 
 interface Settings {
   moduleEdits: ModuleEdit[];
@@ -94,11 +94,13 @@ export async function save() {
 interface LocalData {
   modules: Module[];
   bachelor: BachelorType;
+  major: MajorType | undefined;
 }
 
 const [localData, setLocalData] = createSignal<LocalData>({
   modules: [],
   bachelor: BachelorType.CyberSecurity,
+  major: undefined,
 });
 
 export async function loadLocalData(): Promise<void> {

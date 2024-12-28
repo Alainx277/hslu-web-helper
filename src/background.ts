@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true;
   } else if (message.type == "loadLocal") {
     chrome.storage.local
-      .get(["modules", "bachelor"])
+      .get(["modules", "bachelor", "major"])
       .then((x) => sendResponse(x));
     return true;
   }
