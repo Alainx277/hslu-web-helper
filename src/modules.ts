@@ -42,7 +42,7 @@ export function getModuleType(
   // Check if this is a major module for the chosen major
   if (major != undefined) {
     const majorName = MajorType[major] as keyof typeof MajorType;
-    if (moduleData.majors?.includes(majorName)) {
+    if (moduleData.majors?.includes(majorName) == true) {
       type = ModuleType[ModuleType.Major] as keyof typeof ModuleType;
     }
   }

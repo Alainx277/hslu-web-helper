@@ -299,7 +299,7 @@ export function creditStatistics(
   const done = Object.assign({}, ongoing);
 
   for (const module of modules) {
-    if (!module.ects) {
+    if (module.ects == undefined || module.ects == 0) {
       continue;
     }
 

@@ -24,7 +24,7 @@ class ModuleElement {
     // Try to parse ECTS if present
     const ectsLabel = Array.from(element.querySelectorAll<HTMLElement>(".anlass-label")).find((x) => x.textContent?.toLowerCase()?.includes("ects"));
     if (ectsLabel) {
-      const ects = Number.parseInt(ectsLabel.nextElementSibling?.textContent || "");
+      const ects = Number.parseInt(ectsLabel.nextElementSibling?.textContent ?? "");
       if (!isNaN(ects)) {
         this.ects = ects;
       }
@@ -39,7 +39,7 @@ class ModuleElement {
   }
 
   markState(state: ModuleState): void {
-    if (this.element.dataset.state) {
+    if (this.element.dataset.state != undefined) {
       return;
     }
 
@@ -125,7 +125,7 @@ async function handleTabChanged(): Promise<void> {
       const required =
         BACHELOR_REQUIREMENTS[bachelor][moduleTypeToCreditsKey(type)];
       // Don't need any of this type, show no indicator
-      if (!required) {
+      if (required == undefined || required == 0) {
         return;
       }
 
@@ -153,7 +153,7 @@ async function handleTabChanged(): Promise<void> {
         ".wizard-tab-container:not([aria-hidden]) .main-modules",
       );
       if (selectedModulesContainer != null) {
-        const additionalCredits = selectedModules.reduce((a, b) => a + (b.ects || 0), 0);
+        const additionalCredits = selectedModules.reduce((a, b) => a + (b.ects ?? 0), 0);
         const selectedSubtitle =
           selectedModulesContainer.querySelector(".callout h4");
         if (selectedSubtitle != null) {
