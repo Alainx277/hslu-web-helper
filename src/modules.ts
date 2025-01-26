@@ -18,7 +18,7 @@ export function getModuleType(
 ): ModuleType | null {
   // User has edited type
   const userType = getModuleEdit(module.fullId)?.edits.type;
-  if (userType) {
+  if (userType != undefined) {
     return userType;
   }
 
