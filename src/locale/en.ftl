@@ -2,6 +2,12 @@
 requirements = Requirements
 modules = Modules
 loading = Loading...
+settings = Settings
+semester-current = Current semester
+semester-select = Semester for calculation
+semester-select-help =
+  Depending on which semester the module types are taken from, your credits statistic might look differently because modules can be reclassified.
+  Unofficially, any semester from when you started can be chosen, whichever best fits the graduation requirements.
 
 core-module = Core
 project-module = Project

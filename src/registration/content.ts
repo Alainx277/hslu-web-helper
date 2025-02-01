@@ -6,8 +6,9 @@ import {
   ModuleType,
   moduleTypeToCreditsKey,
   parseModuleId,
+  semesterFromDate,
 } from "../module";
-import { load, loadLocalData, localData } from "../storage";
+import { load, loadLocalData, localData, settings } from "../storage";
 import "./style.css";
 
 class ModuleElement {
@@ -77,7 +78,14 @@ function getTabModules(): [ModuleElement[], ModuleElement[]] {
 // Function to handle wizard navigation changes
 async function handleTabChanged(): Promise<void> {
   const [availableModules, selectedModules] = getTabModules();
-  const { modules, bachelor, major } = localData();
+  const {
+    modules,
+    bachelor: detectedBachelor,
+    major: detectedMajor,
+  } = localData();
+  const bachelor = settings().bachelor ?? detectedBachelor;
+  const major = settings().major ?? detectedMajor;
+  const semester = settings().semester ?? semesterFromDate(new Date());
 
   // Process all available modules
   for (const module of modules) {
@@ -110,7 +118,12 @@ async function handleTabChanged(): Promise<void> {
         break;
     }
     if (type != null) {
-      const { ongoing, done } = creditStatistics(modules, bachelor, major);
+      const { ongoing, done } = creditStatistics(
+        modules,
+        semester,
+        bachelor,
+        major,
+      );
 
       // Check if we are in the "Moduländerungen" phase
       // If we are, we should only consider the done modules in our existing credits calculation,

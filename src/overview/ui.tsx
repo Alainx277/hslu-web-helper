@@ -1,4 +1,4 @@
-import { Show, createEffect, createMemo, createResource } from "solid-js";
+import { For, Show, createEffect, createMemo, createResource, createSelector } from "solid-js";
 import {
   BACHELOR_CREDITS,
   BACHELOR_REQUIREMENTS,
@@ -6,15 +6,17 @@ import {
   BachelorType,
   Credits,
   creditStatistics,
+  formatSemester,
   MajorType,
   Module,
   ModuleState,
   ModuleType,
   Semester,
+  semesterFromDate,
 } from "../module";
 import * as api from "./api";
 import * as storage from "../storage";
-import { getModuleType } from "../modules";
+import { getModuleType, getSemesters } from "../modules";
 import AgGridSolid, { AgGridSolidRef } from "ag-grid-solid";
 
 import "ag-grid-community/styles/ag-grid.css";
@@ -23,7 +25,8 @@ import "./style.css";
 import { t } from "../i18n";
 
 export const App = () => {
-  storage.load();
+  const [loadSettings] = createResource(storage.load);
+
   // Load modules from the API
   const [apiModules] = createResource(async () => {
     return await api.fetchModules();
@@ -34,7 +37,23 @@ export const App = () => {
     if (api == null) {
       return null;
     }
+    if (loadSettings.loading) {
+      return null;
+    }
     return storage.getUserModules(api);
+  });
+
+  const configuredSemester = createMemo(() => {
+    const settings = storage.settings();
+    return settings.semester;
+  });
+
+  const selectedSemester = createMemo(() => {
+    const semester = configuredSemester();
+    if (semester != undefined) {
+      return semester;
+    }
+    return semesterFromDate(new Date());
   });
 
   const [studyInfo] = createResource(api.getStudyInfo);
@@ -56,20 +75,25 @@ export const App = () => {
     storage.updateLocalData(localData);
   });
 
+
   return (
     <>
       <Show
         when={modules() != null && !studyInfo.loading}
         fallback={<p>{t("loading")}</p>}
       >
+        <h2>{t("settings")}</h2>
+        <Settings semester={configuredSemester()}></Settings>
         <h2>{t("requirements")}</h2>
         <Requirements
+          semester={selectedSemester()}
           bachelor={studyInfo()!.bachelor}
           major={studyInfo()!.major}
           modules={modules()!}
         ></Requirements>
         <h2>{t("modules")}</h2>
         <ModulesTableNew
+          semester={selectedSemester()}
           bachelor={studyInfo()!.bachelor}
           major={studyInfo()!.major}
           modules={modules()!}
@@ -79,14 +103,41 @@ export const App = () => {
   );
 };
 
+const Settings = (props: {
+  semester: Semester | null | undefined;
+}) => {
+  function changeSemester(event: Event & {
+    currentTarget: HTMLSelectElement;
+    target: HTMLSelectElement;
+  }) {
+    storage.updateSemester(JSON.parse(event.target.value));
+  }
+
+  return (
+    <div style={{ display: "grid", "grid-template-columns": "max-content max-content", "column-gap": "1em" }}>
+      <div style={{ display: "flex" }}>
+        <label for="semester-select">{t("semester-select")}</label>
+        <i class="gg-info" title={t("semester-select-help")}></i>
+      </div>
+      <select id="semester-select" value={JSON.stringify(props.semester == undefined ? null : props.semester)} onchange={changeSemester}>
+        <option value={"null"}>{t("semester-current")}</option>
+        <For each={getSemesters()}>{(semester, i) =>
+          <option value={JSON.stringify(semester)}>{formatSemester(semester)}</option>
+        }</For>
+      </select>
+    </div>
+  );
+};
+
 const Requirements = (props: {
+  semester: Semester;
   bachelor: BachelorType;
   major: MajorType | undefined;
   modules: Module[];
 }) => {
   const reqs = BACHELOR_REQUIREMENTS[props.bachelor];
   const statistics = createMemo(() =>
-    creditStatistics(props.modules, props.bachelor, props.major),
+    creditStatistics(props.modules, props.semester, props.bachelor, props.major),
   );
 
   return (
@@ -196,6 +247,7 @@ const RequirementCell = (props: { value: number; required: number }) => {
 };
 
 const ModulesTableNew = (props: {
+  semester: Semester;
   bachelor: BachelorType;
   major: MajorType | undefined;
   modules: Module[];
@@ -288,14 +340,14 @@ const ModulesTableNew = (props: {
       filter: "agTextColumnFilter",
       floatingFilter: true,
       valueGetter(params: { data: Module }) {
-        const type = getModuleType(params.data, props.bachelor, props.major);
+        const type = getModuleType(props.semester, params.data, props.bachelor, props.major);
         if (type == null) {
           return "";
         }
         return t(`module-type-${ModuleType[type].toLowerCase()}`);
       },
       filterValueGetter(params: { data: Module }) {
-        const type = getModuleType(params.data, props.bachelor, props.major);
+        const type = getModuleType(props.semester, params.data, props.bachelor, props.major);
         if (type == null) {
           return "";
         }
@@ -355,7 +407,13 @@ const ModulesTableNew = (props: {
           }
         />
       </div>
-      <a type="button" onclick={() => grid.api.exportDataAsCsv()}>
+      <a
+        type="button"
+        onclick={
+          // @ts-expect-error TS does not understand ref initialization
+          () => grid.api.exportDataAsCsv()
+        }
+      >
         {t("export-csv")}
       </a>
     </div>

@@ -1,8 +1,9 @@
 import { createSignal } from "solid-js";
-import { BachelorType, MajorType, Module, ModuleType } from "./module";
+import { BachelorType, MajorType, Module, ModuleType, Semester } from "./module";
 
 interface Settings {
   moduleEdits: ModuleEdit[];
+  semester: Semester | null | undefined;
 }
 
 interface ModuleEdit {
@@ -12,7 +13,16 @@ interface ModuleEdit {
 
 const [settings, setSettings] = createSignal<Settings>({
   moduleEdits: [],
+  semester: null,
 });
+
+export async function updateSemester(semester: Semester | null) {
+  const current = settings();
+  const newSettings = Object.assign({}, current);
+  newSettings.semester = semester;
+  setSettings(newSettings);
+  await save();
+}
 
 export async function editModule(edit: ModuleEdit) {
   const current = settings();

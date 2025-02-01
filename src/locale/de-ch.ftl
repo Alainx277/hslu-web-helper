@@ -2,6 +2,13 @@
 requirements = Anforderungen
 modules = Module
 loading = Wird geladen...
+settings = Einstellungen
+semester-current = Aktuelles Semester
+semester-select = Semester für Berechnung
+semester-select-help =
+  Je nachdem, aus welchem Semester die Modultypen entnommen werden, könnten deine Credits unterschiedlich aussehen, da Module neu klassifiziert werden können.
+  Inoffiziell kann jedes Semester seit deinem Studienbeginn gewählt werden, je nachdem, welches am besten zu den Bacheloranforderungen passt.
+
 
 core-module = Kernmodul
 project-module = Projektmodul

@@ -43,6 +43,10 @@ export interface Semester {
   part: "FS" | "HS";
 }
 
+export function formatSemester(semester: Semester): string {
+  return `${semester.part}${String(semester.year % 100).padStart(2, '0')}`
+}
+
 // Returns the starting semester
 // Assumes the modules array is sorted in reverse time order
 export function startingSemester(modules: Module[]): Semester {
@@ -298,6 +302,7 @@ export interface CreditsStatistic {
 // Calculate how many credits are completed or planned
 export function creditStatistics(
   modules: Module[],
+  semester: Semester,
   bachelor: BachelorType,
   major: MajorType | undefined,
 ): CreditsStatistic {
@@ -316,7 +321,7 @@ export function creditStatistics(
       continue;
     }
 
-    const type = getModuleType(module, bachelor, major);
+    const type = getModuleType(semester, module, bachelor, major);
     if (type == null) {
       continue;
     }
