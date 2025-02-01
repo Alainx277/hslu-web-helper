@@ -92,6 +92,19 @@ export function nextSemester(current: Semester): Semester {
   }
 }
 
+export function previousSemester(current: Semester): Semester {
+  switch (current.part) {
+    case "HS":
+      return { part: "FS", year: current.year };
+    case "FS":
+      return { part: "HS", year: current.year - 1 };
+    default:
+      const exhaustiveCheck: never = current.part;
+      throw new Error(`Invalid semester part ${exhaustiveCheck}, this is a bug.`);
+  }
+}
+
+
 export interface BachelorRequirement {
   // Kernmodul
   coreCredits?: number;

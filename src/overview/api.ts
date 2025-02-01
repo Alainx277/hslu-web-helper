@@ -7,6 +7,7 @@ import {
   ModuleState,
   nextSemester,
   parseModuleId,
+  previousSemester,
   semesterFromDate,
 } from "../module";
 
@@ -74,6 +75,7 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
 
   const { shortName, year, part: yearPart } = data;
 
+  const currentSemester = semesterFromDate(new Date());
   // Parse module state from the (non-standard) comment
   let moduleState = ModuleState.NotApplicable;
   if (apiModule.prop1.length > 0) {
@@ -82,10 +84,14 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
       moduleState = comment.includes("nicht")
         ? ModuleState.Failed
         : ModuleState.Passed;
+    } else if (comment.includes("testat")) {
+      const previous = previousSemester(currentSemester);
+      if (previous.year == year && previous.part == yearPart) {
+        moduleState = ModuleState.Ongoing;
+      }
     }
   }
   if (moduleState == ModuleState.NotApplicable) {
-    const currentSemester = semesterFromDate(new Date());
     // Module is currently running
     if (currentSemester.year == year && currentSemester.part == yearPart) {
       moduleState = ModuleState.Ongoing;
