@@ -90,7 +90,10 @@ export const App = () => {
           major={studyInfo()!.major}
           modules={modules()!}
         ></Requirements>
-        <h2>{t("modules")}</h2>
+        <div style={{ display: "flex" }}>
+          <h2>{t("modules")}</h2>
+          <i class="gg-info" title={t("modules-help")}></i>
+        </div>
         <ModulesTableNew
           semester={selectedSemester()}
           bachelor={studyInfo()!.bachelor}
