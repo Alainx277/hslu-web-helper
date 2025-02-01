@@ -44,7 +44,7 @@ export interface Semester {
 }
 
 export function formatSemester(semester: Semester): string {
-  return `${semester.part}${String(semester.year % 100).padStart(2, '0')}`
+  return `${semester.part}${String(semester.year % 100).padStart(2, "0")}`;
 }
 
 // Returns the starting semester
@@ -104,10 +104,11 @@ export function previousSemester(current: Semester): Semester {
       return { part: "HS", year: current.year - 1 };
     default:
       const exhaustiveCheck: never = current.part;
-      throw new Error(`Invalid semester part ${exhaustiveCheck}, this is a bug.`);
+      throw new Error(
+        `Invalid semester part ${exhaustiveCheck}, this is a bug.`,
+      );
   }
 }
-
 
 export interface BachelorRequirement {
   // Kernmodul

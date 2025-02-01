@@ -1,5 +1,11 @@
 import { createSignal } from "solid-js";
-import { BachelorType, MajorType, Module, ModuleType, Semester } from "./module";
+import {
+  BachelorType,
+  MajorType,
+  Module,
+  ModuleType,
+  Semester,
+} from "./module";
 
 interface Settings {
   moduleEdits: ModuleEdit[];

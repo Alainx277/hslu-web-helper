@@ -1,4 +1,11 @@
-import { BachelorType, formatSemester, MajorType, Module, ModuleType, Semester } from "./module";
+import {
+  BachelorType,
+  formatSemester,
+  MajorType,
+  Module,
+  ModuleType,
+  Semester,
+} from "./module";
 import modulesDataRaw from "./modules.json";
 const modulesData = modulesDataRaw as {
   [semester: string]: {
@@ -9,7 +16,7 @@ const modulesData = modulesDataRaw as {
         majors?: (keyof typeof MajorType)[];
       };
     };
-  }
+  };
 };
 import { getModuleEdit } from "./storage";
 
@@ -56,9 +63,9 @@ export function getModuleType(
 }
 
 export function getSemesters(): Semester[] {
-  return Object.keys(modulesData).map(x => {
+  return Object.keys(modulesData).map((x) => {
     return {
-      part: x[0] == 'H' ? 'HS' : 'FS',
+      part: x[0] == "H" ? "HS" : "FS",
       year: 2000 + Number.parseInt(x.substring(2)),
     };
   });

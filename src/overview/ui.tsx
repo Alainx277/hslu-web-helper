@@ -1,4 +1,4 @@
-import { For, Show, createEffect, createMemo, createResource, createSelector } from "solid-js";
+import { For, Show, createEffect, createMemo, createResource } from "solid-js";
 import {
   BACHELOR_CREDITS,
   BACHELOR_REQUIREMENTS,
@@ -75,7 +75,6 @@ export const App = () => {
     storage.updateLocalData(localData);
   });
 
-
   return (
     <>
       <Show
@@ -103,27 +102,43 @@ export const App = () => {
   );
 };
 
-const Settings = (props: {
-  semester: Semester | null | undefined;
-}) => {
-  function changeSemester(event: Event & {
-    currentTarget: HTMLSelectElement;
-    target: HTMLSelectElement;
-  }) {
+const Settings = (props: { semester: Semester | null | undefined }) => {
+  function changeSemester(
+    event: Event & {
+      currentTarget: HTMLSelectElement;
+      target: HTMLSelectElement;
+    },
+  ) {
     storage.updateSemester(JSON.parse(event.target.value));
   }
 
   return (
-    <div style={{ display: "grid", "grid-template-columns": "max-content max-content", "column-gap": "1em" }}>
+    <div
+      style={{
+        display: "grid",
+        "grid-template-columns": "max-content max-content",
+        "column-gap": "1em",
+      }}
+    >
       <div style={{ display: "flex" }}>
         <label for="semester-select">{t("semester-select")}</label>
         <i class="gg-info" title={t("semester-select-help")}></i>
       </div>
-      <select id="semester-select" value={JSON.stringify(props.semester == undefined ? null : props.semester)} onchange={changeSemester}>
+      <select
+        id="semester-select"
+        value={JSON.stringify(
+          props.semester == undefined ? null : props.semester,
+        )}
+        onchange={changeSemester}
+      >
         <option value={"null"}>{t("semester-current")}</option>
-        <For each={getSemesters()}>{(semester, i) =>
-          <option value={JSON.stringify(semester)}>{formatSemester(semester)}</option>
-        }</For>
+        <For each={getSemesters()}>
+          {(semester) => (
+            <option value={JSON.stringify(semester)}>
+              {formatSemester(semester)}
+            </option>
+          )}
+        </For>
       </select>
     </div>
   );
@@ -137,7 +152,12 @@ const Requirements = (props: {
 }) => {
   const reqs = BACHELOR_REQUIREMENTS[props.bachelor];
   const statistics = createMemo(() =>
-    creditStatistics(props.modules, props.semester, props.bachelor, props.major),
+    creditStatistics(
+      props.modules,
+      props.semester,
+      props.bachelor,
+      props.major,
+    ),
   );
 
   return (
@@ -340,14 +360,24 @@ const ModulesTableNew = (props: {
       filter: "agTextColumnFilter",
       floatingFilter: true,
       valueGetter(params: { data: Module }) {
-        const type = getModuleType(props.semester, params.data, props.bachelor, props.major);
+        const type = getModuleType(
+          props.semester,
+          params.data,
+          props.bachelor,
+          props.major,
+        );
         if (type == null) {
           return "";
         }
         return t(`module-type-${ModuleType[type].toLowerCase()}`);
       },
       filterValueGetter(params: { data: Module }) {
-        const type = getModuleType(props.semester, params.data, props.bachelor, props.major);
+        const type = getModuleType(
+          props.semester,
+          params.data,
+          props.bachelor,
+          props.major,
+        );
         if (type == null) {
           return "";
         }

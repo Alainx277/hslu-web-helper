@@ -23,9 +23,13 @@ class ModuleElement {
     this.fullId = this.titleElement.textContent?.trim() ?? "";
 
     // Try to parse ECTS if present
-    const ectsLabel = Array.from(element.querySelectorAll<HTMLElement>(".anlass-label")).find((x) => x.textContent?.toLowerCase()?.includes("ects"));
+    const ectsLabel = Array.from(
+      element.querySelectorAll<HTMLElement>(".anlass-label"),
+    ).find((x) => x.textContent?.toLowerCase()?.includes("ects"));
     if (ectsLabel) {
-      const ects = Number.parseInt(ectsLabel.nextElementSibling?.textContent ?? "");
+      const ects = Number.parseInt(
+        ectsLabel.nextElementSibling?.textContent ?? "",
+      );
       if (!isNaN(ects)) {
         this.ects = ects;
       }
@@ -57,22 +61,24 @@ class ModuleElement {
 }
 
 function getTabModules(): [ModuleElement[], ModuleElement[]] {
-  const activeTab = document.querySelector(".wizard-tab-container:not([aria-hidden])");
+  const activeTab = document.querySelector(
+    ".wizard-tab-container:not([aria-hidden])",
+  );
   if (activeTab == null) {
     throw "Cannot parse page content";
   }
 
-  const available =
-    activeTab.querySelectorAll<HTMLElement>(".available-modules .anlass-info");
-  const selected =
-    activeTab.querySelectorAll<HTMLElement>(".main-modules .anlass-info-non-unique");
+  const available = activeTab.querySelectorAll<HTMLElement>(
+    ".available-modules .anlass-info",
+  );
+  const selected = activeTab.querySelectorAll<HTMLElement>(
+    ".main-modules .anlass-info-non-unique",
+  );
 
-  return [Array.from(available).map(
-    (element) => new ModuleElement(element),
-  ),
-  Array.from(selected).map(
-    (element) => new ModuleElement(element),
-  )];
+  return [
+    Array.from(available).map((element) => new ModuleElement(element)),
+    Array.from(selected).map((element) => new ModuleElement(element)),
+  ];
 }
 
 // Function to handle wizard navigation changes
@@ -166,7 +172,10 @@ async function handleTabChanged(): Promise<void> {
         ".wizard-tab-container:not([aria-hidden]) .main-modules",
       );
       if (selectedModulesContainer != null) {
-        const additionalCredits = selectedModules.reduce((a, b) => a + (b.ects ?? 0), 0);
+        const additionalCredits = selectedModules.reduce(
+          (a, b) => a + (b.ects ?? 0),
+          0,
+        );
         const selectedSubtitle =
           selectedModulesContainer.querySelector(".callout h4");
         if (selectedSubtitle != null) {
