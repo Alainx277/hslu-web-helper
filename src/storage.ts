@@ -9,7 +9,8 @@ import {
 
 interface Settings {
   moduleEdits: ModuleEdit[];
-  semester: Semester | null | undefined;
+  semester?: Semester | null;
+  bachelor?: BachelorType | null;
 }
 
 interface ModuleEdit {
@@ -20,12 +21,21 @@ interface ModuleEdit {
 const [settings, setSettings] = createSignal<Settings>({
   moduleEdits: [],
   semester: null,
+  bachelor: null,
 });
 
 export async function updateSemester(semester: Semester | null) {
   const current = settings();
   const newSettings = Object.assign({}, current);
   newSettings.semester = semester;
+  setSettings(newSettings);
+  await save();
+}
+
+export async function updateBachelor(bachelor: BachelorType | null) {
+  const current = settings();
+  const newSettings = Object.assign({}, current);
+  newSettings.bachelor = bachelor;
   setSettings(newSettings);
   await save();
 }

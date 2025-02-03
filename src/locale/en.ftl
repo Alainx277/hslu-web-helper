@@ -10,6 +10,9 @@ semester-select-help =
   Depending on which semester the module types are taken from, your credits statistic might look differently because modules can be reclassified.
   Unofficially, any semester from when you started can be chosen, whichever best fits the graduation requirements.
 
+bachelor-automatic = Automatically detect
+bachelor-select = Bachelor
+
 modules-help =
   Lists all your modules.
   You can filter and sort the columns.

@@ -1,6 +1,7 @@
 import { For, Show, createEffect, createMemo, createResource } from "solid-js";
 import {
   BACHELOR_CREDITS,
+  BACHELOR_NAMES,
   BACHELOR_REQUIREMENTS,
   BachelorRequirement,
   BachelorType,
@@ -58,6 +59,11 @@ export const App = () => {
 
   const [studyInfo] = createResource(api.getStudyInfo);
 
+  const bachelor = createMemo(() => {
+    const settings = storage.settings();
+    return settings.bachelor ?? studyInfo()?.bachelor;
+  });
+
   // Update the stored data
   createEffect(() => {
     const moduleList = modules();
@@ -82,11 +88,15 @@ export const App = () => {
         fallback={<p>{t("loading")}</p>}
       >
         <h2>{t("settings")}</h2>
-        <Settings semester={configuredSemester()}></Settings>
+        <Settings
+          semester={configuredSemester()}
+          bachelor={storage.settings().bachelor}
+          detectedBachelor={studyInfo()!.bachelor}
+        ></Settings>
         <h2>{t("requirements")}</h2>
         <Requirements
           semester={selectedSemester()}
-          bachelor={studyInfo()!.bachelor}
+          bachelor={bachelor()!}
           major={studyInfo()!.major}
           modules={modules()!}
         ></Requirements>
@@ -96,7 +106,7 @@ export const App = () => {
         </div>
         <ModulesTableNew
           semester={selectedSemester()}
-          bachelor={studyInfo()!.bachelor}
+          bachelor={bachelor()!}
           major={studyInfo()!.major}
           modules={modules()!}
         ></ModulesTableNew>
@@ -105,7 +115,11 @@ export const App = () => {
   );
 };
 
-const Settings = (props: { semester: Semester | null | undefined }) => {
+const Settings = (props: {
+  semester: Semester | null | undefined;
+  bachelor: BachelorType | null | undefined;
+  detectedBachelor: BachelorType;
+}) => {
   function changeSemester(
     event: Event & {
       currentTarget: HTMLSelectElement;
@@ -113,6 +127,15 @@ const Settings = (props: { semester: Semester | null | undefined }) => {
     },
   ) {
     storage.updateSemester(JSON.parse(event.target.value));
+  }
+
+  function changeBachelor(
+    event: Event & {
+      currentTarget: HTMLSelectElement;
+      target: HTMLSelectElement;
+    },
+  ) {
+    storage.updateBachelor(JSON.parse(event.target.value));
   }
 
   return (
@@ -139,6 +162,26 @@ const Settings = (props: { semester: Semester | null | undefined }) => {
           {(semester) => (
             <option value={JSON.stringify(semester)}>
               {formatSemester(semester)}
+            </option>
+          )}
+        </For>
+      </select>
+
+      <label for="bachelor-select">{t("bachelor-select")}</label>
+      <select
+        id="bachelor-select"
+        value={JSON.stringify(
+          props.bachelor == undefined ? null : props.bachelor,
+        )}
+        onchange={changeBachelor}
+      >
+        <option value={"null"}>
+          {`${t("bachelor-automatic")} (${BACHELOR_NAMES[props.detectedBachelor]})`}
+        </option>
+        <For each={Object.keys(BACHELOR_NAMES)}>
+          {(bachelor) => (
+            <option value={JSON.stringify(bachelor)}>
+              {BACHELOR_NAMES[Number.parseInt(bachelor) as BachelorType]}
             </option>
           )}
         </For>

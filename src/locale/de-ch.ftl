@@ -10,6 +10,9 @@ semester-select-help =
   Je nachdem, aus welchem Semester die Modultypen entnommen werden, könnten deine Credits unterschiedlich aussehen, da Module neu klassifiziert werden können.
   Inoffiziell kann jedes Semester seit deinem Studienbeginn gewählt werden, je nachdem, welches am besten zu den Bacheloranforderungen passt.
 
+bachelor-automatic = Automatisch erkennen
+bachelor-select = Bachelor
+
 modules-help =
   Listet alle deine Module auf.
   Du kannst die Spalten filtern und sortieren.

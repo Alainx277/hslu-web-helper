@@ -139,6 +139,15 @@ type EnumDictionary<T extends string | symbol | number, U> = {
   [K in T]: U;
 };
 
+export const BACHELOR_NAMES: EnumDictionary<BachelorType, string> = {
+  [BachelorType.CyberSecurity]: "Information & Cyber-Security",
+  [BachelorType.ComputerScience]: "Informatik",
+  [BachelorType.Economics]: "Wirtschaftsinformatik",
+  [BachelorType.ArtificialIntelligence]:
+    "Artificial Intelligence & Machine Learning",
+  [BachelorType.DigitalIdeation]: "Digital Ideation",
+};
+
 export const BACHELOR_REQUIREMENTS: EnumDictionary<
   BachelorType,
   BachelorRequirement
