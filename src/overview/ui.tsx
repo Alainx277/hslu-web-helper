@@ -166,25 +166,6 @@ const Settings = (props: {
         "column-gap": "1em",
       }}
     >
-      <div style={{ display: "flex" }}>
-        <label for="semester-select">{t("semester-select")}</label>
-        <i class="gg-info" title={t("semester-select-help")}></i>
-      </div>
-      <select
-        id="semester-select"
-        value={JSON.stringify(props.semester)}
-        onchange={changeSemester}
-      >
-        <option value={"null"}>{t("semester-current")}</option>
-        <For each={getSemesters()}>
-          {(semester) => (
-            <option value={JSON.stringify(semester)}>
-              {formatSemester(semester)}
-            </option>
-          )}
-        </For>
-      </select>
-
       <label for="bachelor-select">{t("bachelor-select")}</label>
       <select
         id="bachelor-select"
@@ -215,6 +196,25 @@ const Settings = (props: {
         <For each={BACHELOR_MAJORS[props.bachelor ?? props.detectedBachelor]}>
           {(major) => (
             <option value={JSON.stringify(major)}>{MAJOR_NAMES[major]}</option>
+          )}
+        </For>
+      </select>
+
+      <div style={{ display: "flex" }}>
+        <label for="semester-select">{t("semester-select")}</label>
+        <i class="gg-info" title={t("semester-select-help")}></i>
+      </div>
+      <select
+        id="semester-select"
+        value={JSON.stringify(props.semester)}
+        onchange={changeSemester}
+      >
+        <option value={"null"}>{t("semester-current")}</option>
+        <For each={getSemesters()}>
+          {(semester) => (
+            <option value={JSON.stringify(semester)}>
+              {formatSemester(semester)}
+            </option>
           )}
         </For>
       </select>
