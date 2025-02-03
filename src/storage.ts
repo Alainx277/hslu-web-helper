@@ -11,6 +11,7 @@ interface Settings {
   moduleEdits: ModuleEdit[];
   semester?: Semester | null;
   bachelor?: BachelorType | null;
+  major?: MajorType | null;
 }
 
 interface ModuleEdit {
@@ -22,6 +23,7 @@ const [settings, setSettings] = createSignal<Settings>({
   moduleEdits: [],
   semester: null,
   bachelor: null,
+  major: null,
 });
 
 export async function updateSemester(semester: Semester | null) {
@@ -36,6 +38,14 @@ export async function updateBachelor(bachelor: BachelorType | null) {
   const current = settings();
   const newSettings = Object.assign({}, current);
   newSettings.bachelor = bachelor;
+  setSettings(newSettings);
+  await save();
+}
+
+export async function updateMajor(major: MajorType | null) {
+  const current = settings();
+  const newSettings = Object.assign({}, current);
+  newSettings.major = major;
   setSettings(newSettings);
   await save();
 }

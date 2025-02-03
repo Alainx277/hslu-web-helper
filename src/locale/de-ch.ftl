@@ -13,6 +13,9 @@ semester-select-help =
 bachelor-automatic = Automatisch erkennen
 bachelor-select = Bachelor
 
+major-automatic = Automatisch erkennen
+major-select = Major / Minor
+
 modules-help =
   Listet alle deine Module auf.
   Du kannst die Spalten filtern und sortieren.

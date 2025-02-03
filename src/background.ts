@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true;
   } else if (message.type == "loadSettings") {
     chrome.storage.sync
-      .get(["moduleEdits", "semester", "bachelor"])
+      .get(["moduleEdits", "semester", "bachelor", "major"])
       .then((x) => sendResponse(x));
     return true;
   } else if (message.type == "saveLocal") {

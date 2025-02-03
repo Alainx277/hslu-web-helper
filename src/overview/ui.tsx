@@ -1,6 +1,7 @@
 import { For, Show, createEffect, createMemo, createResource } from "solid-js";
 import {
   BACHELOR_CREDITS,
+  BACHELOR_MAJORS,
   BACHELOR_NAMES,
   BACHELOR_REQUIREMENTS,
   BachelorRequirement,
@@ -8,6 +9,7 @@ import {
   Credits,
   creditStatistics,
   formatSemester,
+  MAJOR_NAMES,
   MajorType,
   Module,
   ModuleState,
@@ -64,6 +66,11 @@ export const App = () => {
     return settings.bachelor ?? studyInfo()?.bachelor;
   });
 
+  const major = createMemo(() => {
+    const settings = storage.settings();
+    return settings.major ?? studyInfo()?.major;
+  });
+
   // Update the stored data
   createEffect(() => {
     const moduleList = modules();
@@ -92,12 +99,14 @@ export const App = () => {
           semester={configuredSemester()}
           bachelor={storage.settings().bachelor}
           detectedBachelor={studyInfo()!.bachelor}
+          major={storage.settings().major}
+          detectedMajor={studyInfo()!.major}
         ></Settings>
         <h2>{t("requirements")}</h2>
         <Requirements
           semester={selectedSemester()}
           bachelor={bachelor()!}
-          major={studyInfo()!.major}
+          major={major()!}
           modules={modules()!}
         ></Requirements>
         <div style={{ display: "flex" }}>
@@ -107,7 +116,7 @@ export const App = () => {
         <ModulesTableNew
           semester={selectedSemester()}
           bachelor={bachelor()!}
-          major={studyInfo()!.major}
+          major={major()!}
           modules={modules()!}
         ></ModulesTableNew>
       </Show>
@@ -119,6 +128,8 @@ const Settings = (props: {
   semester: Semester | null | undefined;
   bachelor: BachelorType | null | undefined;
   detectedBachelor: BachelorType;
+  major: MajorType | null | undefined;
+  detectedMajor: MajorType | undefined;
 }) => {
   function changeSemester(
     event: Event & {
@@ -136,6 +147,15 @@ const Settings = (props: {
     },
   ) {
     storage.updateBachelor(JSON.parse(event.target.value));
+  }
+
+  function changeMajor(
+    event: Event & {
+      currentTarget: HTMLSelectElement;
+      target: HTMLSelectElement;
+    },
+  ) {
+    storage.updateMajor(JSON.parse(event.target.value));
   }
 
   return (
@@ -183,6 +203,22 @@ const Settings = (props: {
             <option value={JSON.stringify(bachelor)}>
               {BACHELOR_NAMES[Number.parseInt(bachelor) as BachelorType]}
             </option>
+          )}
+        </For>
+      </select>
+
+      <label for="major-select">{t("major-select")}</label>
+      <select
+        id="major-select"
+        value={JSON.stringify(props.major == undefined ? null : props.major)}
+        onchange={changeMajor}
+      >
+        <option value={"null"}>
+          {`${t("major-automatic")} (${props.detectedMajor == undefined ? "none" : MAJOR_NAMES[props.detectedMajor]})`}
+        </option>
+        <For each={BACHELOR_MAJORS[props.bachelor ?? props.detectedBachelor]}>
+          {(major) => (
+            <option value={JSON.stringify(major)}>{MAJOR_NAMES[major]}</option>
           )}
         </For>
       </select>
