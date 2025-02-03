@@ -9,9 +9,9 @@ import {
 
 interface Settings {
   moduleEdits: ModuleEdit[];
-  semester?: Semester | null;
-  bachelor?: BachelorType | null;
-  major?: MajorType | null;
+  semester: Semester | null;
+  bachelor: BachelorType | null;
+  major: MajorType | null;
 }
 
 interface ModuleEdit {
@@ -111,11 +111,16 @@ export async function updateSettings(settings: Settings) {
 export { settings };
 
 export async function load(): Promise<void> {
-  const loaded = await chrome.runtime.sendMessage({ type: "loadSettings" });
-  if (isEmpty(loaded)) {
-    return;
-  }
-  setSettings(loaded);
+  const loaded = (await chrome.runtime.sendMessage({
+    type: "loadSettings",
+  })) as Partial<Settings>;
+  const settings: Settings = {
+    moduleEdits: loaded.moduleEdits ?? [],
+    semester: loaded.semester ?? null,
+    bachelor: loaded.bachelor ?? null,
+    major: loaded.major ?? null,
+  };
+  setSettings(settings);
 }
 
 export async function save() {

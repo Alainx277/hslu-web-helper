@@ -125,10 +125,10 @@ export const App = () => {
 };
 
 const Settings = (props: {
-  semester: Semester | null | undefined;
-  bachelor: BachelorType | null | undefined;
+  semester: Semester | null;
+  bachelor: BachelorType | null;
   detectedBachelor: BachelorType;
-  major: MajorType | null | undefined;
+  major: MajorType | null;
   detectedMajor: MajorType | undefined;
 }) => {
   function changeSemester(
@@ -172,9 +172,7 @@ const Settings = (props: {
       </div>
       <select
         id="semester-select"
-        value={JSON.stringify(
-          props.semester == undefined ? null : props.semester,
-        )}
+        value={JSON.stringify(props.semester)}
         onchange={changeSemester}
       >
         <option value={"null"}>{t("semester-current")}</option>
@@ -190,9 +188,7 @@ const Settings = (props: {
       <label for="bachelor-select">{t("bachelor-select")}</label>
       <select
         id="bachelor-select"
-        value={JSON.stringify(
-          props.bachelor == undefined ? null : props.bachelor,
-        )}
+        value={JSON.stringify(props.bachelor)}
         onchange={changeBachelor}
       >
         <option value={"null"}>
@@ -210,7 +206,7 @@ const Settings = (props: {
       <label for="major-select">{t("major-select")}</label>
       <select
         id="major-select"
-        value={JSON.stringify(props.major == undefined ? null : props.major)}
+        value={JSON.stringify(props.major)}
         onchange={changeMajor}
       >
         <option value={"null"}>
