@@ -45,7 +45,7 @@ export function getModuleType(
   const bachelorName = BachelorType[bachelor] as keyof typeof BachelorType;
   const moduleData = semesterData[module.shortName]?.[bachelorName];
   if (moduleData == undefined) {
-    console.warn("Module not found", module, bachelorName);
+    // Default to extension module
     return ModuleType.Extension;
   }
 
