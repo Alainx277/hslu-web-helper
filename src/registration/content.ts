@@ -89,6 +89,12 @@ async function handleTabChanged(): Promise<void> {
     bachelor: detectedBachelor,
     major: detectedMajor,
   } = localData();
+
+  // Don't display anything if we do not have users module data
+  if (modules.length == 0) {
+    return;
+  }
+
   const bachelor = settings().bachelor ?? detectedBachelor;
   const major = settings().major ?? detectedMajor;
   const semester = settings().semester ?? semesterFromDate(new Date());
