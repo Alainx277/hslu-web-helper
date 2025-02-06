@@ -73,6 +73,11 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
     return null;
   }
 
+  // Why is a parking permit a module?
+  if (apiModule.anlassnumber.includes(".PARK_")) {
+    return null;
+  }
+
   const { shortName, year, part: yearPart } = data;
 
   const currentSemester = semesterFromDate(new Date());
