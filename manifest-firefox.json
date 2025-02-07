@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "HSLU Web Helper",
   "description": "Extra features for HSLU websites used by students",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
@@ -27,12 +27,6 @@
   ],
   "background": {
     "scripts": ["build/background.js"]
-  },
-  "externally_connectable": {
-    "matches": [
-      "https://mycampus.hslu.ch/*/stud-i/mein-studium/meine-anmeldungen*",
-      "https://moduleinschreibung.hslu.ch/*"
-    ]
   },
   "permissions": ["storage"],
   "browser_specific_settings": {

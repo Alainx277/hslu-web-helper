@@ -37,3 +37,23 @@ Before creating a pull request, lint and format your changes.
 npm run lint
 npm run format
 ```
+
+### Firefox Release Build
+
+This section is required for Mozilla to review the addon.
+
+Software:
+
+- Windows 10
+- node v20.11.0
+- npm 10.2.4
+- powershell
+
+Build instructions:
+
+```
+npm install
+$env:BROWSER='firefox'
+$env:NODE_ENV='production'
+npm run build
+```
