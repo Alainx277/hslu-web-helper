@@ -12,7 +12,8 @@ export interface Module {
 export function parseModuleId(
   full: string,
 ): { shortName: string; year: number; part: "FS" | "HS" } | null {
-  const nameRegex = /^[^.]+\.(?:[^_.]+_)?([^.]+?)(?:_K)?\.([FH])?(\d\d)\d\d$/;
+  const nameRegex =
+    /^[^.]+\.(?:[^_.]+_)?([^.]+?)(?:_[KE])?\.([FH])?(\d\d)\d\d$/;
   const match = nameRegex.exec(full);
   if (!match) {
     return null;
