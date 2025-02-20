@@ -1,11 +1,4 @@
-import {
-  For,
-  Show,
-  createEffect,
-  createMemo,
-  createResource,
-  createSignal,
-} from "solid-js";
+import { For, Show, createEffect, createMemo, createResource } from "solid-js";
 import {
   BACHELOR_CREDITS,
   BACHELOR_MAJORS,
@@ -247,9 +240,6 @@ const Requirements = (props: {
   );
 
   const averageGrade = createMemo(() => {
-    if (!props.modules || props.modules.length === 0) {
-      return null;
-    }
     return calculateAverageGrade(props.modules);
   });
 
@@ -280,14 +270,10 @@ const Requirements = (props: {
           ></RequirementRow>
         </tbody>
       </table>
-      <Show when={props.modules && props.modules.length > 0}>
-        <div style="margin-top: 1em">
-          <strong>{t("average-grade")}:</strong>{" "}
-          {averageGrade() !== null
-            ? averageGrade()?.toFixed(2)
-            : t("no-grades")}
-        </div>
-      </Show>
+      <div style="margin-top: 1em">
+        <strong>{t("average-grade")}:</strong>{" "}
+        {averageGrade() !== null ? averageGrade()?.toFixed(2) : t("no-grades")}
+      </div>
     </>
   );
 };
