@@ -1,4 +1,11 @@
-import { For, Show, createEffect, createMemo, createResource } from "solid-js";
+import {
+  For,
+  Show,
+  createEffect,
+  createMemo,
+  createResource,
+  createSignal,
+} from "solid-js";
 import {
   BACHELOR_CREDITS,
   BACHELOR_MAJORS,
@@ -8,6 +15,7 @@ import {
   BachelorType,
   Credits,
   creditStatistics,
+  calculateAverageGrade,
   formatSemester,
   MAJOR_NAMES,
   MajorType,
@@ -135,7 +143,7 @@ const Settings = (props: {
     event: Event & {
       currentTarget: HTMLSelectElement;
       target: HTMLSelectElement;
-    },
+    }
   ) {
     storage.updateSemester(JSON.parse(event.target.value));
   }
@@ -144,7 +152,7 @@ const Settings = (props: {
     event: Event & {
       currentTarget: HTMLSelectElement;
       target: HTMLSelectElement;
-    },
+    }
   ) {
     storage.updateBachelor(JSON.parse(event.target.value));
   }
@@ -153,7 +161,7 @@ const Settings = (props: {
     event: Event & {
       currentTarget: HTMLSelectElement;
       target: HTMLSelectElement;
-    },
+    }
   ) {
     storage.updateMajor(JSON.parse(event.target.value));
   }
@@ -230,40 +238,52 @@ const Requirements = (props: {
 }) => {
   const reqs = BACHELOR_REQUIREMENTS[props.bachelor];
   const statistics = createMemo(() =>
-    creditStatistics(
-      props.modules,
-      props.semester,
-      props.bachelor,
-      props.major,
-    ),
+    creditStatistics(props.modules, props.semester, props.bachelor, props.major)
   );
 
+  const averageGrade = createMemo(() => {
+    if (!props.modules || props.modules.length === 0) {
+      return null;
+    }
+    return calculateAverageGrade(props.modules);
+  });
+
   return (
-    <table class="requirements" style="table-layout: fixed">
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">{t("core-module")}</th>
-          <th scope="col">{t("project-module")}</th>
-          <th scope="col">{t("major-module")}</th>
-          <th scope="col">{t("extension-module")}</th>
-          <th scope="col">{t("misc-module")}</th>
-          <th scope="col">{t("total")}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <RequirementRow
-          label={t("requirement-ongoing")}
-          credits={statistics().ongoing}
-          reqs={reqs}
-        ></RequirementRow>
-        <RequirementRow
-          label={t("requirement-completed")}
-          credits={statistics().done}
-          reqs={reqs}
-        ></RequirementRow>
-      </tbody>
-    </table>
+    <>
+      <table class="requirements" style="table-layout: fixed">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">{t("core-module")}</th>
+            <th scope="col">{t("project-module")}</th>
+            <th scope="col">{t("major-module")}</th>
+            <th scope="col">{t("extension-module")}</th>
+            <th scope="col">{t("misc-module")}</th>
+            <th scope="col">{t("total")}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <RequirementRow
+            label={t("requirement-ongoing")}
+            credits={statistics().ongoing}
+            reqs={reqs}
+          ></RequirementRow>
+          <RequirementRow
+            label={t("requirement-completed")}
+            credits={statistics().done}
+            reqs={reqs}
+          ></RequirementRow>
+        </tbody>
+      </table>
+      <Show when={props.modules && props.modules.length > 0}>
+        <div style="margin-top: 1em">
+          <strong>{t("average-grade")}:</strong>{" "}
+          {averageGrade() !== null
+            ? averageGrade()?.toFixed(2)
+            : t("no-grades")}
+        </div>
+      </Show>
+    </>
   );
 };
 
@@ -403,12 +423,12 @@ const ModulesTableNew = (props: {
       floatingFilter: true,
       valueGetter(params: { data: Module }) {
         return t(
-          `module-state-${ModuleState[params.data.state].toLowerCase()}`,
+          `module-state-${ModuleState[params.data.state].toLowerCase()}`
         );
       },
       filterValueGetter(params: { data: Module }) {
         return t(
-          `module-state-${ModuleState[params.data.state].toLowerCase()}`,
+          `module-state-${ModuleState[params.data.state].toLowerCase()}`
         );
       },
       editable: true,
@@ -442,7 +462,7 @@ const ModulesTableNew = (props: {
           props.semester,
           params.data,
           props.bachelor,
-          props.major,
+          props.major
         );
         if (type == null) {
           return "";
@@ -454,7 +474,7 @@ const ModulesTableNew = (props: {
           props.semester,
           params.data,
           props.bachelor,
-          props.major,
+          props.major
         );
         if (type == null) {
           return "";
