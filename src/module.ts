@@ -10,7 +10,7 @@ export interface Module {
 }
 
 export function parseModuleId(
-  full: string
+  full: string,
 ): { shortName: string; year: number; part: "FS" | "HS" } | null {
   const nameRegex =
     /^[^.]+\.(?:[^_.]+_)?([^.]+?)(?:_[KE])?\.([FH])?(\d\d)\d\d$/;
@@ -92,7 +92,7 @@ export function nextSemester(current: Semester): Semester {
     default:
       const exhaustiveCheck: never = current.part;
       throw new Error(
-        `Invalid semester part ${exhaustiveCheck}, this is a bug.}`
+        `Invalid semester part ${exhaustiveCheck}, this is a bug.}`,
       );
   }
 }
@@ -106,7 +106,7 @@ export function previousSemester(current: Semester): Semester {
     default:
       const exhaustiveCheck: never = current.part;
       throw new Error(
-        `Invalid semester part ${exhaustiveCheck}, this is a bug.`
+        `Invalid semester part ${exhaustiveCheck}, this is a bug.`,
       );
   }
 }
@@ -315,7 +315,7 @@ export function creditStatistics(
   modules: Module[],
   semester: Semester,
   bachelor: BachelorType,
-  major: MajorType | undefined
+  major: MajorType | undefined,
 ): CreditsStatistic {
   const ongoing: Credits = {
     coreCredits: 0,

@@ -143,7 +143,7 @@ const Settings = (props: {
     event: Event & {
       currentTarget: HTMLSelectElement;
       target: HTMLSelectElement;
-    }
+    },
   ) {
     storage.updateSemester(JSON.parse(event.target.value));
   }
@@ -152,7 +152,7 @@ const Settings = (props: {
     event: Event & {
       currentTarget: HTMLSelectElement;
       target: HTMLSelectElement;
-    }
+    },
   ) {
     storage.updateBachelor(JSON.parse(event.target.value));
   }
@@ -161,7 +161,7 @@ const Settings = (props: {
     event: Event & {
       currentTarget: HTMLSelectElement;
       target: HTMLSelectElement;
-    }
+    },
   ) {
     storage.updateMajor(JSON.parse(event.target.value));
   }
@@ -238,7 +238,12 @@ const Requirements = (props: {
 }) => {
   const reqs = BACHELOR_REQUIREMENTS[props.bachelor];
   const statistics = createMemo(() =>
-    creditStatistics(props.modules, props.semester, props.bachelor, props.major)
+    creditStatistics(
+      props.modules,
+      props.semester,
+      props.bachelor,
+      props.major,
+    ),
   );
 
   const averageGrade = createMemo(() => {
@@ -423,12 +428,12 @@ const ModulesTableNew = (props: {
       floatingFilter: true,
       valueGetter(params: { data: Module }) {
         return t(
-          `module-state-${ModuleState[params.data.state].toLowerCase()}`
+          `module-state-${ModuleState[params.data.state].toLowerCase()}`,
         );
       },
       filterValueGetter(params: { data: Module }) {
         return t(
-          `module-state-${ModuleState[params.data.state].toLowerCase()}`
+          `module-state-${ModuleState[params.data.state].toLowerCase()}`,
         );
       },
       editable: true,
@@ -462,7 +467,7 @@ const ModulesTableNew = (props: {
           props.semester,
           params.data,
           props.bachelor,
-          props.major
+          props.major,
         );
         if (type == null) {
           return "";
@@ -474,7 +479,7 @@ const ModulesTableNew = (props: {
           props.semester,
           params.data,
           props.bachelor,
-          props.major
+          props.major,
         );
         if (type == null) {
           return "";
