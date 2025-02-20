@@ -1,4 +1,3 @@
-
 requirements = Anforderungen
 modules = Module
 loading = Wird geladen...
@@ -58,3 +57,8 @@ export-csv = Als CSV exportieren
 
 completed = bestanden
 ongoing = laufend
+
+average-grade = Notendurchschnitt
+no-grades = Keine Noten verfügbar
+
+calculate-grade = Notendurchschnitt berechnen

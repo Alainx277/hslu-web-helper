@@ -1,4 +1,3 @@
-
 requirements = Requirements
 modules = Modules
 loading = Loading...
@@ -58,3 +57,8 @@ export-csv = Export as CSV
 
 completed = completed
 ongoing = ongoing
+
+average-grade = Average Grade
+no-grades = No grades available
+
+calculate-grade = Calculate Average Grade

@@ -391,3 +391,38 @@ export function moduleTypeToCreditsKey(type: ModuleType): keyof Credits {
       throw new Error(`Invalid module type ${exhaustiveCheck}, this is a bug.`);
   }
 }
+
+export function calculateAverageGrade(modules: Module[]): number | null {
+  const passedModulesWithGrades = modules.filter((m) => {
+    const isPassed = m.state === ModuleState.Passed;
+    const hasGrade =
+      m.grade !== null && !isNaN(Number(m.grade.replace(",", ".")));
+    const hasCredits = m.ects !== null;
+    return isPassed && hasGrade && hasCredits;
+  });
+
+  if (passedModulesWithGrades.length === 0) {
+    return null;
+  }
+
+  let totalWeightedGrades = 0;
+  let totalCredits = 0;
+
+  for (const module of passedModulesWithGrades) {
+    const grade = Number(module.grade!.replace(",", "."));
+    const credits = module.ects!;
+
+    if (isNaN(grade)) {
+      continue;
+    }
+
+    totalWeightedGrades += grade * credits;
+    totalCredits += credits;
+  }
+
+  if (totalCredits === 0) {
+    return null;
+  }
+
+  return Number((totalWeightedGrades / totalCredits).toFixed(2));
+}

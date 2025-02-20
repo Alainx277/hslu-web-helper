@@ -8,6 +8,7 @@ import {
   BachelorType,
   Credits,
   creditStatistics,
+  calculateAverageGrade,
   formatSemester,
   MAJOR_NAMES,
   MajorType,
@@ -238,32 +239,42 @@ const Requirements = (props: {
     ),
   );
 
+  const averageGrade = createMemo(() => {
+    return calculateAverageGrade(props.modules);
+  });
+
   return (
-    <table class="requirements" style="table-layout: fixed">
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">{t("core-module")}</th>
-          <th scope="col">{t("project-module")}</th>
-          <th scope="col">{t("major-module")}</th>
-          <th scope="col">{t("extension-module")}</th>
-          <th scope="col">{t("misc-module")}</th>
-          <th scope="col">{t("total")}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <RequirementRow
-          label={t("requirement-ongoing")}
-          credits={statistics().ongoing}
-          reqs={reqs}
-        ></RequirementRow>
-        <RequirementRow
-          label={t("requirement-completed")}
-          credits={statistics().done}
-          reqs={reqs}
-        ></RequirementRow>
-      </tbody>
-    </table>
+    <>
+      <table class="requirements" style="table-layout: fixed">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">{t("core-module")}</th>
+            <th scope="col">{t("project-module")}</th>
+            <th scope="col">{t("major-module")}</th>
+            <th scope="col">{t("extension-module")}</th>
+            <th scope="col">{t("misc-module")}</th>
+            <th scope="col">{t("total")}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <RequirementRow
+            label={t("requirement-ongoing")}
+            credits={statistics().ongoing}
+            reqs={reqs}
+          ></RequirementRow>
+          <RequirementRow
+            label={t("requirement-completed")}
+            credits={statistics().done}
+            reqs={reqs}
+          ></RequirementRow>
+        </tbody>
+      </table>
+      <div style="margin-top: 1em; margin-bottom: 1em">
+        <strong>{t("average-grade")}:</strong>{" "}
+        {averageGrade() !== null ? averageGrade()?.toFixed(2) : t("no-grades")}
+      </div>
+    </>
   );
 };
 
