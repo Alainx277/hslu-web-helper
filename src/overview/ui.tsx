@@ -270,7 +270,7 @@ const Requirements = (props: {
           ></RequirementRow>
         </tbody>
       </table>
-      <div style="margin-top: 1em">
+      <div style="margin-top: 1em; margin-bottom: 1em">
         <strong>{t("average-grade")}:</strong>{" "}
         {averageGrade() !== null ? averageGrade()?.toFixed(2) : t("no-grades")}
       </div>
