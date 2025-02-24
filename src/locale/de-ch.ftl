@@ -62,3 +62,9 @@ average-grade = Notendurchschnitt
 no-grades = Keine Noten verfügbar
 
 calculate-grade = Notendurchschnitt berechnen
+
+module-manual-add = Modul manuell hinzufügen
+module-short-name = Modul-Kürzel
+add = Hinzufügen
+cancel = Abbrechen
+year = Jahr
