@@ -1,4 +1,11 @@
-import { For, Show, createEffect, createMemo, createResource } from "solid-js";
+import {
+  For,
+  Show,
+  createEffect,
+  createMemo,
+  createResource,
+  createSignal,
+} from "solid-js";
 import {
   BACHELOR_CREDITS,
   BACHELOR_MAJORS,
@@ -27,6 +34,8 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./style.css";
 import { t } from "../i18n";
+import { AddModuleModal } from "./add-module-modal";
+import { Portal } from "solid-js/web";
 
 export const App = () => {
   const [loadSettings] = createResource(storage.load);
@@ -362,6 +371,7 @@ const ModulesTableNew = (props: {
   modules: Module[];
 }) => {
   let grid: AgGridSolidRef;
+  const [showManualAddModal, setShowManualAddModal] = createSignal(false);
 
   const defaultColDef = {
     filterParams: {
@@ -535,6 +545,18 @@ const ModulesTableNew = (props: {
       >
         {t("export-csv")}
       </a>
+      <a
+        type="button"
+        onclick={() => setShowManualAddModal(true)}
+        style="margin-left: 1em"
+      >
+        {t("module-manual-add")}
+      </a>
+      <Show when={showManualAddModal()}>
+        <Portal>
+          <AddModuleModal onClose={() => setShowManualAddModal(false)} />
+        </Portal>
+      </Show>
     </div>
   );
 };

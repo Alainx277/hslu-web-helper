@@ -396,7 +396,9 @@ export function calculateAverageGrade(modules: Module[]): number | null {
   const passedModulesWithGrades = modules.filter((m) => {
     const isPassed = m.state === ModuleState.Passed;
     const hasGrade =
-      m.grade !== null && !isNaN(Number(m.grade.replace(",", ".")));
+      m.grade !== null &&
+      m.grade !== undefined &&
+      !isNaN(Number(m.grade.replace(",", ".")));
     const hasCredits = m.ects !== null;
     return isPassed && hasGrade && hasCredits;
   });

@@ -14,7 +14,7 @@ interface Settings {
   major: MajorType | null;
 }
 
-interface ModuleEdit {
+export interface ModuleEdit {
   fullId: string;
   edits: Partial<Module & { type: ModuleType }>;
 }
@@ -51,6 +51,12 @@ export async function updateMajor(major: MajorType | null) {
 }
 
 export async function editModule(edit: ModuleEdit) {
+  // Safety check, should never happen, but if it would it would brick the table
+  if (!edit.fullId) {
+    console.error("No fullId in edit", edit);
+    return;
+  }
+
   const current = settings();
 
   const existingEdit = current.moduleEdits.find((x) => x.fullId == edit.fullId);
@@ -59,6 +65,8 @@ export async function editModule(edit: ModuleEdit) {
   edit.edits.semester ??= existingEdit?.edits?.semester;
   edit.edits.state ??= existingEdit?.edits?.state;
   edit.edits.type ??= existingEdit?.edits?.type;
+  edit.edits.shortName ??= existingEdit?.edits?.shortName;
+  edit.edits.fullId ??= existingEdit?.edits?.fullId;
 
   const newEdits = current.moduleEdits.filter((x) => x.fullId != edit.fullId);
   newEdits.push(edit);
@@ -85,7 +93,7 @@ export async function deleteModuleEdit(fullId: string) {
 
 export function getUserModules(apiModules: Module[]): Module[] {
   const current = settings();
-  return apiModules.map((module) => {
+  const editedModules = apiModules.map((module) => {
     const edit = current.moduleEdits.find((x) => x.fullId == module.fullId);
     if (!edit) {
       return module;
@@ -101,6 +109,15 @@ export function getUserModules(apiModules: Module[]): Module[] {
       semester: edit.edits.semester ?? module.semester,
     };
   });
+
+  const manualModules = current.moduleEdits
+    .filter(
+      (module) =>
+        !apiModules.some((apiModule) => apiModule.fullId === module.fullId),
+    )
+    .map((moduleEdit) => moduleEdit.edits as Module);
+
+  return [...editedModules, ...manualModules];
 }
 
 export async function updateSettings(settings: Settings) {
