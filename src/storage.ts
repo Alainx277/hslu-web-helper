@@ -1,6 +1,7 @@
 import { createSignal } from "solid-js";
 import {
   BachelorType,
+  compareSemester,
   MajorType,
   Module,
   ModuleType,
@@ -117,7 +118,9 @@ export function getUserModules(apiModules: Module[]): Module[] {
     )
     .map((moduleEdit) => moduleEdit.edits as Module);
 
-  return [...editedModules, ...manualModules];
+  return [...editedModules, ...manualModules].sort((a, b) =>
+    compareSemester(a.semester, b.semester),
+  );
 }
 
 export async function updateSettings(settings: Settings) {

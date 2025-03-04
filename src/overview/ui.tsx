@@ -24,6 +24,7 @@ import {
   ModuleType,
   Semester,
   semesterFromDate,
+  compareSemester,
 } from "../module";
 import * as api from "./api";
 import * as storage from "../storage";
@@ -409,19 +410,10 @@ const ModulesTableNew = (props: {
       headerName: t("header-semester"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
-      // valueGetter(params: { data: Module }) {
-      //   return `${params.data.semester.part} ${params.data.semester.year}`;
-      // },
       valueFormatter(params: { value: Semester }) {
         return `${params.value.part} ${params.value.year}`;
       },
-      comparator(valueA: Semester, valueB: Semester) {
-        if (valueA.year == valueB.year && valueA.part != valueB.part) {
-          return valueA.part == "HS" ? -1 : 1;
-        }
-
-        return valueB.year - valueA.year;
-      },
+      comparator: compareSemester,
     },
     {
       field: "state",
