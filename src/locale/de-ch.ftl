@@ -52,6 +52,7 @@ header-grade = Note
 header-actions = Aktionen
 
 remove-edit = Zurücksetzen
+remove-module = Modul entfernen
 
 export-csv = Als CSV exportieren
 

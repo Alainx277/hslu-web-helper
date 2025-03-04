@@ -36,6 +36,7 @@ import "./style.css";
 import { t } from "../i18n";
 import { AddModuleModal } from "./add-module-modal";
 import { Portal } from "solid-js/web";
+import { ColDef } from "ag-grid-community";
 
 export const App = () => {
   const [loadSettings] = createResource(storage.load);
@@ -390,13 +391,18 @@ const ModulesTableNew = (props: {
     .slice(0, types.length / 2)
     .map((x) => t(`module-type-${(x as string).toLowerCase()}`));
 
-  const columnDefs = [
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const columnDefs: ColDef<any, any>[] = [
     {
       field: "shortName",
       headerName: t("header-module"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
       flex: 1.5,
+      cellClassRules: {
+        "cell-module-manual": (p) =>
+          storage.getModuleEdit(p.data.fullId)?.edits.fullId != undefined,
+      },
     },
     {
       field: "semester",
@@ -562,14 +568,17 @@ const ModulesTableNew = (props: {
 };
 
 const ActionsCell = (props: { data: Module }) => {
+  const moduleEdit = createMemo(() => storage.getModuleEdit(props.data.fullId));
+  const isManual = createMemo(() => moduleEdit()?.edits.fullId != undefined);
+
   return (
-    <Show when={storage.getModuleEdit(props.data.fullId)}>
+    <Show when={moduleEdit()}>
       <div style="height: 100%; display: flex; align-items: center;">
         <a
-          title={t("remove-edit")}
+          title={isManual() ? t("remove-module") : t("remove-edit")}
           onClick={() => storage.deleteModuleEdit(props.data.fullId)}
         >
-          <i class="gg-remove-r"></i>
+          <i class={isManual() ? "gg-trash-empty" : "gg-remove-r"}></i>
         </a>
       </div>
     </Show>

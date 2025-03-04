@@ -52,6 +52,7 @@ header-grade = Grade
 header-actions = Actions
 
 remove-edit = Undo edits
+remove-module = Delete module
 
 export-csv = Export as CSV
 
