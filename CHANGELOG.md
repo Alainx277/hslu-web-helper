@@ -11,6 +11,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 !-->
 
+## [0.2.2] - 2025-03-04
+
 ### Added
 - Modules can be added manually (author: [Neyxo](https://github.com/Neyxo))
 - ECTS per module can be edited
@@ -43,7 +45,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Initial release
 
-[unreleased]: https://github.com/Alainx277/hslu-web-helper/compare/0.2.1...HEAD
+[unreleased]: https://github.com/Alainx277/hslu-web-helper/compare/0.2.2...HEAD
+[0.2.2]: https://github.com/Alainx277/hslu-web-helper/compare/0.2.1...0.2.2
 [0.2.1]: https://github.com/Alainx277/hslu-web-helper/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/Alainx277/hslu-web-helper/compare/0.1.1...0.2.0
 [0.1.1]: https://github.com/Alainx277/hslu-web-helper/releases/tag/0.1.1

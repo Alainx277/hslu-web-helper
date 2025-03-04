@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "HSLU Web Helper",
   "description": "Extra features for HSLU websites used by students",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
