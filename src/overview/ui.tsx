@@ -1,4 +1,11 @@
-import { For, Show, createEffect, createMemo, createResource } from "solid-js";
+import {
+  For,
+  Show,
+  createEffect,
+  createMemo,
+  createResource,
+  createSignal,
+} from "solid-js";
 import {
   BACHELOR_CREDITS,
   BACHELOR_MAJORS,
@@ -17,6 +24,7 @@ import {
   ModuleType,
   Semester,
   semesterFromDate,
+  compareSemester,
 } from "../module";
 import * as api from "./api";
 import * as storage from "../storage";
@@ -27,6 +35,9 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./style.css";
 import { t } from "../i18n";
+import { AddModuleModal } from "./add-module-modal";
+import { Portal } from "solid-js/web";
+import { ColDef } from "ag-grid-community";
 
 export const App = () => {
   const [loadSettings] = createResource(storage.load);
@@ -362,6 +373,7 @@ const ModulesTableNew = (props: {
   modules: Module[];
 }) => {
   let grid: AgGridSolidRef;
+  const [showManualAddModal, setShowManualAddModal] = createSignal(false);
 
   const defaultColDef = {
     filterParams: {
@@ -380,32 +392,28 @@ const ModulesTableNew = (props: {
     .slice(0, types.length / 2)
     .map((x) => t(`module-type-${(x as string).toLowerCase()}`));
 
-  const columnDefs = [
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const columnDefs: ColDef<any, any>[] = [
     {
       field: "shortName",
       headerName: t("header-module"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
       flex: 1.5,
+      cellClassRules: {
+        "cell-module-manual": (p) =>
+          storage.getModuleEdit(p.data.fullId)?.edits.fullId != undefined,
+      },
     },
     {
       field: "semester",
       headerName: t("header-semester"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
-      // valueGetter(params: { data: Module }) {
-      //   return `${params.data.semester.part} ${params.data.semester.year}`;
-      // },
       valueFormatter(params: { value: Semester }) {
         return `${params.value.part} ${params.value.year}`;
       },
-      comparator(valueA: Semester, valueB: Semester) {
-        if (valueA.year == valueB.year && valueA.part != valueB.part) {
-          return valueA.part == "HS" ? -1 : 1;
-        }
-
-        return valueB.year - valueA.year;
-      },
+      comparator: compareSemester,
     },
     {
       field: "state",
@@ -497,6 +505,23 @@ const ModulesTableNew = (props: {
       field: "ects",
       headerName: t("header-ects"),
       flex: 0.5,
+      editable: true,
+      valueSetter(params: {
+        data: Module;
+        newValue: number | null | undefined;
+      }): boolean {
+        if (params.newValue == null) {
+          return false;
+        }
+
+        storage.editModule({
+          fullId: params.data.fullId,
+          edits: {
+            ects: params.newValue,
+          },
+        });
+        return true;
+      },
     },
     {
       field: "grade",
@@ -535,19 +560,34 @@ const ModulesTableNew = (props: {
       >
         {t("export-csv")}
       </a>
+      <a
+        type="button"
+        onclick={() => setShowManualAddModal(true)}
+        style="margin-left: 1em"
+      >
+        {t("module-manual-add")}
+      </a>
+      <Show when={showManualAddModal()}>
+        <Portal>
+          <AddModuleModal onClose={() => setShowManualAddModal(false)} />
+        </Portal>
+      </Show>
     </div>
   );
 };
 
 const ActionsCell = (props: { data: Module }) => {
+  const moduleEdit = createMemo(() => storage.getModuleEdit(props.data.fullId));
+  const isManual = createMemo(() => moduleEdit()?.edits.fullId != undefined);
+
   return (
-    <Show when={storage.getModuleEdit(props.data.fullId)}>
+    <Show when={moduleEdit()}>
       <div style="height: 100%; display: flex; align-items: center;">
         <a
-          title={t("remove-edit")}
+          title={isManual() ? t("remove-module") : t("remove-edit")}
           onClick={() => storage.deleteModuleEdit(props.data.fullId)}
         >
-          <i class="gg-remove-r"></i>
+          <i class={isManual() ? "gg-trash-empty" : "gg-remove-r"}></i>
         </a>
       </div>
     </Show>

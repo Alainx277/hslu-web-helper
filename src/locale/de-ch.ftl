@@ -52,6 +52,7 @@ header-grade = Note
 header-actions = Aktionen
 
 remove-edit = Zurücksetzen
+remove-module = Modul entfernen
 
 export-csv = Als CSV exportieren
 
@@ -62,3 +63,9 @@ average-grade = Notendurchschnitt
 no-grades = Keine Noten verfügbar
 
 calculate-grade = Notendurchschnitt berechnen
+
+module-manual-add = Modul manuell hinzufügen
+module-short-name = Modul-Kürzel
+add = Hinzufügen
+cancel = Abbrechen
+year = Jahr

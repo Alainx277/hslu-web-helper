@@ -48,6 +48,14 @@ export function formatSemester(semester: Semester): string {
   return `${semester.part}${String(semester.year % 100).padStart(2, "0")}`;
 }
 
+export function compareSemester(valueA: Semester, valueB: Semester): number {
+  if (valueA.year == valueB.year && valueA.part != valueB.part) {
+    return valueA.part == "HS" ? -1 : 1;
+  }
+
+  return valueB.year - valueA.year;
+}
+
 // Returns the starting semester
 // Assumes the modules array is sorted in reverse time order
 export function startingSemester(modules: Module[]): Semester {
@@ -396,7 +404,9 @@ export function calculateAverageGrade(modules: Module[]): number | null {
   const passedModulesWithGrades = modules.filter((m) => {
     const isPassed = m.state === ModuleState.Passed;
     const hasGrade =
-      m.grade !== null && !isNaN(Number(m.grade.replace(",", ".")));
+      m.grade !== null &&
+      m.grade !== undefined &&
+      !isNaN(Number(m.grade.replace(",", ".")));
     const hasCredits = m.ects !== null;
     return isPassed && hasGrade && hasCredits;
   });

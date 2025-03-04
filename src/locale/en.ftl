@@ -52,6 +52,7 @@ header-grade = Grade
 header-actions = Actions
 
 remove-edit = Undo edits
+remove-module = Delete module
 
 export-csv = Export as CSV
 
@@ -62,3 +63,9 @@ average-grade = Average Grade
 no-grades = No grades available
 
 calculate-grade = Calculate Average Grade
+
+module-manual-add = Add a module manually
+module-short-name = Module short name
+add = Add
+cancel = Cancel
+year = Year
