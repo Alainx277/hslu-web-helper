@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 !-->
 
+### Added
+- Modules can be added manually (author: [Neyxo](https://github.com/Neyxo))
+- ECTS per module can be edited
+
 ## [0.2.1] - 2025-02-20
 
 ### Added
