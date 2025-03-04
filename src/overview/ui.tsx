@@ -505,6 +505,23 @@ const ModulesTableNew = (props: {
       field: "ects",
       headerName: t("header-ects"),
       flex: 0.5,
+      editable: true,
+      valueSetter(params: {
+        data: Module;
+        newValue: number | null | undefined;
+      }): boolean {
+        if (params.newValue == null) {
+          return false;
+        }
+
+        storage.editModule({
+          fullId: params.data.fullId,
+          edits: {
+            ects: params.newValue,
+          },
+        });
+        return true;
+      },
     },
     {
       field: "grade",
