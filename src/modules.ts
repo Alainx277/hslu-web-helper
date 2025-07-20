@@ -41,11 +41,13 @@ export function getModuleType(
   }
 
   // Look up hardcoded module data in extension
-  const semesterData = modulesData[formatSemester(semester)];
-  const bachelorName = BachelorType[bachelor] as keyof typeof BachelorType;
-  const moduleData = semesterData[module.shortName]?.[bachelorName];
-  if (moduleData == undefined) {
-    // Default to extension module
+  let moduleData = getModuleData(semester, module, bachelor);
+
+  // If the module doesn't exist in the chosen semester fall back to the semester it was completed
+  moduleData ??= getModuleData(module.semester, module, bachelor);
+
+  // If we have no data at all default to an extension module
+  if (!moduleData) {
     return ModuleType.Extension;
   }
 
@@ -60,6 +62,19 @@ export function getModuleType(
 
   // Stored module data will always have one of the valid module types
   return ModuleType[type as keyof typeof ModuleType];
+}
+
+function getModuleData(
+  semester: Semester,
+  module: Module,
+  bachelor: BachelorType,
+) {
+  const semesterData = modulesData[formatSemester(semester)];
+  if (semesterData == null) {
+    return undefined;
+  }
+  const bachelorName = BachelorType[bachelor] as keyof typeof BachelorType;
+  return semesterData[module.shortName]?.[bachelorName];
 }
 
 export function getSemesters(): Semester[] {
