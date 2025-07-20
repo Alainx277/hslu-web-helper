@@ -28,7 +28,6 @@
   "dependencies": {
     "@fluent/bundle": "^0.18.0",
     "ag-grid-solid": "^31.1.1",
-    "pdfjs-dist": "^4.2.67",
     "solid-js": "^1.8.17"
   }
 }
