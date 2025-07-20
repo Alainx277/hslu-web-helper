@@ -28,7 +28,11 @@ import {
 } from "../module";
 import * as api from "./api";
 import * as storage from "../storage";
-import { getModuleType, getSemesters } from "../modules";
+import {
+  getAllModulesForSemester,
+  getModuleType,
+  getSemesters,
+} from "../modules";
 import AgGridSolid, { AgGridSolidRef } from "ag-grid-solid";
 
 import "ag-grid-community/styles/ag-grid.css";
@@ -131,6 +135,12 @@ export const App = () => {
           major={major()!}
           modules={modules()!}
         ></ModulesTableNew>
+        <h2>{t("all-semester-modules")}</h2>
+        <AllModulesTable
+          semester={selectedSemester()}
+          bachelor={bachelor()!}
+          major={major()!}
+        />
       </Show>
     </>
   );
@@ -572,6 +582,80 @@ const ModulesTableNew = (props: {
           <AddModuleModal onClose={() => setShowManualAddModal(false)} />
         </Portal>
       </Show>
+    </div>
+  );
+};
+
+const AllModulesTable = (props: {
+  semester: Semester;
+  bachelor: BachelorType;
+  major: MajorType | undefined;
+}) => {
+  const allModules = createMemo(() => {
+    return getAllModulesForSemester(
+      semesterFromDate(new Date()),
+      props.bachelor,
+      props.major,
+    );
+  });
+
+  const columnDefs: ColDef[] = [
+    {
+      field: "shortName",
+      headerName: t("header-module"),
+      filter: "agTextColumnFilter",
+      floatingFilter: true,
+    },
+    {
+      field: "description",
+      headerName: t("header-description"),
+      filter: "agTextColumnFilter",
+      floatingFilter: true,
+      flex: 2,
+      wrapText: true,
+    },
+    {
+      field: "type",
+      headerName: t("header-type"),
+      filter: "agTextColumnFilter",
+      floatingFilter: true,
+      valueFormatter(params) {
+        if (params.value == null) {
+          return "";
+        }
+        return t(`module-type-${ModuleType[params.value].toLowerCase()}`);
+      },
+      flex: 1,
+    },
+    {
+      field: "ects",
+      headerName: t("header-ects"),
+      filter: "agNumberColumnFilter",
+      floatingFilter: true,
+      flex: 0.5,
+    },
+  ];
+
+  const defaultColDef: ColDef = {
+    filterParams: {
+      debounceMs: 100,
+    },
+    flex: 1,
+    sortable: true,
+    resizable: true,
+  };
+
+  return (
+    <div
+      class="ag-theme-alpine"
+      style={{ height: "500px", "margin-top": "1em" }}
+    >
+      <AgGridSolid
+        columnDefs={columnDefs}
+        defaultColDef={defaultColDef}
+        rowData={allModules()}
+        rowHeight={120}
+      />
     </div>
   );
 };

@@ -162,3 +162,10 @@ div input.ag-input-field-input {
 div button.ag-button {
   margin: auto;
 }
+
+/* Nicer text wrapping in tables */
+.ag-cell.ag-cell-wrap-text {
+  line-height: unset;
+  overflow-y: auto;
+  word-break: unset;
+}

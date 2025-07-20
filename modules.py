@@ -17,15 +17,16 @@ def setup_logging():
 def sort_result(result):
     sorted_result = {}
     for module in sorted(result.keys()):
+        sorted_result[module] = result[module]
         sorted_departments = {}
-        for dept in sorted(result[module].keys()):
-            dept_info = result[module][dept]
+        for dept in sorted(result[module]["bachelors"].keys()):
+            dept_info = result[module]["bachelors"][dept]
             # Sort majors if they exist
             if "majors" in dept_info:
                 sorted_majors = sorted(dept_info["majors"])
                 dept_info["majors"] = sorted_majors
             sorted_departments[dept] = dept_info
-        sorted_result[module] = sorted_departments
+        sorted_result[module]["bachelors"] = sorted_departments
     return sorted_result
 
 def map_department(department, short_name, logger):
@@ -131,7 +132,11 @@ def fetch_semester_data(semester, logger):
                 continue
 
             if short_name not in result:
-                result[short_name] = {}
+                result[short_name] = {
+                    "ects": int(module.get("Ects", "0")),
+                    "description": module.get("Description", ""),
+                    "bachelors": {}
+                }
 
             module_offers = module.get("ModuleOffers", [])
             if not isinstance(module_offers, list):
@@ -154,16 +159,16 @@ def fetch_semester_data(semester, logger):
                 majors = extract_majors(offered_classes, short_name, logger)
 
                 if mapped_dept not in result[short_name]:
-                    result[short_name][mapped_dept] = {
+                    result[short_name]["bachelors"][mapped_dept] = {
                         "type": mapped_type,
                         "obligatory": is_obligatory
                     }
 
                 if majors:
-                    existing_majors = result[short_name][mapped_dept].get("majors", [])
+                    existing_majors = result[short_name]["bachelors"][mapped_dept].get("majors", [])
                     # Avoid duplicate majors
                     combined_majors = list(set(existing_majors + majors))
-                    result[short_name][mapped_dept]["majors"] = combined_majors
+                    result[short_name]["bachelors"][mapped_dept]["majors"] = combined_majors
 
         except Exception as e:
             logger.error(f"Error processing module '{module.get('ShortName', 'Unknown')}' for semester '{semester}': {e}")
