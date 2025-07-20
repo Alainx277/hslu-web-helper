@@ -24954,5 +24954,3940 @@
         "obligatory": false
       }
     }
+  },
+  "HS25": {
+    "3DMOD4RT": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      }
+    },
+    "4DAUT": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ABIZ": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ACBA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ACMETSS": {},
+    "AD": {
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ADCREA": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ADML": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceVisualComputing",
+          "DataScienceDataEngineering"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      }
+    },
+    "ADP": {},
+    "ADPENTEST": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester"
+        ]
+      }
+    },
+    "ADRM": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "ADS": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ADSS": {},
+    "AEDC1": {},
+    "AEDC2": {},
+    "AEDCIT": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "AEDCTO": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "AGAMEDEV": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      }
+    },
+    "AICASE": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "AICH": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "AICOMP": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "AIRCH": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRoboticsMinor"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRobotics"
+        ]
+      }
+    },
+    "AIRWEEK": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRoboticsMinor"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRobotics"
+        ]
+      }
+    },
+    "AISO": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRoboticsMinor"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRobotics",
+          "ArtificialIntelligenceVisualComputing"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "AISUS": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "AI_ISA": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "AKIC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "AMLMED": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "MedtechHealthcare"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ANA-G": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ANAF": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ANCPH": {},
+    "ANGCPH": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "APCSA": {},
+    "APPLAI": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "MedtechHealthcare"
+        ]
+      }
+    },
+    "AR": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      }
+    },
+    "ARINT": {},
+    "ARTIFIN": {},
+    "ASACPH": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ASTAT": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement",
+          "InformationSecurityTechnologie"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ASTATF": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BAA": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "BADIT": {},
+    "BCHAIN": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BCON": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "BDLC": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      }
+    },
+    "BDLS": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering",
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "BDM": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BHLP1": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "BHLP2": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "BIDS": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering",
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "BLOCC": {},
+    "BLOCCAI": {},
+    "BPRAXIS_1": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BPRAXIS_2": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BPRAXIS_3": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BPRAXIS_XXX": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "BPROI": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "BSCMA": {},
+    "BUDDY": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "BUINT": {},
+    "BUPRMA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "BUSOD": {},
+    "BYOB": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "CAB": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "CAEPRO": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "CF": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalForensic"
+        ]
+      }
+    },
+    "CG": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceVisualComputing"
+        ]
+      }
+    },
+    "CHMA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "CI": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "CISO_ISSUES": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "CLOUDSEC": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "CNA": {
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "CNAIS": {},
+    "COACH": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "COBAU": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "COMGI": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "COMGX": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "COMPMATHS": {},
+    "COMPP": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "COMS": {
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "CONEBA": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "CONS": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis"
+        ]
+      }
+    },
+    "CONSBW": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis"
+        ]
+      }
+    },
+    "CONWB": {},
+    "CPLAB": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareEngineeringDevops"
+        ]
+      }
+    },
+    "CRIT_ISA": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "CRS": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalForensic",
+          "InformationSecurityManagement"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "CSA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "CSARCH": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot"
+        ]
+      }
+    },
+    "CT": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "CTIU": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "CVAI": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRobotics",
+          "ArtificialIntelligenceVisualComputing"
+        ]
+      }
+    },
+    "CW": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester"
+        ]
+      }
+    },
+    "CYBER": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "CloudMobileIot",
+          "DigitalForensic",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "CYBER2": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester"
+        ]
+      }
+    },
+    "CYC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot",
+          "DigitalForensic",
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "CYSECO": {
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "DAMA": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DAMABA": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DAMGT": {},
+    "DAPRBA": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DAS": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "DASB": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis",
+          "DataScienceDataEngineering",
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "DAVI": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      }
+    },
+    "DAWA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis",
+          "DataScienceDataEngineering"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis",
+          "DataScienceDataEngineering",
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "DB&S": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DBS": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DCEX": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "DDSEMAB": {},
+    "DENG": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "DEVOPS": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareEngineeringDevops"
+        ]
+      }
+    },
+    "DEWEB": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DFF": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalForensic"
+        ]
+      }
+    },
+    "DIBM": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "DICO": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "DIGCRE": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "DIGIBUMO": {},
+    "DIGITAL": {},
+    "DIGMGT": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DIMA": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "DIPRO": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DIRPCO": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DIST": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis",
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "DITEC": {},
+    "DITI": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "DK": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "DL4G": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "DLP": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "DMATH": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DMATH-ALGO": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DMATH-CODE": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "DRONES": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRoboticsMinor"
+        ]
+      }
+    },
+    "DSO": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "DSPRO1": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "DSPRO2": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "DSTPS": {},
+    "DVIZ": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "EALA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis"
+        ]
+      }
+    },
+    "ECIOT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ECOM": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "EINFBUB": {
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "EINFITB": {
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ENGDBU": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ENGFTD": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ENGPRA": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ENGTCS": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ENLAB": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareEngineeringDevops"
+        ]
+      }
+    },
+    "ERPAP": {},
+    "ERPBRM": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ETHAI": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ETHDW": {},
+    "ETHIK": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "FADU": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "FAUE": {},
+    "FININ": {},
+    "FIT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "FITE": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "FKOM": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "FM_3": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "FM_6": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "GAME": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "GAMEDES": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "GAMEDEV": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      }
+    },
+    "GAMEPROD": {},
+    "GEEI": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "GENCG": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "GIS": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "GPDA": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis"
+        ]
+      }
+    },
+    "HCD": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis"
+        ]
+      }
+    },
+    "HCDE": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "HFD": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality",
+          "HumanComputerInteractionDesign"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality",
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "HOA": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "HPP_1_3": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "HRI": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRoboticsMinor"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRobotics",
+          "ArtificialIntelligenceVisualComputing"
+        ]
+      }
+    },
+    "HTCLAW": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalForensic"
+        ]
+      }
+    },
+    "I2C": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IAI": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "IAIEX": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "IAM": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "IAVR_BW": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      }
+    },
+    "IBIS": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ICCO": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ICPRO": {},
+    "IG": {},
+    "IGAME": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "IIP1": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "IIP2": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "IKDZ": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IKV": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IL_LECT": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IL_PROJ": {
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "IMATH": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IMLAB": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "INFSC": {},
+    "ININCOP": {},
+    "INLP": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceVisualComputing",
+          "DataScienceDataEngineering"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      }
+    },
+    "INMA": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "BusinessAnalysis"
+        ]
+      }
+    },
+    "INMAC": {},
+    "INTAC": {},
+    "INTAF": {},
+    "INTCOMP": {},
+    "INTEC": {},
+    "INTLA": {
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "INTOT": {},
+    "INTROIMMTECH": {},
+    "INTROL": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "INTRO_QC": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IOPT": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IOS": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IOT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRoboticsMinor"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "IOTHACK": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IPEUS": {
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "IPROBA": {
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "IRFORENSIC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalForensic"
+        ]
+      }
+    },
+    "IRSECPOL": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ISA": {},
+    "ISA_MU": {},
+    "ISF": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ISFCS": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ISLAB": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "ISM": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "ISMA": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ISPTM": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ISSS": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ISTO": {},
+    "ITA_A1": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ITA_B1": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ITEC": {},
+    "ITEO": {
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ITIA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot"
+        ]
+      }
+    },
+    "ITMGMT": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "ITPRB": {},
+    "ITPRBA": {
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "ITRE": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "IUX": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "IXD": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "JSJ_ISA": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "KIPRO": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "KOMA": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "KRINF": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "KRINFLAB": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "KRKO": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "KRR": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "KRYPTO": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "KRYPTOB": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      }
+    },
+    "KRYPTOE": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "KRYPTOG": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ItOperationSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "KUFA": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "LAB_AR": {},
+    "LAB_DDG": {},
+    "LAB_HCD": {},
+    "LAB_INIS": {},
+    "LAB_PD": {},
+    "LAB_VR": {},
+    "LIAL": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "LIOS": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "LSPHR": {},
+    "LWD": {},
+    "MAAC": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MABU": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MAGA": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MAIDICO": {},
+    "MAITPRO": {},
+    "MALDASC": {},
+    "MALWLAB": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "DigitalForensic"
+        ]
+      }
+    },
+    "MAT1": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MAT2": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MATBF": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MATCS": {},
+    "MATDM": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MATGC": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MATHESIS": {},
+    "MATHSDD": {},
+    "MATHSIMTEC": {},
+    "MCIF": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot",
+          "DigitalForensic"
+        ]
+      }
+    },
+    "MEDIMG": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "MedtechHealthcare"
+        ]
+      }
+    },
+    "MICRO": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "ML": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceVisualComputing",
+          "DataScienceDataEngineering"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DataScienceDataEngineering"
+        ]
+      }
+    },
+    "MLOPS": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MOBILSEC": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "MOBINFSEC": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot"
+        ]
+      }
+    },
+    "MOBLAB": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareDevelopment",
+          "SoftwareEngineeringDevops"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MOBPRO": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MOD": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "MTIV": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MTOP": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "MWI1": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "NAFU": {},
+    "NAIT": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "NALAPRO": {},
+    "NAND2TETRIS": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "NATCYSEC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "NETDA": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "NETT": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "NETW1": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "NETW2": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "NETW3": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "NLP": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "NO_LECT": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "NO_PROJ": {
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "NPE1": {
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "NPE2": {
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "ONBU": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "DigitalBusiness"
+        ]
+      }
+    },
+    "OOP": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "OOPCREA": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "OSA": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "OSSEC": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "PCP": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareDevelopment",
+          "SoftwareEngineeringDevops"
+        ]
+      }
+    },
+    "PEFU": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "PHKI": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "PIPE": {
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "PLAB": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "PMB": {
+      "ArtificialIntelligence": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "PMRE": {
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "PRAXIS_VT": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "PRG": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "PRIVACY": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationCyberSecurity"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "PROFU": {},
+    "PROG": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "PROMPT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "PROTCO": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "PTA": {
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "PYTHON": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "P_MUS1_MU": {},
+    "P_MUS3": {},
+    "QMUDC_MP_1": {},
+    "RANDANDALG": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "RAYTRACING": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "REBUPRO": {},
+    "RED": {},
+    "REUF": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "REVE1": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "REVE2": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "DigitalForensic",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "RIPRO": {},
+    "RL": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "ArtificialIntelligenceRobotics"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "RMDI": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "ROBO": {
+      "ArtificialIntelligence": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "RSEC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "SAADBE": {},
+    "SAAELC": {},
+    "SAATEC": {},
+    "SAWDBE": {},
+    "SAWELC": {},
+    "SAWTEC": {},
+    "SBITBA": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "SDDW": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "SEBI": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "SECPROJ": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "SEDM": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "SEER": {
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SGC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "SGPOR": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "InformationSecurityManagement"
+        ]
+      }
+    },
+    "SIOT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "CloudMobileIot",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "SMF": {},
+    "SOC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "CloudMobileIot",
+          "DigitalForensic",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "SOCIAL": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SOCPR": {
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SOMS": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SOUNDCREA": {},
+    "SPA_A1": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SPA_A2": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SPCS": {},
+    "SPOAT_ISA": {
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SPREN1": {
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "SPREN2": {
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "SPRG": {
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "SPTA": {
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "SQAS": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STCSA": {},
+    "STCSB": {},
+    "STDW": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STMGT": {},
+    "STUEM": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STUG1": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STUG2": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STUIN": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "STUPR": {
+      "DigitalIdeation": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "STUPX": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STUU1": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STUW1": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "STUW2": {
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "SUDIT": {},
+    "SUMBLOCK": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "SUM_SCHOOL": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "SWAT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareEngineering"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareDevelopment",
+          "SoftwareEngineeringDevops"
+        ]
+      }
+    },
+    "SWAW": {},
+    "SWDA": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareEngineering"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "SWDE": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "SWENG": {},
+    "SWT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareEngineering"
+        ]
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareDevelopment",
+          "SoftwareEngineeringDevops"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "SYSSEC": {
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AttackPentester",
+          "DigitalForensic",
+          "InformationSecurityTechnologie"
+        ]
+      }
+    },
+    "TECHPM": {},
+    "TIME": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "UGDM": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "URT": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "USAB": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality",
+          "HumanComputerInteractionDesign",
+          "SoftwareDevelopment",
+          "SoftwareEngineeringDevops"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality",
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "VID": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "HumanComputerInteractionDesign"
+        ]
+      }
+    },
+    "VRT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "AugmentedVirtualReality"
+        ]
+      }
+    },
+    "VSK": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "VWL": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "WEBLAB": {
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "SoftwareDevelopment",
+          "SoftwareEngineeringDevops"
+        ]
+      }
+    },
+    "WEBT": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Core",
+        "obligatory": true
+      },
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "WEBXR": {},
+    "WEB_ISA": {},
+    "WECOT": {},
+    "WECOTE": {
+      "Economics": {
+        "type": "Core",
+        "obligatory": true
+      }
+    },
+    "WIDA": {
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "WIPRO": {
+      "ComputerScience": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Project",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Project",
+        "obligatory": false
+      }
+    },
+    "WSFM": {
+      "ArtificialIntelligence": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Misc",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Misc",
+        "obligatory": false
+      }
+    },
+    "XAI": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false,
+        "majors": [
+          "MedtechHealthcare"
+        ]
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    },
+    "XML": {
+      "ArtificialIntelligence": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "ComputerScience": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "CyberSecurity": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "DigitalIdeation": {
+        "type": "Extension",
+        "obligatory": false
+      },
+      "Economics": {
+        "type": "Extension",
+        "obligatory": false
+      }
+    }
   }
 }
