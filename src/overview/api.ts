@@ -82,7 +82,7 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
 
   const currentSemester = semesterFromDate(new Date());
   // Parse module state from the (non-standard) comment
-  let moduleState = ModuleState.NotApplicable;
+  let moduleState: ModuleState | null = null;
   if (apiModule.prop1.length > 0) {
     const comment = apiModule.prop1[0].text.toLowerCase();
     if (comment.includes("erfolgreich")) {
@@ -91,12 +91,15 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
         : ModuleState.Passed;
     } else if (comment.includes("testat")) {
       const previous = previousSemester(currentSemester);
-      if (previous.year == year && previous.part == yearPart) {
+      if (comment.includes("nicht")) {
+        // Didn't complete testat, module doesn't count
+        moduleState = ModuleState.NotApplicable;
+      } else if (previous.year == year && previous.part == yearPart) {
         moduleState = ModuleState.Ongoing;
       }
     }
   }
-  if (moduleState == ModuleState.NotApplicable) {
+  if (moduleState == null) {
     // Module is currently running
     if (currentSemester.year == year && currentSemester.part == yearPart) {
       moduleState = ModuleState.Ongoing;
@@ -113,7 +116,7 @@ function moduleFromApi(apiModule: ApiModule): Module | null {
     fullId: apiModule.anlassnumber,
     ects: apiModule.ects != null ? +apiModule.ects : null,
     grade: apiModule.note,
-    state: moduleState,
+    state: moduleState ?? ModuleState.NotApplicable,
     shortName: shortName,
     semester: { year, part: yearPart },
   };
