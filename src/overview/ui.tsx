@@ -116,47 +116,59 @@ export const App = () => {
         when={modules() != null && !studyInfo.loading}
         fallback={<p>{t("loading")}</p>}
       >
-        <h2>{t("settings")}</h2>
-        <Settings
-          semester={configuredSemester()}
-          bachelor={storage.settings().bachelor}
-          detectedBachelor={studyInfo()!.bachelor}
-          major={storage.settings().major}
-          detectedMajor={studyInfo()!.major}
-        ></Settings>
-        <h2>{t("requirements")}</h2>
-        <Requirements
-          semester={selectedSemester()}
-          bachelor={bachelor()!}
-          major={major()!}
-          modules={modules()!}
-        ></Requirements>
-        <div style={{ display: "flex" }}>
-          <h2>{t("modules")}</h2>
-          <i class="gg-info" title={t("modules-help")}></i>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem">
+          <div>
+            <h2>{t("settings")}</h2>
+            <Settings
+              semester={configuredSemester()}
+              bachelor={storage.settings().bachelor}
+              detectedBachelor={studyInfo()!.bachelor}
+              major={storage.settings().major}
+              detectedMajor={studyInfo()!.major}
+            ></Settings>
+          </div>
+          <div>
+            <h2>{t("requirements")}</h2>
+            <Requirements
+              semester={selectedSemester()}
+              bachelor={bachelor()!}
+              major={major()!}
+              modules={modules()!}
+            ></Requirements>
+          </div>
+          <div>
+            <div style={{ display: "flex" }}>
+              <h2>{t("modules")}</h2>
+              <i class="gg-info" title={t("modules-help")}></i>
+            </div>
+            <ModulesTableNew
+              semester={selectedSemester()}
+              bachelor={bachelor()!}
+              major={major()!}
+              modules={modules()!}
+            ></ModulesTableNew>
+          </div>
+          <div>
+            <h2>{t("all-semester-modules")}</h2>
+            <AllModulesTable
+              semester={selectedSemester()}
+              bachelor={bachelor()!}
+              major={major()!}
+              startingSemester={startingSemester(modules()!)}
+              partTime={studyInfo()!.partTime}
+            />
+          </div>
+          <div>
+            <h2>{t("semester-planning")}</h2>
+            <SemesterPlanning
+              modules={modules()!}
+              bachelor={bachelor()!}
+              major={major()!}
+              partTime={studyInfo()!.partTime}
+              semester={selectedSemester()}
+            />
+          </div>
         </div>
-        <ModulesTableNew
-          semester={selectedSemester()}
-          bachelor={bachelor()!}
-          major={major()!}
-          modules={modules()!}
-        ></ModulesTableNew>
-        <h2>{t("all-semester-modules")}</h2>
-        <AllModulesTable
-          semester={selectedSemester()}
-          bachelor={bachelor()!}
-          major={major()!}
-          startingSemester={startingSemester(modules()!)}
-          partTime={studyInfo()!.partTime}
-        />
-        <h2>{t("semester-planning")}</h2>
-        <SemesterPlanning
-          modules={modules()!}
-          bachelor={bachelor()!}
-          major={major()!}
-          partTime={studyInfo()!.partTime}
-          semester={selectedSemester()}
-        />
       </Show>
     </>
   );
@@ -307,7 +319,7 @@ const Requirements = (props: {
           ></RequirementRow>
         </tbody>
       </table>
-      <div style="margin-top: 1em; margin-bottom: 1em">
+      <div style="margin-top: 1em;">
         <strong>{t("average-grade")}:</strong>{" "}
         {averageGrade() !== null ? averageGrade()?.toFixed(2) : t("no-grades")}
       </div>
