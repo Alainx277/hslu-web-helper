@@ -4,8 +4,10 @@ import {
   compareSemester,
   MajorType,
   Module,
+  ModuleState,
   ModuleType,
   Semester,
+  semesterFromDate,
 } from "./module";
 
 interface Settings {
@@ -78,6 +80,31 @@ export async function editModule(edit: ModuleEdit) {
   await save();
 }
 
+export async function planModule(
+  module: Partial<Module & { type: ModuleType }>,
+  semester: Semester,
+) {
+  const fullId = `planned_${module.shortName}_${semester.year}_${semester.part}`;
+
+  const existingEdit = getModuleEdit(fullId);
+  if (existingEdit) {
+    console.warn("This module is already planned for this semester.");
+    return;
+  }
+
+  const edit: ModuleEdit = {
+    fullId,
+    edits: {
+      ...module,
+      fullId,
+      state: ModuleState.Planned,
+      semester: semester,
+    },
+  };
+
+  await editModule(edit);
+}
+
 export function getModuleEdit(fullId: string): ModuleEdit | undefined {
   return settings().moduleEdits.find((x) => x.fullId == fullId);
 }
@@ -116,7 +143,11 @@ export function getUserModules(apiModules: Module[]): Module[] {
       (module) =>
         !apiModules.some((apiModule) => apiModule.fullId === module.fullId),
     )
-    .map((moduleEdit) => moduleEdit.edits as Module);
+    .map((moduleEdit) => {
+      const newModule = structuredClone(moduleEdit.edits as Module);
+      newModule.manual = true;
+      return newModule;
+    });
 
   return [...editedModules, ...manualModules].sort((a, b) =>
     compareSemester(a.semester, b.semester),
@@ -140,7 +171,23 @@ export async function load(): Promise<void> {
     bachelor: loaded.bachelor ?? null,
     major: loaded.major ?? null,
   };
+
+  // Filter out old planned modules
+  const currentSemester = semesterFromDate(new Date());
+  const isOutdated = (edit: ModuleEdit) =>
+    edit.edits.state === ModuleState.Planned &&
+    edit.edits.semester != null &&
+    compareSemester(edit.edits.semester, currentSemester) > 0;
+  const originalEdits = settings.moduleEdits;
+  settings.moduleEdits = settings.moduleEdits.filter(
+    (edit) => !isOutdated(edit),
+  );
+
   setSettings(settings);
+
+  if (originalEdits.length != settings.moduleEdits.length) {
+    await save();
+  }
 }
 
 export async function save() {

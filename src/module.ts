@@ -7,6 +7,7 @@ export interface Module {
   state: ModuleState;
   grade: string | null;
   semester: Semester;
+  manual?: true;
 }
 
 export function parseModuleId(
@@ -117,6 +118,33 @@ export function previousSemester(current: Semester): Semester {
         `Invalid semester part ${exhaustiveCheck}, this is a bug.`,
       );
   }
+}
+
+const FULL_TIME_SEMESTERS = 6;
+const PART_TIME_SEMESTERS = 8;
+
+export function upcomingSemesters(
+  current: Semester,
+  partTime: boolean,
+  started: Semester,
+): Semester[] {
+  const semesters: Semester[] = [];
+  const totalSemesters = partTime ? PART_TIME_SEMESTERS : FULL_TIME_SEMESTERS;
+  let semestersCompleted = 0;
+  while (started.year != current.year || started.part != current.part) {
+    semestersCompleted++;
+    started = nextSemester(started);
+  }
+
+  const semestersRemaining = totalSemesters - semestersCompleted;
+  // Always show at least current and next semester for planning
+  // Some students will need more than the ideal amount of semesters
+  const semestersToShow = Math.max(2, semestersRemaining);
+  for (let i = 0; i < semestersToShow; i++) {
+    semesters.push(current);
+    current = nextSemester(current);
+  }
+  return semesters;
 }
 
 export interface BachelorRequirement {
@@ -355,6 +383,46 @@ export function creditStatistics(
   }
 
   return { done, ongoing: ongoing };
+}
+
+export function creditsIncludingPlanned(
+  modules: Module[],
+  semester: Semester,
+  calculationSemester: Semester,
+  bachelor: BachelorType,
+  major: MajorType | undefined,
+) {
+  const baseStats = creditStatistics(
+    modules,
+    calculationSemester,
+    bachelor,
+    major,
+  );
+
+  const plannedCredits: Credits = {
+    coreCredits: 0,
+    projectCredits: 0,
+    majorCredits: 0,
+    extensionCredits: 0,
+    miscCredits: 0,
+    totalCredits: 0,
+  };
+
+  const plannedModules = modules.filter(
+    (m) =>
+      m.state === ModuleState.Planned &&
+      compareSemester(m.semester, semester) >= 0,
+  );
+
+  for (const module of plannedModules) {
+    const type = getModuleType(calculationSemester, module, bachelor, major);
+    if (module.ects == null) {
+      continue;
+    }
+    assignCredits(plannedCredits, module.ects, type ?? ModuleType.Extension);
+  }
+
+  return { ...baseStats, planned: plannedCredits };
 }
 
 function assignCredits(credits: Credits, amount: number, type: ModuleType) {

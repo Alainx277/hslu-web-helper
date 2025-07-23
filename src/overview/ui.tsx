@@ -25,6 +25,9 @@ import {
   Semester,
   semesterFromDate,
   compareSemester,
+  startingSemester,
+  upcomingSemesters,
+  creditsIncludingPlanned,
 } from "../module";
 import * as api from "./api";
 import * as storage from "../storage";
@@ -42,6 +45,7 @@ import { t } from "../i18n";
 import { AddModuleModal } from "./add-module-modal";
 import { Portal } from "solid-js/web";
 import { ColDef } from "ag-grid-community";
+import { ICellRendererParams } from "ag-grid-community";
 
 export const App = () => {
   const [loadSettings] = createResource(storage.load);
@@ -59,7 +63,9 @@ export const App = () => {
     if (loadSettings.loading) {
       return null;
     }
-    return storage.getUserModules(api);
+    const allModules = storage.getUserModules(api);
+    allModules.sort((a, b) => compareSemester(a.semester, b.semester));
+    return allModules;
   });
 
   const configuredSemester = createMemo(() => {
@@ -140,6 +146,16 @@ export const App = () => {
           semester={selectedSemester()}
           bachelor={bachelor()!}
           major={major()!}
+          startingSemester={startingSemester(modules()!)}
+          partTime={studyInfo()!.partTime}
+        />
+        <h2>{t("semester-planning")}</h2>
+        <SemesterPlanning
+          modules={modules()!}
+          bachelor={bachelor()!}
+          major={major()!}
+          partTime={studyInfo()!.partTime}
+          semester={selectedSemester()}
         />
       </Show>
     </>
@@ -300,16 +316,18 @@ const Requirements = (props: {
 };
 
 const RequirementRow = (props: {
-  label: string;
+  label?: string;
   credits: Credits;
   reqs: BachelorRequirement;
 }) => {
   return (
     <tr>
-      <td>{props.label}</td>
+      <Show when={props.label != null}>
+        <td>{props.label}</td>
+      </Show>
       <Show
         when={props.reqs.coreCredits != undefined}
-        fallback={<p>{t("requirement-not-needed")}</p>}
+        fallback={<td>{t("requirement-not-needed")}</td>}
       >
         <RequirementCell
           value={props.credits.coreCredits}
@@ -318,7 +336,7 @@ const RequirementRow = (props: {
       </Show>
       <Show
         when={props.reqs.projectCredits != undefined}
-        fallback={<p>{t("requirement-not-needed")}</p>}
+        fallback={<td>{t("requirement-not-needed")}</td>}
       >
         <RequirementCell
           value={props.credits.projectCredits}
@@ -327,7 +345,7 @@ const RequirementRow = (props: {
       </Show>
       <Show
         when={props.reqs.majorCredits != undefined}
-        fallback={<p>{t("requirement-not-needed")}</p>}
+        fallback={<td>{t("requirement-not-needed")}</td>}
       >
         <RequirementCell
           value={props.credits.majorCredits}
@@ -336,7 +354,7 @@ const RequirementRow = (props: {
       </Show>
       <Show
         when={props.reqs.extensionCredits != undefined}
-        fallback={<p>{t("requirement-not-needed")}</p>}
+        fallback={<td>{t("requirement-not-needed")}</td>}
       >
         <RequirementCell
           value={props.credits.extensionCredits}
@@ -345,7 +363,7 @@ const RequirementRow = (props: {
       </Show>
       <Show
         when={props.reqs.miscCredits != undefined}
-        fallback={<p>{t("requirement-not-needed")}</p>}
+        fallback={<td>{t("requirement-not-needed")}</td>}
       >
         <RequirementCell
           value={props.credits.miscCredits}
@@ -373,6 +391,64 @@ const RequirementCell = (props: { value: number; required: number }) => {
         data-fulfilled={props.value >= props.required}
       ></progress>
     </td>
+  );
+};
+
+const PlannedSemesterRequirements = (props: {
+  semester: Semester;
+  calculationSemester: Semester;
+  bachelor: BachelorType;
+  major: MajorType | undefined;
+  modules: Module[];
+}) => {
+  const reqs = BACHELOR_REQUIREMENTS[props.bachelor];
+
+  const statistics = createMemo(() =>
+    creditsIncludingPlanned(
+      props.modules,
+      props.semester,
+      props.calculationSemester,
+      props.bachelor,
+      props.major,
+    ),
+  );
+
+  // Combine previous and planned credits
+  const combinedCredits = createMemo((): Credits => {
+    const stats = statistics();
+    const base =
+      compareSemester(props.semester, semesterFromDate(new Date())) === 0
+        ? stats.done
+        : stats.ongoing;
+    return {
+      coreCredits: base.coreCredits + stats.planned.coreCredits,
+      projectCredits: base.projectCredits + stats.planned.projectCredits,
+      majorCredits: base.majorCredits + stats.planned.majorCredits,
+      extensionCredits: base.extensionCredits + stats.planned.extensionCredits,
+      miscCredits: base.miscCredits + stats.planned.miscCredits,
+      totalCredits: base.totalCredits + stats.planned.totalCredits,
+    };
+  });
+
+  return (
+    <table class="requirements" style="table-layout: fixed">
+      <thead>
+        <tr>
+          <th scope="col">{t("core-module")}</th>
+          <th scope="col">{t("project-module")}</th>
+          <th scope="col">{t("major-module")}</th>
+          <th scope="col">{t("extension-module")}</th>
+          <th scope="col">{t("misc-module")}</th>
+          <th scope="col">{t("total")}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <RequirementRow
+          credits={combinedCredits()}
+          reqs={reqs}
+        ></RequirementRow>
+      </tbody>
+    </table>
   );
 };
 
@@ -411,8 +487,7 @@ const ModulesTableNew = (props: {
       floatingFilter: true,
       flex: 1.5,
       cellClassRules: {
-        "cell-module-manual": (p) =>
-          storage.getModuleEdit(p.data.fullId)?.edits.fullId != undefined,
+        "cell-module-manual": (p) => p.data.manual,
       },
     },
     {
@@ -421,7 +496,7 @@ const ModulesTableNew = (props: {
       filter: "agTextColumnFilter",
       floatingFilter: true,
       valueFormatter(params: { value: Semester }) {
-        return `${params.value.part} ${params.value.year}`;
+        return formatSemester(params.value);
       },
       comparator: compareSemester,
     },
@@ -586,16 +661,68 @@ const ModulesTableNew = (props: {
   );
 };
 
+const PlanModuleCell = (
+  props: ICellRendererParams & { semesters: Semester[] },
+) => {
+  const [selectedSemester, setSelectedSemester] = createSignal<string>("null");
+
+  const planModule = () => {
+    const semester: Semester | null = JSON.parse(selectedSemester());
+    if (!semester) return;
+
+    const { shortName, ects, type } = props.data;
+    storage.planModule(
+      {
+        shortName,
+        ects,
+        type,
+      },
+      semester,
+    );
+  };
+
+  return (
+    <div style="display: flex; align-items: center; gap: 5px; height: 100%;">
+      <select
+        onChange={(e) => setSelectedSemester(e.currentTarget.value)}
+        value={selectedSemester()}
+      >
+        <option value="null" selected disabled>
+          {t("plan-for-semester")}
+        </option>
+        <For each={props.semesters}>
+          {(s) => (
+            <option value={JSON.stringify(s)}>{formatSemester(s)}</option>
+          )}
+        </For>
+      </select>
+      <a type="button" onclick={planModule}>
+        {t("plan-button")}
+      </a>
+    </div>
+  );
+};
+
 const AllModulesTable = (props: {
   semester: Semester;
   bachelor: BachelorType;
   major: MajorType | undefined;
+  startingSemester: Semester;
+  partTime: boolean;
 }) => {
   const allModules = createMemo(() => {
     return getAllModulesForSemester(
       semesterFromDate(new Date()),
       props.bachelor,
       props.major,
+    );
+  });
+
+  const semestersToPlanFor = createMemo(() => {
+    return upcomingSemesters(
+      semesterFromDate(new Date()),
+      props.partTime,
+      props.startingSemester,
     );
   });
 
@@ -634,6 +761,14 @@ const AllModulesTable = (props: {
       floatingFilter: true,
       flex: 0.5,
     },
+    {
+      headerName: t("header-plan"),
+      cellRenderer: PlanModuleCell,
+      cellRendererParams: {
+        semesters: semestersToPlanFor(),
+      },
+      flex: 1.5,
+    },
   ];
 
   const defaultColDef: ColDef = {
@@ -662,18 +797,87 @@ const AllModulesTable = (props: {
 
 const ActionsCell = (props: { data: Module }) => {
   const moduleEdit = createMemo(() => storage.getModuleEdit(props.data.fullId));
-  const isManual = createMemo(() => moduleEdit()?.edits.fullId != undefined);
 
   return (
     <Show when={moduleEdit()}>
       <div style="height: 100%; display: flex; align-items: center;">
         <a
-          title={isManual() ? t("remove-module") : t("remove-edit")}
+          title={props.data.manual ? t("remove-module") : t("remove-edit")}
           onClick={() => storage.deleteModuleEdit(props.data.fullId)}
         >
-          <i class={isManual() ? "gg-trash-empty" : "gg-remove-r"}></i>
+          <i class={props.data.manual ? "gg-trash-empty" : "gg-remove-r"}></i>
         </a>
       </div>
     </Show>
+  );
+};
+
+const SemesterPlanning = (props: {
+  modules: Module[];
+  bachelor: BachelorType;
+  major: MajorType | undefined;
+  partTime: boolean;
+  semester: Semester;
+}) => {
+  const futureSemesters = createMemo(() => {
+    return upcomingSemesters(
+      semesterFromDate(new Date()),
+      props.partTime,
+      startingSemester(props.modules),
+    );
+  });
+
+  return (
+    <div style={{ "margin-top": "1em" }}>
+      <For each={futureSemesters()}>
+        {(semester) => {
+          const plannedModulesForSemester = createMemo(() =>
+            props.modules.filter(
+              (m) =>
+                m.state === ModuleState.Planned &&
+                compareSemester(m.semester, semester) === 0,
+            ),
+          );
+          return (
+            <div style="margin-bottom: 2em; margin-top: 1em;">
+              <h3>{formatSemester(semester)}</h3>
+              <PlannedSemesterRequirements
+                semester={semester}
+                calculationSemester={props.semester}
+                bachelor={props.bachelor}
+                major={props.major}
+                modules={props.modules}
+              />
+              <h4>{t("planned-modules-for-semester")}</h4>
+              <Show
+                when={plannedModulesForSemester().length > 0}
+                fallback={<p>{t("no-modules-planned")}</p>}
+              >
+                <ul class="planned-modules-list">
+                  <For each={plannedModulesForSemester()}>
+                    {(module) => (
+                      <li>
+                        {module.shortName} ({module.ects} ECTS)
+                        <Show when={module.manual}>
+                          <a
+                            class="planned-module-delete"
+                            title={t("remove-module")}
+                            onClick={() =>
+                              storage.deleteModuleEdit(module.fullId)
+                            }
+                          >
+                            <i class="gg-trash-empty"></i>
+                          </a>
+                        </Show>
+                      </li>
+                    )}
+                  </For>
+                </ul>
+              </Show>
+            </div>
+          );
+        }}
+      </For>
+    </div>
   );
 };
