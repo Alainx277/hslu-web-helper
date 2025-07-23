@@ -45,7 +45,7 @@ import { t } from "../i18n";
 import { AddModuleModal } from "./add-module-modal";
 import { Portal } from "solid-js/web";
 import { ColDef } from "ag-grid-community";
-import { ICellRendererParams } from "ag-grid-community";
+import { ICellRendererParams, ValueSetterParams } from "ag-grid-community";
 
 export const App = () => {
   const [loadSettings] = createResource(storage.load);
@@ -684,6 +684,7 @@ const PlanModuleCell = (
   return (
     <div style="display: flex; align-items: center; gap: 5px; height: 100%;">
       <select
+        style="margin: 0px"
         onChange={(e) => setSelectedSemester(e.currentTarget.value)}
         value={selectedSemester()}
       >
@@ -767,7 +768,6 @@ const AllModulesTable = (props: {
       cellRendererParams: {
         semesters: semestersToPlanFor(),
       },
-      flex: 1.5,
     },
   ];
 
@@ -812,6 +812,101 @@ const ActionsCell = (props: { data: Module }) => {
   );
 };
 
+const PlannedSemesterTable = (props: {
+  modules: Module[];
+  bachelor: BachelorType;
+  major: MajorType | undefined;
+  semester: Semester;
+}) => {
+  const types = Object.values(ModuleType);
+  const typeValues = types
+    .slice(0, types.length / 2)
+    .map((x) => t(`module-type-${(x as string).toLowerCase()}`));
+
+  const columnDefs: ColDef<Module>[] = [
+    {
+      field: "shortName",
+      headerName: t("header-module"),
+      flex: 2,
+    },
+    {
+      headerName: t("header-type"),
+      flex: 1.5,
+      valueGetter(params) {
+        if (!params.data) return "";
+        const type = getModuleType(
+          props.semester,
+          params.data,
+          props.bachelor,
+          props.major,
+        );
+        if (type == null) {
+          return "";
+        }
+        return t(`module-type-${ModuleType[type].toLowerCase()}`);
+      },
+      editable: true,
+      cellEditor: "agSelectCellEditor",
+      cellEditorParams: {
+        values: typeValues,
+      },
+      valueSetter(params: ValueSetterParams<Module, string>): boolean {
+        if (params.newValue == null) return false;
+
+        const index = typeValues.indexOf(params.newValue);
+        if (index == -1) {
+          console.error("unknown type value");
+          return false;
+        }
+
+        storage.editModule({
+          fullId: params.data.fullId,
+          edits: {
+            type: index,
+          },
+        });
+        return false;
+      },
+    },
+    {
+      field: "ects",
+      headerName: t("header-ects"),
+      flex: 1,
+      editable: true,
+      valueSetter(
+        params: ValueSetterParams<Module, number | null | undefined>,
+      ): boolean {
+        if (params.newValue == null) {
+          return false;
+        }
+
+        storage.editModule({
+          fullId: params.data.fullId,
+          edits: {
+            ects: params.newValue,
+          },
+        });
+        return true;
+      },
+    },
+    {
+      headerName: t("header-actions"),
+      cellRenderer: ActionsCell,
+      flex: 1,
+      minWidth: 50,
+    },
+  ];
+
+  return (
+    <div
+      class="ag-theme-alpine"
+      style={{ height: "200px", "margin-top": "1em" }}
+    >
+      <AgGridSolid columnDefs={columnDefs} rowData={props.modules} />
+    </div>
+  );
+};
+
 const SemesterPlanning = (props: {
   modules: Module[];
   bachelor: BachelorType;
@@ -848,31 +943,16 @@ const SemesterPlanning = (props: {
                 major={props.major}
                 modules={props.modules}
               />
-              <h4>{t("planned-modules-for-semester")}</h4>
               <Show
                 when={plannedModulesForSemester().length > 0}
                 fallback={<p>{t("no-modules-planned")}</p>}
               >
-                <ul class="planned-modules-list">
-                  <For each={plannedModulesForSemester()}>
-                    {(module) => (
-                      <li>
-                        {module.shortName} ({module.ects} ECTS)
-                        <Show when={module.manual}>
-                          <a
-                            class="planned-module-delete"
-                            title={t("remove-module")}
-                            onClick={() =>
-                              storage.deleteModuleEdit(module.fullId)
-                            }
-                          >
-                            <i class="gg-trash-empty"></i>
-                          </a>
-                        </Show>
-                      </li>
-                    )}
-                  </For>
-                </ul>
+                <PlannedSemesterTable
+                  modules={plannedModulesForSemester()}
+                  bachelor={props.bachelor}
+                  major={props.major}
+                  semester={props.semester}
+                />
               </Show>
             </div>
           );

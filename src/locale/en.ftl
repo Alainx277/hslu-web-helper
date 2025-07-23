@@ -71,3 +71,10 @@ cancel = Cancel
 year = Year
 
 all-semester-modules = Available Modules
+header-description = Description
+
+semester-planning = Semester planning
+header-plan = Plan
+no-modules-planned = No modules planned
+plan-for-semester = Choose semester
+plan-button = Plan
