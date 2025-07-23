@@ -15,6 +15,7 @@ interface Settings {
   semester: Semester | null;
   bachelor: BachelorType | null;
   major: MajorType | null;
+  congratulated: boolean;
 }
 
 export interface ModuleEdit {
@@ -27,6 +28,7 @@ const [settings, setSettings] = createSignal<Settings>({
   semester: null,
   bachelor: null,
   major: null,
+  congratulated: false,
 });
 
 export async function updateSemester(semester: Semester | null) {
@@ -105,6 +107,15 @@ export async function planModule(
   await editModule(edit);
 }
 
+export async function saveCongratulated() {
+  const current = settings();
+  const newSettings = Object.assign({}, current);
+  newSettings.congratulated = true;
+
+  setSettings(newSettings);
+  await save();
+}
+
 export function getModuleEdit(fullId: string): ModuleEdit | undefined {
   return settings().moduleEdits.find((x) => x.fullId == fullId);
 }
@@ -170,6 +181,7 @@ export async function load(): Promise<void> {
     semester: loaded.semester ?? null,
     bachelor: loaded.bachelor ?? null,
     major: loaded.major ?? null,
+    congratulated: loaded.congratulated ?? false,
   };
 
   // Filter out old planned modules

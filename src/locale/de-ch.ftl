@@ -78,3 +78,5 @@ header-plan = Planen
 no-modules-planned = Keine Module geplant
 plan-for-semester = Semester wählen
 plan-button = Planen
+
+congratulations = GLÜCKWUNSCH

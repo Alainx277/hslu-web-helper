@@ -5,6 +5,7 @@ import {
   createMemo,
   createResource,
   createSignal,
+  onMount,
 } from "solid-js";
 import {
   BACHELOR_CREDITS,
@@ -46,6 +47,7 @@ import { AddModuleModal } from "./add-module-modal";
 import { Portal } from "solid-js/web";
 import { ColDef } from "ag-grid-community";
 import { ICellRendererParams, ValueSetterParams } from "ag-grid-community";
+import Confetti from "./confetti";
 
 export const App = () => {
   const [loadSettings] = createResource(storage.load);
@@ -116,6 +118,14 @@ export const App = () => {
         when={modules() != null && !studyInfo.loading}
         fallback={<p>{t("loading")}</p>}
       >
+        <Show
+          when={
+            !storage.settings().congratulated &&
+            modules()!.some((m) => m.shortName == "DIPLOM")
+          }
+        >
+          <CongratulationsMessage />
+        </Show>
         <div style="display: flex; flex-direction: column; gap: 1.5rem">
           <div>
             <h2>{t("settings")}</h2>
@@ -971,5 +981,35 @@ const SemesterPlanning = (props: {
         }}
       </For>
     </div>
+  );
+};
+
+const CongratulationsMessage = () => {
+  const [isFading, setIsFading] = createSignal(false);
+
+  onMount(() => {
+    const timer = setTimeout(() => {
+      setIsFading(true);
+    }, 4500);
+
+    const endTimer = setTimeout(async () => {
+      await storage.saveCongratulated();
+    }, 10000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(endTimer);
+    };
+  });
+
+  return (
+    <>
+      <Confetti duration={5} />
+      <div class="overlay-message" classList={{ "fade-out": isFading() }}>
+        <h1 style="font-size: 8rem;" class="rainbow-text">
+          {t("congratulations")}
+        </h1>
+      </div>
+    </>
   );
 };
