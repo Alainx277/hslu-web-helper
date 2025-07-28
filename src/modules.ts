@@ -4,6 +4,7 @@ import {
   MajorType,
   Module,
   ModuleType,
+  previousSemester,
   Semester,
 } from "./module";
 import modulesDataRaw from "./modules.json";
@@ -112,11 +113,14 @@ export function getAllModulesForSemester(
   bachelor: BachelorType,
   major: MajorType | undefined,
 ): ModuleData[] {
-  const semesterKey = formatSemester(semester);
-  const semesterData = modulesData[semesterKey];
+  let semesterData = null;
 
-  if (semesterData == null) {
-    return [];
+  // Try to find desired semester data, but fallback to older semesters if not present
+  while (semesterData == null) {
+    const semesterKey = formatSemester(semester);
+    semesterData = modulesData[semesterKey];
+
+    semester = previousSemester(semester);
   }
 
   const bachelorName = BachelorType[bachelor] as keyof typeof BachelorType;
