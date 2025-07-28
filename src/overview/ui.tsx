@@ -770,11 +770,11 @@ const AllModulesTable = (props: {
       headerName: t("header-type"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
-      valueFormatter(params) {
-        if (params.value == null) {
+      valueGetter(params) {
+        if (params.data == null) {
           return "";
         }
-        return t(`module-type-${ModuleType[params.value].toLowerCase()}`);
+        return t(`module-type-${ModuleType[params.data.type].toLowerCase()}`);
       },
       flex: 1,
     },
