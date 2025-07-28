@@ -70,7 +70,6 @@ add = Hinzufügen
 cancel = Abbrechen
 year = Jahr
 
-all-semester-modules = Verfügbare Module
 header-description = Beschreibung
 
 semester-planning = Semesterplanung

@@ -70,7 +70,6 @@ add = Add
 cancel = Cancel
 year = Year
 
-all-semester-modules = Available Modules
 header-description = Description
 
 semester-planning = Semester planning

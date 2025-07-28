@@ -159,26 +159,25 @@ export const App = () => {
               modules={modules()!}
             ></ModulesTableNew>
           </div>
-          <div>
-            <h2>{t("all-semester-modules")}</h2>
-            <AllModulesTable
-              semester={selectedSemester()}
-              bachelor={bachelor()!}
-              major={major()!}
-              startingSemester={startingSemester(modules()!)}
-              partTime={studyInfo()!.partTime}
-            />
-          </div>
-          <div>
-            <h2>{t("semester-planning")}</h2>
-            <SemesterPlanning
-              modules={modules()!}
-              bachelor={bachelor()!}
-              major={major()!}
-              partTime={studyInfo()!.partTime}
-              semester={selectedSemester()}
-            />
-          </div>
+          <details>
+            <summary style="display: revert;">{t("semester-planning")}</summary>
+            <div>
+              <AllModulesTable
+                semester={selectedSemester()}
+                bachelor={bachelor()!}
+                major={major()!}
+                startingSemester={startingSemester(modules()!)}
+                partTime={studyInfo()!.partTime}
+              />
+              <SemesterPlanning
+                modules={modules()!}
+                bachelor={bachelor()!}
+                major={major()!}
+                partTime={studyInfo()!.partTime}
+                semester={selectedSemester()}
+              />
+            </div>
+          </details>
         </div>
       </Show>
     </>
