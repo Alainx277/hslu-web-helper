@@ -10,6 +10,11 @@ progress[data-fulfilled="true"] {
   font-style: italic;
 }
 
+.cell-module-passed {
+  font-style: italic;
+  font-weight: lighter;
+}
+
 /* Icons */
 .gg-remove-r {
   box-sizing: border-box;

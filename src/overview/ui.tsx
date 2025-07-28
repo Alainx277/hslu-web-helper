@@ -163,6 +163,7 @@ export const App = () => {
             <summary style="display: revert;">{t("semester-planning")}</summary>
             <div>
               <AllModulesTable
+                modules={modules()!}
                 semester={selectedSemester()}
                 bachelor={bachelor()!}
                 major={major()!}
@@ -728,18 +729,31 @@ const PlanModuleCell = (
 };
 
 const AllModulesTable = (props: {
+  modules: Module[];
   semester: Semester;
   bachelor: BachelorType;
   major: MajorType | undefined;
   startingSemester: Semester;
   partTime: boolean;
 }) => {
+  type PersonalizedModuleData = ModuleData & { passed?: true };
   const allModules = createMemo(() => {
-    return getAllModulesForSemester(
+    const allModules: PersonalizedModuleData[] = getAllModulesForSemester(
       semesterFromDate(new Date()),
       props.bachelor,
       props.major,
     );
+    for (const module of allModules) {
+      if (
+        props.modules.find(
+          (m) =>
+            m.shortName == module.shortName && m.state == ModuleState.Passed,
+        )
+      ) {
+        module.passed = true;
+      }
+    }
+    return allModules;
   });
 
   const semestersToPlanFor = createMemo(() => {
@@ -750,12 +764,15 @@ const AllModulesTable = (props: {
     );
   });
 
-  const columnDefs: ColDef<ModuleData>[] = [
+  const columnDefs: ColDef<PersonalizedModuleData>[] = [
     {
       field: "shortName",
       headerName: t("header-module"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
+      cellClassRules: {
+        "cell-module-passed": (p) => p.data!.passed == true,
+      },
     },
     {
       field: "description",
