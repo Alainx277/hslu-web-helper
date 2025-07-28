@@ -36,6 +36,7 @@ import {
   getAllModulesForSemester,
   getModuleType,
   getSemesters,
+  ModuleData,
 } from "../modules";
 import AgGridSolid, { AgGridSolidRef } from "ag-grid-solid";
 
@@ -501,7 +502,7 @@ const ModulesTableNew = (props: {
     .map((x) => t(`module-type-${(x as string).toLowerCase()}`));
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const columnDefs: ColDef<any, any>[] = [
+  const columnDefs: ColDef<Module, any>[] = [
     {
       field: "shortName",
       headerName: t("header-module"),
@@ -509,7 +510,7 @@ const ModulesTableNew = (props: {
       floatingFilter: true,
       flex: 1.5,
       cellClassRules: {
-        "cell-module-manual": (p) => p.data.manual,
+        "cell-module-manual": (p) => p.data!.manual == true,
       },
     },
     {
@@ -527,14 +528,14 @@ const ModulesTableNew = (props: {
       headerName: t("header-state"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
-      valueGetter(params: { data: Module }) {
+      valueGetter(params: { data: Module | undefined }) {
         return t(
-          `module-state-${ModuleState[params.data.state].toLowerCase()}`,
+          `module-state-${ModuleState[params.data!.state].toLowerCase()}`,
         );
       },
-      filterValueGetter(params: { data: Module }) {
+      filterValueGetter(params: { data: Module | undefined }) {
         return t(
-          `module-state-${ModuleState[params.data.state].toLowerCase()}`,
+          `module-state-${ModuleState[params.data!.state].toLowerCase()}`,
         );
       },
       editable: true,
@@ -559,14 +560,13 @@ const ModulesTableNew = (props: {
       },
     },
     {
-      field: "type",
       headerName: t("header-type"),
       filter: "agTextColumnFilter",
       floatingFilter: true,
-      valueGetter(params: { data: Module }) {
+      valueGetter(params: { data: Module | undefined }) {
         const type = getModuleType(
           props.semester,
-          params.data,
+          params.data!,
           props.bachelor,
           props.major,
         );
@@ -575,10 +575,10 @@ const ModulesTableNew = (props: {
         }
         return t(`module-type-${ModuleType[type].toLowerCase()}`);
       },
-      filterValueGetter(params: { data: Module }) {
+      filterValueGetter(params: { data: Module | undefined }) {
         const type = getModuleType(
           props.semester,
-          params.data,
+          params.data!,
           props.bachelor,
           props.major,
         );
@@ -613,6 +613,7 @@ const ModulesTableNew = (props: {
       headerName: t("header-ects"),
       flex: 0.5,
       editable: true,
+      cellEditor: "agNumberCellEditor",
       valueSetter(params: {
         data: Module;
         newValue: number | null | undefined;
@@ -750,7 +751,7 @@ const AllModulesTable = (props: {
     );
   });
 
-  const columnDefs: ColDef[] = [
+  const columnDefs: ColDef<ModuleData>[] = [
     {
       field: "shortName",
       headerName: t("header-module"),
@@ -896,6 +897,7 @@ const PlannedSemesterTable = (props: {
       headerName: t("header-ects"),
       flex: 1,
       editable: true,
+      cellEditor: "agNumberCellEditor",
       valueSetter(
         params: ValueSetterParams<Module, number | null | undefined>,
       ): boolean {

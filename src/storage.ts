@@ -195,6 +195,13 @@ export async function load(): Promise<void> {
     (edit) => !isOutdated(edit),
   );
 
+  // Fix string ECTS data (I love JavaScript!!!)
+  for (const entry of settings.moduleEdits) {
+    if (entry.edits.ects != null) {
+      entry.edits.ects = Number(entry.edits.ects);
+    }
+  }
+
   setSettings(settings);
 
   if (originalEdits.length != settings.moduleEdits.length) {

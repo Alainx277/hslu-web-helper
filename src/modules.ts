@@ -100,11 +100,18 @@ function calculateModuleType(
   return ModuleType[typeName as keyof typeof ModuleType];
 }
 
+export type ModuleData = {
+  shortName: string;
+  type: ModuleType;
+  ects: number;
+  description: string;
+};
+
 export function getAllModulesForSemester(
   semester: Semester,
   bachelor: BachelorType,
   major: MajorType | undefined,
-) {
+): ModuleData[] {
   const semesterKey = formatSemester(semester);
   const semesterData = modulesData[semesterKey];
 
