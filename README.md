@@ -38,6 +38,19 @@ npm run lint
 npm run format
 ```
 
+### Module data
+
+Data about modules is stored inside of the extension using the `src/modules.json` file. It needs to be updated once per semester using the `modules.py` script. The only argument is the first available semester (should always be F21):
+
+```shell
+python .\modules.py F21
+```
+
+This process uses the API for the HSLU Module Master maintained by other students. We cache the data here because the API might stop existing.
+
+In case the API ever stops being updated there's the original `module-extractor` Rust program which reads the data from the actual PDFs on MyCampus.
+Unfortunately the newer PDFs use a matrix which can't be parsed using text, as it originally was implemented. I'd rely on a multimodal LLM or other neural network OCR solution to parse the matrix from the PDF.
+
 ### Firefox Release Build
 
 This section is required for Mozilla to review the addon.
