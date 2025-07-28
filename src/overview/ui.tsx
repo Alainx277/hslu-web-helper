@@ -707,6 +707,7 @@ const PlanModuleCell = (
     <div style="display: flex; align-items: center; gap: 5px; height: 100%;">
       <select
         style="margin: 0px"
+        class="ag-select ag-picker-field-wrapper"
         onChange={(e) => setSelectedSemester(e.currentTarget.value)}
         value={selectedSemester()}
       >
