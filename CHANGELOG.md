@@ -12,6 +12,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 !-->
 
+### Added
+
+- Semester planning: plan what modules you'll take in future semesters
+- Module data for HS25
+- Fallback if module type is not defined in selected calculation semester
+
+### Fixed
+
+- Modules with a failed testat in previous semesters no longer count as "ongoing"
+
 ## [0.2.2] - 2025-03-04
 
 ### Added
