@@ -170,6 +170,7 @@ export enum BachelorType {
   Economics,
   ArtificialIntelligence,
   DigitalIdeation,
+  ImmersiveTechnologies,
 }
 
 type EnumDictionary<T extends string | symbol | number, U> = {
@@ -183,6 +184,7 @@ export const BACHELOR_NAMES: EnumDictionary<BachelorType, string> = {
   [BachelorType.ArtificialIntelligence]:
     "Artificial Intelligence & Machine Learning",
   [BachelorType.DigitalIdeation]: "Digital Ideation",
+  [BachelorType.ImmersiveTechnologies]: "Immersive Technologies",
 };
 
 export const BACHELOR_REQUIREMENTS: EnumDictionary<
@@ -222,6 +224,13 @@ export const BACHELOR_REQUIREMENTS: EnumDictionary<
     totalCredits: 180,
   },
   [BachelorType.DigitalIdeation]: {
+    totalCredits: 180,
+  },
+  [BachelorType.ImmersiveTechnologies]: {
+    coreCredits: 75,
+    projectCredits: 60,
+    extensionCredits: 18,
+    miscCredits: 27,
     totalCredits: 180,
   },
 };
@@ -328,6 +337,7 @@ export const BACHELOR_MAJORS: EnumDictionary<BachelorType, MajorType[]> = {
     MajorType.ArtificialIntelligenceRoboticsMinor,
   ],
   [BachelorType.DigitalIdeation]: [],
+  [BachelorType.ImmersiveTechnologies]: [],
 };
 
 export const BACHELOR_CREDITS: number = 180;

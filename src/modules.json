@@ -24090,6 +24090,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -24276,6 +24280,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -24296,6 +24304,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -24441,6 +24453,10 @@
           "majors": [
             "ArtificialIntelligenceRobotics"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -24554,6 +24570,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -24632,6 +24652,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -24662,6 +24686,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -25039,6 +25067,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -25085,6 +25117,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -25182,6 +25218,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -25624,6 +25664,10 @@
           "majors": [
             "DigitalBusiness"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -25728,6 +25772,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -25837,6 +25885,10 @@
           "obligatory": false
         },
         "DigitalIdeation": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -26035,6 +26087,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -26055,6 +26111,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -26113,6 +26173,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -26332,6 +26396,10 @@
           "majors": [
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -26370,7 +26438,12 @@
     "GAMEPROD": {
       "ects": 3,
       "description": "In diesem Modul werden Sie mit der grundlegenden Terminologie und den Konzepten vertraut gemacht, die bei der Produktion von Computerspielen üblicherweise verwendet werden. Sie werden in die visuellen Werkzeuge eingeführt, die in Game-Engines verwendet werden, und lernen, wie man sie zur Schaffung interaktiver Erlebnisse einsetzt. Sie werden mit den allgemeinen Elementen einer Game Engine und ihren visuellen Werkzeugen vertraut gemacht - vom UI-Builder über das Kameramanagement und Animationssysteme bis hin zu einfachen Shadern und VFX mit einem besonderen Schwerpunkt auf visuellem Scripting.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "GEEI": {
       "ects": 3,
@@ -26387,6 +26460,10 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -26401,6 +26478,10 @@
         "DigitalIdeation": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -26520,6 +26601,10 @@
             "AugmentedVirtualReality",
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -26656,6 +26741,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -26726,6 +26815,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -26919,6 +27012,16 @@
         }
       }
     },
+    "IMCOMP": {
+      "ects": 3,
+      "description": "TBD",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
     "INFSC": {
       "ects": 6,
       "description": "Die Studierenden erhalten eine Einführung und einen Überblick über das breite Feld der Informations- und Cybersicherheit. Sie lernen die Bedrohungslandschaft, Schwachstellen, Angriffsmethoden und die damit verbundenen Risiken kennen. Sie erhalten eine Einführung in die Public-Key-Kryptographie und in Methoden zum Schutz vor Cyber-Risiken. \nZudem erhalten sie eine Einführung in Penetrationstests (Ethical Hacking). Sie werden die Zero-Entry-Hacking-Methode anwenden, um Schwachstellen in einem System zu erkennen und in das System einzudringen. Der Kurs schliesst mit der Präsentation des Penetration Test Report, der die gefundenen Schwachstellen und Empfehlungen zum Schliessen der erkannten Sicherheitslücken dokumentiert.",
@@ -26951,6 +27054,10 @@
           "majors": [
             "DataScienceDataEngineering"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -27009,6 +27116,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -27020,7 +27131,12 @@
     "INTROIMMTECH": {
       "ects": 3,
       "description": "In diesem Modul erhalten Sie eine solide Einführung in immersive Technologien. Sie erfahren, welche Charakteristika diese ausmachen und welche Wirkung sie bei Menschen erzielen können. Sie lernen unterschiedliche Anwendungsmöglichkeiten und konkrete Uses Cases des weitreichenden Spektrums kennen (AR, VR, MR, Serious/Applied Games und andere immersive Medien-Produktionen), erhalten einen Überblick zu der Entwicklungsgeschichte und den aktuellen Technologie-Stand (Plattformen, Ökosysteme etc.). Sie probieren selbst unterschiedlichste Hardware und Software-Applikationen aus, vergleichen und bewerten diese.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "INTROL": {
       "ects": 3,
@@ -27118,6 +27234,10 @@
           "majors": [
             "ItOperationSecurity"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -27340,6 +27460,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -27731,6 +27855,10 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -27826,7 +27954,12 @@
     "MATHSIMTEC": {
       "ects": 3,
       "description": "Sie erhalten eine umfassende Einführung in mathematische Grundlagen und Konzepte, lineare Algebra und Analysis mit praktischen Anwendungen in immersiven Technologien, welche als Basis für das Verständnis von fortgeschritteneren Konzepten der höheren Mathematik dienen. Durch praktische Übungen und Projekte lernen Sie, wo mathematische Konzepte in immersive Technologien Anwendung finden – illustriert durch konkrete Beispiele aus der Praxis.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "MCIF": {
       "ects": 3,
@@ -28301,6 +28434,10 @@
         "DigitalIdeation": {
           "type": "Core",
           "obligatory": true
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -28351,6 +28488,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -28562,6 +28703,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -28669,6 +28814,10 @@
             "AttackPentester",
             "InformationSecurityTechnologie"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -28766,6 +28915,10 @@
       "description": "Dieses Modul wendet sich an alle, die sich für die Kombination von Robotik, Machine Learning, AI, Computer Vision, und Security interessieren und einmal selber ausprobieren wollen. Die Teilnehmenden lernen, einen Roboter selber zusammenzubauen, mit Python anzusteuern, und Sensoren auszulesen. Sensordaten werden mittels Computer Vision, Machine learning und AI ausgewertet und verwendet, um den Roboter zu steuern. In einer Projektarbeit erweitern die Teilnehmenden den Roboter mit neuen Funktionen und Sicherheit.",
       "bachelors": {
         "CyberSecurity": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -28941,6 +29094,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -29237,6 +29394,10 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -29366,7 +29527,12 @@
     "TECHPM": {
       "ects": 3,
       "description": "In diesem Modul erwerben Sie sich solides Grundlagenwissen im Bereich Technologie und Projektmanagement. Die Integration von ICT-Tools und -Konzepten im gesamten Kurs gewährleistet ein ganzheitliches Verständnis ihrer Anwendung in Projektumgebungen. Praktische Anwendungen und reale Szenarien bilden einen zentralen Schwerpunkt für verbessertes Lernen. Basierend auf Ihren erworbenen Kenntnissen bearbeiten Sie eine Aufgabenstellung zu einem praktischen Use Case.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "TIME": {
       "ects": 3,
@@ -29426,6 +29592,10 @@
           "majors": [
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -29472,6 +29642,10 @@
           "majors": [
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -29500,6 +29674,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -29563,6 +29741,10 @@
         "Economics": {
           "type": "Core",
           "obligatory": true
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -29678,6 +29860,310 @@
         },
         "Economics": {
           "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "APPMA": {
+      "ects": 3,
+      "description": "Dieses Modul vermittelt mathematische und statistische Grundlagen mit klarem Fokus auf praktische Anwendungen. Die Studierenden lernen zentrale Konzepte der Datenanalyse, numerische Verfahren und Differentialgeometrie kennen und setzen diese in anwendungsnahen Kontexten ein. Ziel ist es, ein fundiertes Verständnis für mathematische Methoden zu entwickeln und deren Nutzen in realen Szenarien, wie etwa in der Datenverarbeitung, Simulation oder Bewegungsanalyse, gezielt einsetzen zu können. Der Schwerpunkt liegt dabei nicht auf theoretischer Tiefe, sondern auf dem sinnvollen und kreativen Umgang mit mathematischen Werkzeugen in praxisrelevanten Zusammenhängen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_SELFLEAD": {
+      "ects": 3,
+      "description": "Selbstführung ist eine der grundlegendsten, aber auch am meisten unterschätzten Fähigkeiten der persönlichen Entwicklung. Auch wenn die Folgen einer Vernachlässigung dieser Fähigkeit im kleinen Rahmen vielleicht nicht so offensichtlich sind – zu viel Zeit in den sozialen Medien, das Aufschieben von Hausaufgaben oder unzureichende Leistungen in einem Teamprojekt –, so vergrössern sie sich doch, wenn der Druck steigt. Zu Beginn konzentrieren sich die Studierenden auf sich selbst. Sie arbeiten an ihrem Selbstbewusstsein, ihrer Selbstvermarktung und der Weichenstellung für den eigenen Erfolg. Danach verlagert sich der Fokus darauf, anderen zu helfen und in selbstorganisierten Teams an einem lehrreichen und unterhaltsamen („Edutainment“) Projekt zu arbeiten.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "ADCREA": {
+      "ects": 6,
+      "description": "Die Studierenden kennen und verstehen grundlegende Datenstrukturen und Algorithmen und können Datenstrukturen und Algorithmen beurteilen und passend auswählen. - Die Studierenden können grundlegende Datenstrukturen und Algorithmen mit C# implementieren, testen und anwenden. - Die Studierenden nutzen und vertiefen ihre eingebrachten C# Programmier-Grundkenntnisse.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "COMPMATHS": {
+      "ects": 3,
+      "description": "Dieses Modul bietet eine fundierte Einführung in die computergestützte mathematische Analyse, die speziell auf die Anforderungen der Analysis zugeschnitten ist. Die Studierenden werden in die Lage versetzt, komplexe mathematische Probleme effizient zu lösen und Lösungen zu entwickeln, um numerische Herausforderungen zu bewältigen, die in der Analysis auftreten. Das Programm umfasst Grundlagen wie Ableitungen, sowie fortgeschrittene Themen wie Integrationsmethoden und Optimierung. Zusätzlich werden die Studierenden auf den Einsatz immersiver Technologien vorbereitet, die es ermöglichen, mathematische Modelle in virtuellen Räumen zu visualisieren und interaktiv zu erkunden.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "AIVISION": {
+      "ects": 3,
+      "description": "Das Modul bietet eine Einführung in Computer Vision und Künstliche Intelligenz für Praktiker:innen im Bereich immersiver Technologien. Grundprinzipien, Aufgaben, Workflows, Ansätze und Methoden werden erläutert, mit besonderem Fokus auf Anwendungen für XR-Erlebnisse. Es wird ein allgemeines Verständnis des Fachgebiets und seiner wichtigsten Teilbereiche vermittelt, während gleichzeitig praxisnahe Beispiele aus immersiven Technologien aufgezeigt werden. In den Übungen werden die Studierenden mit gängigen Tools und Workflows vertraut gemacht und arbeiten mit diesen, um beispielsweise die Erstellung von XR-Inhalten sowie deren Integration in XR-Plattformen zu üben. Dabei erhalten sie zudem Einblicke in aktuelle Spitzenforschung des Immersive Realities Research Labs.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_PD": {
+      "ects": 3,
+      "description": "Das Ziel des Moduls ist es, Fähigkeiten der emotionalen Kompetenz zu vermitteln und die emotionale Intelligenz der Teilnehmer zu steigern, um so ihr Selbstbewusstsein und ihre Teamfähigkeit zu verbessern. Die Teilnehmer lernen, Kommunikationsbotschaften zu entschlüsseln, zu analysieren und zu verschlüsseln, indem sie reflektierende Erzähltechniken, interkulturelles Bewusstsein, mitfühlende Kommunikation und künstlerische Mittel einsetzen. Die Studierenden werden in die Lage versetzt, sich selbst und anderen aktiv zuzuhören, ihre Bedürfnisse oder das, was sie glücklich macht, zu kommunizieren und vor allem ihre Emotionen zu erkennen und selbst zu regulieren – allesamt Schlüsselkompetenzen, die Spitzenkräfte auszeichnen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "CNAIS": {
+      "ects": 3,
+      "description": "Dieser Kurs bietet eine umfassende Einführung in Informationssicherheit, Kryptografie und Computernetzwerke. Zu den Themen gehören Netzwerkarchitektur, Protokolle, kryptografische Werkzeuge (einschliesslich Verschlüsselungs- und Authentifizierungstechniken), die Identifizierung gängiger Schwachstellen und Angriffsvektoren, Best Practices in der Cybersicherheit sowie Risikomanagement. Die Studierenden werden kryptografische Prinzipien, sichere Kommunikationsmethoden und Strategien zum Schutz von Netzwerken vor Cyberbedrohungen kennenlernen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "SOUNDCREA": {
+      "ects": 3,
+      "description": "Dieses Modul vermittelt den Studierenden ein grundlegendes Verständnis von Klang und Aufnahmetechniken, das essenziell für die Arbeit in der Audioproduktion, in Spielen und in immersiven Technologien ist. Es behandelt die Prinzipien der Schallphysik, digitale Audiotechnik und Mikrofontechnologie. Die Studierenden sammeln praktische Erfahrungen in der Aufnahme und Verarbeitung von Klang mit branchenüblichen Werkzeugen. Am Ende des Moduls verfügen sie über fundierte Kenntnisse zu grundlegenden Aufnahme-Setups, Signalfluss und Feldaufnahmetechniken, wodurch sie auf weiterführende Studien in immersiven Audioformaten und Sounddesign vorbereitet werden.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "SWAW": {
+      "ects": 3,
+      "description": "Das Modul vermittelt Grundlagen des wissenschaftlichen Arbeitens. Die Studierenden lernen Grundprinzipien des wissenschaftlichen Schreibens sowie Forschungsmethoden kennen. Ziel des Moduls ist es, die Studierenden für das Schreiben und Kommunizieren bzw. Präsentieren der Bachelorarbeit und ähnlicher Projekte zu befähigen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_ART": {
+      "ects": 6,
+      "description": "Dieses Modul bietet eine praktische Einführung in Projektionsmapping im Kontext des Interaktionsdesigns. Die Studierenden richten Projektoren ein, erstellen Inhalte und projizieren diese auf Objekte und Architekturmodelle und entwickeln interaktive Installationen. Durch Teamprojekte und praktische Übungen erwerben sie sowohl technische Fähigkeiten als auch kreatives Selbstvertrauen, um Projektionsmapping in professionelle Interaktionsdesignprojekte zu integrieren.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_SURP": {
+      "ects": 6,
+      "description": "Eine der grössten Herausforderungen der Praxis ist die Zusammenarbeit im Rahmen eines grösseren Teams und als Ergänzung zu einem bereits bestehenden Produkt und Umgebung. Teams von 3-6 Studierenden erstellen für ein reales Projekt Anwendungen, Funktionsmuster, Gamification oder zusätzliche Features. Dabei soll die Arbeitsweise und der Tech-Stack den Anforderungen des Projektes und dem Auftraggeber angepasst werden.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_AR": {
+      "ects": 3,
+      "description": "Das CreaLab Augmented Reality gibt eine Einführung in die Erstellung von AR Anwendungen. Die Studierenden lernen verschiedene Umgebungen zur Erstellung von AR Applikationen kennen und setzen diese in Projekten auf verschiedener Hardware ein.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_DDG": {
+      "ects": 6,
+      "description": "Dieses Modul bietet Studierenden die Möglichkeit, ein Gruppenprojekt zu entwickeln, das sich auf die Erstellung eines digitalen Top-Down oder Side-Scroller Spiels konzentriert. Das Spiel muss sich auf eine der \"8 Arten des Spasses\" von Marc LeBlanc konzentrieren (Sensation, Fantasie, Erzählung, Herausforderung, Kameradschaft, Entdeckung, Ausdruck, Grind). Zusätzlich muss es mindestens eine aktive Komponente jenseits des Spielercharakters enthalten, wie z.B. einen NPC, eine multilineare Story oder eine interaktive Mechanik. In 2 Projektphasen (Prototyp und Produkt) muss das Projekt iterativ entwickelt, das Feedback der Tester dokumentiert und daraus resultierende Entscheidungen dokumentiert werden. Die Entwicklungsstände werden in der Mitte und am Ende des Moduls präsentiert und getestet.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_HCD": {
+      "ects": 6,
+      "description": "In diesem Modul lernen die Studierenden den Human-Centred Design Prozess kennen, der darauf abzielt, nutzungszentrierte Produkte zu entwickeln. Der Fokus liegt auf der kontinuierlichen Einbindung von Nutzern, um sicherzustellen, dass das \"richtige Produkt\" entwickelt und \"das Produkt richtig gemacht\" wird. - User Research: Durchführung von Benutzerbefragungen und die Entwicklung von Personas, um die Bedürfnisse und Verhaltensweisen der Zielgruppe zu verstehen. - Prototyping: Iterative Entwicklung von Low-Fi zu High-Fi Prototypen. - UX Testing: Regelmäßige Tests mit Nutzenden, um die Prototypen zu validieren und zu verbessern. Ziel ist es, die Studierenden zu befähigen, Produkte zu gestalten, die funktional, nutzbar und auf die tatsächlichen Bedürfnisse der Anwender abgestimmt sind.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_INIS": {
+      "ects": 3,
+      "description": "Du lernst grundlegende Elemente von Storytelling kennen (Handlung, Charaktere, Genre etc.) sowie Erzählansätze, um die Komponenten effektiver und erfolgreicher Geschichten zu verstehen. Zunächst lernst du diese Elemente in ihrer Anwendung in einer Vielzahl von Medienformen (Kino, Animation, Fernsehen usw.) kennen. Besonderes Augenmerk wird auf spezifische Anwendungen interaktiver Medien gelegt, wie verzweigte Erzählstränge, Benutzerinteraktivität, Co-Autorenschaft, Interface- Design usw. Beispiele und Fallstudien veranschaulichen die Funktionsweise dieser Story-Elemente in interaktiven Medien. Du entwickelst ein Verständnis dafür, was eine Story ausmacht, ihre Komponenten und Prinzipien im Erstellungsprozess und entwickelst eigene Ideen, Konzepte und Storyboards.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_SG": {
+      "ects": 6,
+      "description": "In diesem Modul lernen die Studierenden die Unterschiede zwischen Unterhaltungsspielen und Serious/Applied Games kennen und entwickeln ihr eigenes Serious/Applied Game. Das Spiel wird auf der Grundlage eines Briefings erstellt, das von einem Industriepartner bereitgestellt wird. Der Industriepartner kann ein Unternehmen, eine Stiftung, eine NGO oder eine Regierungsorganisation sein. Während des Semesters arbeiten die Studierenden in kleinen Teams daran, einen Prototyp oder eine Demo eines angewandten Spiels auf der Grundlage des erhaltenen Briefings zu entwickeln. Am Ende des Semesters präsentieren sie ihr Spiel dem Partner.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_VR": {
+      "ects": 6,
+      "description": "Die Studierenden lernen die Themen Navigation in VR (wirklich Laufen vs. Teleportieren), haptische Interaktionen, VR-Umgang mit realen Objekten (Props), Multiuser und Client-Server Programmierung mit RPC (Remote Procedure Calls) in einer Game Engine. Damit ergeben sich spannende Möglichkeiten mit Co-Located und Remote Multiuser-Bewegungen, Navigation und Interaktionen. Aus diesen Elementen erstellen die Studierenden in kleinen Gruppen ein Projekt und vertiefen une beweisen das Verständnis für diese Themen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "CTIU": {
+      "ects": 3,
+      "description": "Es gibt sehr viele Informationen im Internet; oft befindet man sich in einer «Bubble», was ist die Wahrheit? Wie erkennt man Manipulation? Ist die logischste Lösung auch die beste Lösung? Oder inwiefern ist die direkte Lösung auch die schnellste Lösung; oft muss etwas kritisch hinterfragt werden. Das kann sehr anstrengend und herausfordernd sein. Wie kann soll man damit umgehen? Dabei werden die 5 Schritte (Analyse, Argumentation, Einschätzung, Problemlösung, Entscheidung) besprochen und angewendet.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "DAS": {
+      "ects": 3,
+      "description": "In diesem Modul machen die Studierenden erste Erfahrungen mit dem Thema \"Data Storytelling\". Sie üben das Lesen, Interpretieren und Experimentieren mit verschiedenen Vermittlungsformen. Die Studierenden üben die Vermittlung von Informationen in klassischen und neuen (3D) Medien mit visuellen, akustischen und interaktiven Mitteln. Werkzeuge zur Bearbeitung, Analyse und Aufbereitung von Daten werden praktisch angewendet und deren Produkte in narrative Sequenzen integriert. Sie entwickeln in Gruppenarbeit eine eigene Data Story, die als Animatic, Branched Animatic oder interaktiver Prototyp umgesetzt wird. Das Projekt soll auf vorhandenen Datensätzen aufbauen, die selbst analysiert und interpretiert werden.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "IXD": {
+      "ects": 3,
+      "description": "Dieses Modul taucht in den Kosmos des Interaction Designs ein. Es zeigt auf, wie Interaktionen aufgebaut sind und welche Muster in verschiedenen Kontexten (Business, Museum, Kunst, etc.) funktionieren. Die Studierenden lernen die Psychologie und die Wirkung von Attraktivität kennen und wissen geeignete Muster im eigenen Projekt anzuwenden. Weiter erweitern die Studierenden den digitalen Rahmen und verbinden ihn über Sensoren/Aktoren mit der physischen Welt. Die Studierenden erforschen in Sprints versch. Frameworks und Techniken, entwickeln damit ein eigenes interaktives Produkt, das ein Problem auf neue Art lösen wird.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "LWD": {
+      "ects": 3,
+      "description": "Es werden die Grundprinzipien der Gestaltung interaktiver, narrativer Spielwelten vermittelt. Die Studierenden untersuchen die Unterschiede zwischen Environmental- und Level-/Weltdesign. Zu den Schwerpunkten gehören die Gestaltung von Layouts, Pacing, immersive Licht-/Atmosphären- Techniken, visuelle Rahmung, Umgebungserzählung durch räumliche Hinweise/dynamische Sequenzen. Praktische Übungen mit Unreal Engine/Unity/Hammer thematisieren die Schaffung von Welten, die anspruchsvolles Gameplay, fesselnden Erzählungen und visuell kohärente Ästhetik miteinander kombinieren. Durch die Kombination von Theorie und Praxis schult das Modul die Studierenden darin, facettenreiche Welten zu schaffen, die sich durch Interaktivität, Storytelling und gestalterische Wirkung auszeichnen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "MTIV": {
+      "ects": 3,
+      "description": "Immersive, visual and playful towards sustainable cities - Studierende entwickeln und präsentieren Konzeptprototypen für Datenvisualisierungen, Apps, Spiele, Chatbots oder erweiterte Realitätsprototypen. - Den Hintergrund für die Prototypen bilden Nachhaltigkeits-Szenarien der ETH Zürich für die Stadt Sarajevo. - Die Studierenden arbeiten in interdisziplinären und internationalen Teams. Unterschiedliche Perspektiven werden berücksichtigt. - Die Blockwoche wird zusammen mit der Universität von Sarajevo durchgeführt. - Vor Ort in Sarajevo werden wir die Möglichkeit haben, sich mit Vertretern von Unternehmen aus dem IT-Cluster auszutauschen. Die Kick-off Veranstaltung mit zusätzlichen Informationen zum Modul findet Anfang Juli statt. Genaues Datum erhalten die Teilnehmenden per Mail.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "NAFU": {
+      "ects": 3,
+      "description": "In unserer Welt, die von schnellen Veränderungen geprägt ist, wird strategische Weitsicht zum entscheidenden Wettbewerbsvorteil. In diesem Modul beschäftigen Sie sich mit technologischen, gesellschaftlichen und strukturellen Mega-Trends, die unsere Zukunft massgeblich prägen werden. Sie lernen, diese mithilfe von Foresight-Methoden und Szenario-Analysen zu analysieren und zu bewerten, daraus Zukunftsszenarien zu entwickeln und entsprechende Strategien für Unternehmen, Produkte und Dienstleistungen zu entwickeln. Das Modul kombiniert theoretische Grundlagen mit praxisnahen Fallstudien, um die Zukunftskompetenz der Teilnehmenden zu stärken.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "PROMPT": {
+      "ects": 3,
+      "description": "Prompt Engineering (PROMPT) für Anfänger vermittelt den Studierenden praktische Kenntnisse im Bereich Prompt Engineering für die Generierung von Texten, Bildern, Musik und Videos, wobei der Schwerpunkt auf textbasierten Prompts liegt. Darüber hinaus werden ethische Überlegungen, Datenschutz und Best Practices für den verantwortungsvollen Einsatz von KI in beruflichen und akademischen Umgebungen behandelt. Jede Woche üben und verfeinern die Studierenden ihre Prompt-Engineering-Kenntnisse in Mini-Projekten/Aufgaben, die reale Anwendungsfälle widerspiegeln.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "COMS": {
+      "ects": 3,
+      "description": "Stell dir vor, zwei Personen machen im selben Unternehmen denselben Job, aber ihre Gehälter sind unterschiedlich. Der Grund: Die eine Person hat besser verhandeln können. Wie sieht es mit dir aus? Weisst du, wie man erfolgreich verhandelt? In diesem Kurs wirst du lernen, wie man verhandelt und wie man Konflikte am Arbeitsplatz vermeidet. Du wirst auch lernen, wie Du bei Konflikten vermitteln kannst, wie Du Deine Ideen neu formulieren kannst und wie Du Deine Führungsstärke zeigst, indem Du überzeugend auftrittst. Wir starten mit der persönlichen Herangehensweise an Konflikte und Verhandlungen und lernen, wie wir verhindern können, dass uns Emotionen übermannen. Dieses Modul wird zu 100 % auf Englisch unterrichtet.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "EVENT": {
+      "ects": 3,
+      "description": "In diesem Modul erwerben Sie praxisnahe Kompetenzen im Bereich Eventmanagement mit immersiven Technologien. Sie lernen nicht nur wie öffentliche Auftritte auf Gaming Festivals und Informationsveranstaltungen geplant und organisiert werden, sondern führen diese auch aktiv durch vor Ort. Sie übernehmen in Kleingruppen konkrete Aufgaben in Organisation, Präsentation, Logistik und Werbe-Kommunikation. Ergänzend reflektieren Sie ihre Erfahrungen, entwickeln Verbesserungsvorschläge, sowie neue Eventideen oder erarbeiten Spezialprojekte mit Bezug zu Eventmanagement und immersiven Technologien.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "WEBXR": {
+      "ects": 3,
+      "description": "Dieses Modul bietet einen praxisnahen Einstieg in WebXR, mit Fokus auf WebAR. Die Studierenden entwickeln eigene immersive Erlebnisse direkt im Browser. Durch den Einsatz von Low-Code- und No-Code-Tools erlernen sie die Grundlagen von WebXR, die technischen Anforderungen für performante Erlebnisse und den Umgang mit 3D-, 2D- und Audio-Assets aus Found Footage. Dabei erhalten sie einen frühen Einblick in eine technologische Entwicklung, die das Potenzial hat, unsere alltäglichen Internetinteraktionen tiefgreifend zu verändern. Neben technischen und gestalterischen Aspekten setzen sie sich mit den aktuellen Entwicklungen und Zukunftsperspektiven auseinander und lernen, worauf es ankommt, um immersive Inhalte im Web effizient zu gestalten.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "BUDDY": {
+      "ects": 3,
+      "description": "The module \"Social Project\" combines computer science and social issues. This takes place within a project related to the degree program, e.g. carrying out an excursion or an event, accompanying young people in their choice of career/studies, participation in courses. On our Campus Zug/Rotkreuz, we have a dedicated Buddy Program (independent of ESN), matching local students with in-coming degree-seeking or exchange students. Local students provide their assigned international students with regular support for one semester, helping them adapt to life in Switzerland. Commitment also involves an online kick-off workshop, two online tutorials, self-study, and two buddy program event(s). Sustainable Development Goals 4 Quality education",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "VTEAMS": {
+      "ects": 3,
+      "description": "VTEAMS ist ein einwöchiges, VIRTUELLES Sommermodul, in dem gemischte internationale Teams ihre technischen Fähigkeiten auf eine reale, gemeinschaftsorientierte Herausforderung anwenden und am Ende der Woche ein greifbares Ergebnis präsentieren. Das Ergebnis kann technischer oder nicht-technischer Natur sein, beispielsweise ein Prototyp, ein Konzeptvideo, eine Kommunikationskampagne oder eine andere Lösung für die Projektvorgabe. Die Woche endet mit einer Online-Präsentation, und herausragende Projekte können in Zusammenarbeit mit Partnern über die Woche hinaus fortgesetzt werden. Die Studierenden sammeln Erfahrungen in der Koordination verteilter Arbeit, der Überbrückung kultureller Perspektiven und der klaren Kommunikation von Ergebnissen über digitale Plattformen hinweg.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "SMLS": {
+      "ects": 3,
+      "description": "An 5 Tagen Firmenbesuche Mo-Fr Networking; 6. Tag Gruppenarbeiten individuell. 7. Tag Präsenztag mit Theorie u Gruppen-Präsentation: Leuchtturm-Projekte als Vorbild für Innovationen von Start-ups -Firmenbesuche Bereich Life Sciences -Vermittlung von Grundlagen zu Start-up Gründungen / Entrepreneurship -Beschreibung der Grundzüge des Marketings -Berechnungen zu Finanzmathematik und Bilanzrechnung -Strategie Konzepte von Unternehmen -Betrachtung der Nachhaltigkeit / Sustainability von Firmen Beschreibung des Vorgehens: -Vorlesung: Vermittlung der Theorie und Anwendung mit Praxisbeispielen -Gruppenarbeiten erstellen und Vorträge halten -Besuche von Firmen / Netzwerken im Bereich Life Sciences -Gastvorträge von Firmen / Netzwerken im Bereich Life Sciences",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
           "obligatory": false
         }
       }
@@ -35184,6 +35670,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -35249,6 +35739,10 @@
       "description": "- Die Studierenden kennen und verstehen grundlegende Datenstrukturen und Algorithmen und können Datenstrukturen und Algorithmen beurteilen und passend auswählen. \n- Die Studierenden können grundlegende Datenstrukturen und Algorithmen mit C# implementieren, testen und anwenden.\n- Die Studierenden kennen grundlegende Konzepte und Architekturen für Multiuser-Anwendungen und können diese einsetzen. \n- Die Studierenden nutzen und vertiefen ihre eingebrachten C# Programmier-Grundkenntnisse.",
       "bachelors": {
         "DigitalIdeation": {
+          "type": "Core",
+          "obligatory": true
+        },
+        "ImmersiveTechnologies": {
           "type": "Core",
           "obligatory": true
         }
@@ -35370,6 +35864,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -35386,6 +35884,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -35482,6 +35984,10 @@
           "majors": [
             "ArtificialIntelligenceRobotics"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -35624,6 +36130,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -35670,6 +36180,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -35700,6 +36214,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -36052,6 +36570,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -36135,6 +36657,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -36173,6 +36699,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -36252,7 +36782,12 @@
     "CNAIS": {
       "ects": 3,
       "description": "Dieser Kurs bietet eine umfassende Einführung in Informationssicherheit, Kryptografie und Computernetzwerke. Zu den Themen gehören Netzwerkarchitektur, Protokolle, kryptografische Werkzeuge (einschliesslich Verschlüsselungs- und Authentifizierungstechniken), die Identifizierung gängiger Schwachstellen und Angriffsvektoren, Best Practices in der Cybersicherheit sowie Risikomanagement. Die Studierenden werden kryptografische Prinzipien, sichere Kommunikationsmethoden und Strategien zum Schutz von Netzwerken vor Cyberbedrohungen kennenlernen.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "COACH": {
       "ects": 3,
@@ -36275,6 +36810,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -36317,7 +36856,12 @@
     "COMPMATHS": {
       "ects": 3,
       "description": "Dieses Modul bietet eine fundierte Einführung in die computergestützte mathematische Analyse, die speziell auf die Anforderungen der Analysis zugeschnitten ist. Die Studierenden werden in die Lage versetzt, komplexe mathematische Probleme effizient zu lösen und Lösungen zu entwickeln, um numerische Herausforderungen zu bewältigen, die in der Analysis auftreten. Das Programm umfasst Grundlagen wie Ableitungen, sowie fortgeschrittene Themen wie Integrationsmethoden und Optimierung.  Zusätzlich werden die Studierenden auf den Einsatz immersiver Technologien vorbereitet, die es ermöglichen, mathematische Modelle in virtuellen Räumen zu visualisieren und interaktiv zu erkunden.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "COMPP": {
       "ects": 3,
@@ -36334,6 +36878,10 @@
       "description": "Stell dir vor, zwei Personen machen im selben Unternehmen denselben Job, aber ihre Gehälter sind unterschiedlich. Der Grund: Die eine Person hat besser verhandeln können. Wie sieht es mit dir aus? Weisst du, wie man erfolgreich verhandelt? In diesem Kurs wirst du lernen, wie man verhandelt und wie man Konflikte am Arbeitsplatz vermeidet. Du wirst auch lernen, wie Du bei Konflikten vermitteln kannst, wie Du Deine Ideen neu formulieren kannst und wie Du Deine Führungsstärke zeigst, indem Du überzeugend auftrittst. Wir starten mit der persönlichen Herangehensweise an Konflikte und Verhandlungen und lernen, wie wir verhindern können, dass uns Emotionen übermannen. Dieses Modul wird zu 100 % auf Englisch unterrichtet.",
       "bachelors": {
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -36539,6 +37087,10 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -36684,6 +37236,10 @@
         "ComputerScience": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -36785,6 +37341,10 @@
           "majors": [
             "DigitalBusiness"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -36883,6 +37443,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -37001,6 +37565,10 @@
           "obligatory": false
         },
         "DigitalIdeation": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -37237,6 +37805,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -37257,6 +37829,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -37289,6 +37865,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -37335,7 +37915,12 @@
     "ETHDW": {
       "ects": 3,
       "description": "Die Studierenden lernen, ethische Dimensionen und Fragen zu erkennen, zu verstehen und einzuordnen, die - insbesondere durch das Aufkommen disruptiver Technologien - für ihren beruflichen Alltag relevant sind. Dazu gehört die Entdeckung eigener Werthaltungen, die ihre ethischeEntscheidungsfindung leiten, die Anwendung verschiedener Wertesysteme und die Nutzung eines ethischen Prozesses zur Bewältigung ethischer Probleme im Alltag. Dies wird durch kurze Inputs, regelmässige Aufgaben, Lektüre, Diskussionen und dem Austausch mit dem Dozenten erreicht.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "ETHIK": {
       "ects": 3,
@@ -37504,6 +38089,10 @@
           "majors": [
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -37538,7 +38127,12 @@
     "GAMEPROD": {
       "ects": 3,
       "description": "In diesem Modul werden Sie mit der grundlegenden Terminologie und den Konzepten vertraut gemacht, die bei der Produktion von Computerspielen verwendet werden. Sie werden in die visuellen Werkzeuge eingeführt, die in Game Engines verwendet werden, und lernen, wie man sie einsetzt, um interaktive Erlebnisse zu schaffen. Sie werden mit den allgemeinen Elementen einer Game Engine und deren visuellen Werkzeugen vertraut gemacht - vom UI-Builder über Kameramanagement und Animationssysteme bis hin zu einfachen Shadern und VFX mit besonderem Schwerpunkt auf visuellem Scripting.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "GEEI": {
       "ects": 3,
@@ -37551,16 +38145,24 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
-    "GENCG": {
+    "COMPGRA": {
       "ects": 3,
       "description": "Kennenlernen von generativer Programmierung anhand ausgewählter Algorithmen und individueller Projekte auf dem Gebiet der generativen Kunst. Studium von Algorithmen für Flächenmuster (Tesselation), Agenten, Formen und Geometrie, Farbräume, Generierung von Farbschemata und Text. Schlussprojekt individuell oder in Gruppen in einem der vier Gebiete Exquisite Corpse, Poesie Generator, Sound als Form oder Logo Generator. Dokumentation der Experimente in einem kleinen Portfolio.",
       "bachelors": {
         "DigitalIdeation": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -37659,6 +38261,10 @@
             "AugmentedVirtualReality",
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -37788,6 +38394,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -37822,6 +38432,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -38007,6 +38621,10 @@
           "majors": [
             "DataScienceDataEngineering"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -38055,6 +38673,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -38066,7 +38688,12 @@
     "INTROIMMTECH": {
       "ects": 3,
       "description": "In diesem Modul erhalten Sie eine solide Einführung in immersive Technologien. Sie erfahren, welche Charakteristika diese ausmachen und welche Wirkung sie bei Menschen erzielen können. Sie lernen unterschiedliche Anwendungsmöglichkeiten und konkrete Uses Cases des weitreichenden Spektrums kennen (AR, VR, MR, Serious/Applied Games und andere immersive Medien-Produktionen), erhalten einen Überblick zu der Entwicklungsgeschichte und den aktuellen Technologie-Stand (Plattformen, Ökosysteme etc.). Sie probieren selbst unterschiedlichste Hardware und Software-Applikationen aus, vergleichen und bewerten diese.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "INTROL": {
       "ects": 3,
@@ -38164,6 +38791,10 @@
           "majors": [
             "ItOperationSecurity"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -38380,6 +39011,10 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -38538,6 +39173,10 @@
           "majors": [
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -38746,32 +39385,62 @@
     "LAB_AR": {
       "ects": 3,
       "description": "Das CreaLab Augmented Reality gibt eine Einführung in die Erstellung von AR Anwendungen. Die Studierenden lernen verschiedene Umgebungen zur Erstellung von AR Applikationen kennen und setzen diese in Projekten auf verschiedener Hardware ein.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
     },
     "LAB_DDG": {
       "ects": 6,
       "description": "Dieses Modul bietet Studierenden die Möglichkeit, ein Gruppenprojekt zu entwickeln, das sich auf die Erstellung eines digitalen Top-Down oder Side-Scroller Spiels konzentriert. Das Spiel muss sich auf eine der \"8 Arten des Spasses\" von Marc LeBlanc konzentrieren (Sensation, Fantasie, Erzählung, Herausforderung, Kameradschaft, Entdeckung, Ausdruck, Grind). Zusätzlich muss es mindestens eine aktive Komponente jenseits des Spielercharakters enthalten, wie z.B. einen NPC, eine multilineare Story oder eine interaktive Mechanik. \n\nIn 2 Projektphasen (Prototyp und Produkt) muss das Projekt iterativ entwickelt, das Feedback der Tester dokumentiert und daraus resultierende Entscheidungen dokumentiert werden. Die Entwicklungsstände werden in der Mitte und am Ende des Moduls präsentiert und getestet.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
     },
     "LAB_HCD": {
       "ects": 6,
       "description": "In diesem Modul lernen die Studierenden den Human-Centred Design Prozess kennen, der darauf abzielt, nutzungszentrierte Produkte zu entwickeln. Der Fokus liegt auf der kontinuierlichen Einbindung von Nutzern, um sicherzustellen, dass das \"richtige Produkt\" entwickelt und \"das Produkt richtig gemacht\" wird. \n- User Research: Durchführung von Benutzerbefragungen und die Entwicklung von Personas, um die Bedürfnisse und Verhaltensweisen der Zielgruppe zu verstehen.\n- Prototyping: Iterative Entwicklung von Low-Fi zu High-Fi Prototypen.\n- UX Testing: Regelmäßige Tests mit Nutzenden, um die Prototypen zu validieren und zu verbessern.\nZiel ist es, die Studierenden zu befähigen, Produkte zu gestalten, die funktional, nutzbar und auf die tatsächlichen Bedürfnisse der Anwender abgestimmt sind.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
     },
     "LAB_INIS": {
       "ects": 3,
       "description": "Du lernst grundlegende Elemente von Storytelling kennen (Handlung, Charaktere, Genre etc.) sowie Erzählansätze, um die Komponenten effektiver und erfolgreicher Geschichten zu verstehen. Zunächst lernst du diese Elemente in ihrer Anwendung in einer Vielzahl von Medienformen (Kino, Animation, Fernsehen usw.) kennen. Besonderes Augenmerk wird auf spezifische Anwendungen interaktiver Medien gelegt, wie verzweigte Erzählstränge, Benutzerinteraktivität, Co-Autorenschaft, Interface-Design usw. Beispiele und Fallstudien veranschaulichen die Funktionsweise dieser Story-Elemente in interaktiven Medien. Du entwickelst ein Verständnis dafür, was eine Story ausmacht, ihre Komponenten und Prinzipien im Erstellungsprozess und entwickelst eigene Ideen, Konzepte und Storyboards.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
     },
     "LAB_PD": {
       "ects": 3,
       "description": "Im Berufsleben begegnen wir komplexen Herausforderungen und sich schnell verändernden Bedingungen. Das Verständnis eigener Kompetenzen, Werte und Handlungen ist zentral, um sich in der Gesellschaft zurechtzufinden, sich anzupassen und sie aktiv mitzugestalten. In diesem Modul entwickeln die Studierenden die Grundlage für ihre berufliche Identität als zukünftige Change Agents. Eine Selbsteinschätzung unterstützt sie dabei, sich selbst und eventuelle Lerndefizite besser zu erkennen. Durch einen angeleiteten Reflexionsprozess, verschiedene Feedbackformen und eine Videodokumentation ihrer bisherigen Lernergebnisse erstellen die Studierenden ein individuelles Kompetenzprofil, das sie durch gezielte Übungen erweitern.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "LAB_VR": {
       "ects": 6,
       "description": "Die Studierenden lernen die Themen Navigation in VR (wirklich Laufen vs. Teleportieren), haptische Interaktionen, VR-Umgang mit realen Objekten (Props), Multiuser und Client-Server Programmierung mit RPC (Remote Procedure Calls) in einer Game Engine. Damit ergeben sich spannende Möglichkeiten mit Co-Located und Remote Multiuser-Bewegungen, Navigation und Interaktionen. Aus diesen Elementen erstellen die Studierenden in kleinen Gruppen ein Projekt und vertiefen une beweisen das Verständnis für diese Themen.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
     },
     "LIAL": {
       "ects": 3,
@@ -38821,7 +39490,12 @@
     "LWD": {
       "ects": 3,
       "description": "Es werden die Grundprinzipien der Gestaltung interaktiver, narrativer Spielwelten vermittelt. Die Studierenden untersuchen die Unterschiede zwischen Environmental- und Level-/Weltdesign. Zu den Schwerpunkten gehören die Gestaltung von Layouts, Pacing, immersive Licht-/Atmosphären-Techniken, visuelle Rahmung, Umgebungserzählung durch räumliche Hinweise/dynamische Sequenzen. Praktische Übungen mit Unreal Engine/Unity/Hammer thematisieren die Schaffung von Welten, die anspruchsvolles Gameplay, fesselnden Erzählungen und visuell kohärente Ästhetik miteinander kombinieren. Durch die Kombination von Theorie und Praxis schult das Modul die Studierenden darin, facettenreiche Welten zu schaffen, die sich durch Interaktivität, Storytelling und gestalterische Wirkung auszeichnen.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
     },
     "MAAC": {
       "ects": 3,
@@ -38852,6 +39526,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -38962,7 +39640,12 @@
     "MATHSIMTEC": {
       "ects": 3,
       "description": "Sie erhalten eine umfassende Einführung in die grundlegenden mathematischen Konzepte der linearen Algebra und deren praktische Anwendungen in immersiven Technologien. Diese bilden die Basis für das Verständnis fortgeschrittenerer mathematischer Konzepte. Durch praxisorientierte Übungen und Projekte lernen Sie, wie mathematische Theorien in Bereichen wie XR und Computergrafik angewendet werden. Konkrete Beispiele aus der Praxis veranschaulichen, wie diese Konzepte genutzt werden können.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "MCIF": {
       "ects": 3,
@@ -39182,6 +39865,10 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -39216,7 +39903,12 @@
     "NAFU": {
       "ects": 3,
       "description": "In unserer Welt, die von schnellen Veränderungen geprägt ist, wird strategische Weitsicht zum entscheidenden Wettbewerbsvorteil. In diesem Modul beschäftigen Sie sich mit technologischen, gesellschaftlichen und strukturellen Mega-Trends, die unsere Zukunft massgeblich prägen werden. Sie lernen, diese mithilfe von Foresight-Methoden und Szenario-Analysen zu analysieren und zu bewerten, daraus Zukunftsszenarien zu entwickeln und entsprechende Strategien für Unternehmen, Produkte und Dienstleistungen zu entwickeln. Das Modul kombiniert theoretische Grundlagen mit praxisnahen Fallstudien, um die Zukunftskompetenz der Teilnehmenden zu stärken.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
     },
     "NAIT": {
       "ects": 3,
@@ -39430,6 +40122,10 @@
         "DigitalIdeation": {
           "type": "Core",
           "obligatory": true
+        },
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
         }
       }
     },
@@ -39476,6 +40172,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -39619,6 +40319,10 @@
         "DigitalIdeation": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -39639,6 +40343,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Misc",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Misc",
           "obligatory": false
         }
@@ -39754,6 +40462,10 @@
             "AttackPentester",
             "InformationSecurityTechnologie"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -39831,6 +40543,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -40034,13 +40750,22 @@
         "Economics": {
           "type": "Misc",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
     "SOUNDCREA": {
       "ects": 3,
       "description": "Dieses Modul vermittelt den Studierenden ein grundlegendes Verständnis von Klang und Aufnahmetechniken, das essenziell für die Arbeit in der Audioproduktion, in Spielen und in immersiven Technologien ist. Es behandelt die Prinzipien der Schallphysik, digitale Audiotechnik und Mikrofontechnologie. Die Studierenden sammeln praktische Erfahrungen in der Aufnahme und Verarbeitung von Klang mit branchenüblichen Werkzeugen. Am Ende des Moduls verfügen sie über fundierte Kenntnisse zu grundlegenden Aufnahme-Setups, Signalfluss und Feldaufnahmetechniken, wodurch sie auf weiterführende Studien in immersiven Audioformaten und Sounddesign vorbereitet werden.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "SPA_A1": {
       "ects": 3,
@@ -40274,6 +40999,10 @@
         "Economics": {
           "type": "Extension",
           "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
         }
       }
     },
@@ -40327,7 +41056,12 @@
     "SWAW": {
       "ects": 3,
       "description": "Das Modul vermittelt Grundlagen des wissenschaftlichen Arbeitens. Die Studierenden lernen Grundprinzipien des wissenschaftlichen Schreibens sowie Forschungsmethoden kennen. Ziel des Moduls ist es, die Studierenden für das Schreiben und Kommunizieren bzw. Präsentieren der Bachelorarbeit und ähnlicher Projekte zu befähigen.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "SWDA": {
       "ects": 6,
@@ -40408,7 +41142,12 @@
     "TECHPM": {
       "ects": 3,
       "description": "In diesem Modul erwerben Sie sich solides Grundlagenwissen im Bereich Technologie und Projektmanagement. Die Integration von ICT-Konzepten im gesamten Kurs gewährleistet ein ganzheitliches Verständnis ihrer Anwendung in Projektumgebungen. Praktische Anwendungen und reale Szenarien bilden einen zentralen Schwerpunkt für verbessertes Lernen. Basierend auf Ihren erworbenen Kenntnissen bearbeiten Sie eine Aufgabenstellung zu einem praktischen Use Case.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
     },
     "TIME": {
       "ects": 3,
@@ -40447,6 +41186,10 @@
           "obligatory": false
         },
         "Economics": {
+          "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
           "type": "Extension",
           "obligatory": false
         }
@@ -40499,6 +41242,10 @@
           "majors": [
             "HumanComputerInteractionDesign"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -40527,6 +41274,10 @@
           "majors": [
             "AugmentedVirtualReality"
           ]
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
@@ -40591,13 +41342,22 @@
         "Economics": {
           "type": "Core",
           "obligatory": true
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
         }
       }
     },
     "WEBXR": {
       "ects": 3,
       "description": "Dieses Modul bietet einen praxisnahen Einstieg in WebXR, mit Fokus auf WebAR. Die Studierenden entwickeln eigene immersive Erlebnisse direkt im Browser. Durch den Einsatz von Low-Code- und No-Code-Tools erlernen sie die Grundlagen von WebXR, die technischen Anforderungen für performante Erlebnisse und den Umgang mit 3D-, 2D- und Audio-Assets aus Found Footage. Dabei erhalten sie einen frühen Einblick in eine technologische Entwicklung, die das Potenzial hat, unsere alltäglichen Internetinteraktionen tiefgreifend zu verändern. Neben technischen und gestalterischen Aspekten setzen sie sich mit den aktuellen Entwicklungen und Zukunftsperspektiven auseinander und lernen, worauf es ankommt, um immersive Inhalte im Web effizient zu gestalten.",
-      "bachelors": {}
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
     },
     "WEB_ISA": {
       "ects": 3,
@@ -40712,6 +41472,100 @@
         },
         "Economics": {
           "type": "Extension",
+          "obligatory": false
+        },
+        "ImmersiveTechnologies": {
+          "type": "Extension",
+          "obligatory": false
+        }
+      }
+    },
+    "APPMA": {
+      "ects": 3,
+      "description": "Dieses Modul vermittelt mathematische und statistische Grundlagen mit klarem Fokus auf praktische Anwendungen. Die Studierenden lernen zentrale Konzepte der Datenanalyse, numerische Verfahren und Differentialgeometrie kennen und setzen diese in anwendungsnahen Kontexten ein. Ziel ist es, ein fundiertes Verständnis für mathematische Methoden zu entwickeln und deren Nutzen in realen Szenarien, wie etwa in der Datenverarbeitung, Simulation oder Bewegungsanalyse, gezielt einsetzen zu können. Der Schwerpunkt liegt dabei nicht auf theoretischer Tiefe, sondern auf dem sinnvollen und kreativen Umgang mit mathematischen Werkzeugen in praxisrelevanten Zusammenhängen.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_SELFLEAD": {
+      "ects": 3,
+      "description": "Selbstführung ist eine der grundlegendsten, aber auch am meisten unterschätzten Fähigkeiten der persönlichen Entwicklung. Auch wenn die Folgen einer Vernachlässigung dieser Fähigkeit im kleinen Rahmen vielleicht nicht so offensichtlich sind – zu viel Zeit in den sozialen Medien, das Aufschieben von Hausaufgaben oder unzureichende Leistungen in einem Teamprojekt –, so vergrössern sie sich doch, wenn der Druck steigt. Zu Beginn konzentrieren sich die Studierenden auf sich selbst. Sie arbeiten an ihrem Selbstbewusstsein, ihrer Selbstvermarktung und der Weichenstellung für den eigenen Erfolg. Danach verlagert sich der Fokus darauf, anderen zu helfen und in selbstorganisierten Teams an einem lehrreichen und unterhaltsamen („Edutainment“) Projekt zu arbeiten.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "AIVISION": {
+      "ects": 3,
+      "description": "Das Modul bietet eine Einführung in Computer Vision und Künstliche Intelligenz für Praktiker:innen im Bereich immersiver Technologien. Grundprinzipien, Aufgaben, Workflows, Ansätze und Methoden werden erläutert, mit besonderem Fokus auf Anwendungen für XR-Erlebnisse. Es wird ein allgemeines Verständnis des Fachgebiets und seiner wichtigsten Teilbereiche vermittelt, während gleichzeitig praxisnahe Beispiele aus immersiven Technologien aufgezeigt werden. In den Übungen werden die Studierenden mit gängigen Tools und Workflows vertraut gemacht und arbeiten mit diesen, um beispielsweise die Erstellung von XR-Inhalten sowie deren Integration in XR-Plattformen zu üben. Dabei erhalten sie zudem Einblicke in aktuelle Spitzenforschung des Immersive Realities Research Labs.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Core",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_ART": {
+      "ects": 6,
+      "description": "Dieses Modul bietet eine praktische Einführung in Projektionsmapping im Kontext des Interaktionsdesigns. Die Studierenden richten Projektoren ein, erstellen Inhalte und projizieren diese auf Objekte und Architekturmodelle und entwickeln interaktive Installationen. Durch Teamprojekte und praktische Übungen erwerben sie sowohl technische Fähigkeiten als auch kreatives Selbstvertrauen, um Projektionsmapping in professionelle Interaktionsdesignprojekte zu integrieren.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_SURP": {
+      "ects": 6,
+      "description": "Eine der grössten Herausforderungen der Praxis ist die Zusammenarbeit im Rahmen eines grösseren Teams und als Ergänzung zu einem bereits bestehenden Produkt und Umgebung. Teams von 3-6 Studierenden erstellen für ein reales Projekt Anwendungen, Funktionsmuster, Gamification oder zusätzliche Features. Dabei soll die Arbeitsweise und der Tech-Stack den Anforderungen des Projektes und dem Auftraggeber angepasst werden.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "LAB_SG": {
+      "ects": 6,
+      "description": "In diesem Modul lernen die Studierenden die Unterschiede zwischen Unterhaltungsspielen und Serious/Applied Games kennen und entwickeln ihr eigenes Serious/Applied Game. Das Spiel wird auf der Grundlage eines Briefings erstellt, das von einem Industriepartner bereitgestellt wird. Der Industriepartner kann ein Unternehmen, eine Stiftung, eine NGO oder eine Regierungsorganisation sein. Während des Semesters arbeiten die Studierenden in kleinen Teams daran, einen Prototyp oder eine Demo eines angewandten Spiels auf der Grundlage des erhaltenen Briefings zu entwickeln. Am Ende des Semesters präsentieren sie ihr Spiel dem Partner.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Project",
+          "obligatory": true
+        }
+      }
+    },
+    "EVENT": {
+      "ects": 3,
+      "description": "In diesem Modul erwerben Sie praxisnahe Kompetenzen im Bereich Eventmanagement mit immersiven Technologien. Sie lernen nicht nur wie öffentliche Auftritte auf Gaming Festivals und Informationsveranstaltungen geplant und organisiert werden, sondern führen diese auch aktiv durch vor Ort. Sie übernehmen in Kleingruppen konkrete Aufgaben in Organisation, Präsentation, Logistik und Werbe-Kommunikation. Ergänzend reflektieren Sie ihre Erfahrungen, entwickeln Verbesserungsvorschläge, sowie neue Eventideen oder erarbeiten Spezialprojekte mit Bezug zu Eventmanagement und immersiven Technologien.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "VTEAMS": {
+      "ects": 3,
+      "description": "VTEAMS ist ein einwöchiges, VIRTUELLES Sommermodul, in dem gemischte internationale Teams ihre technischen Fähigkeiten auf eine reale, gemeinschaftsorientierte Herausforderung anwenden und am Ende der Woche ein greifbares Ergebnis präsentieren. Das Ergebnis kann technischer oder nicht-technischer Natur sein, beispielsweise ein Prototyp, ein Konzeptvideo, eine Kommunikationskampagne oder eine andere Lösung für die Projektvorgabe. Die Woche endet mit einer Online-Präsentation, und herausragende Projekte können in Zusammenarbeit mit Partnern über die Woche hinaus fortgesetzt werden. Die Studierenden sammeln Erfahrungen in der Koordination verteilter Arbeit, der Überbrückung kultureller Perspektiven und der klaren Kommunikation von Ergebnissen über digitale Plattformen hinweg.",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
+          "obligatory": false
+        }
+      }
+    },
+    "SMLS": {
+      "ects": 3,
+      "description": "An 5 Tagen Firmenbesuche Mo-Fr Networking; 6. Tag Gruppenarbeiten individuell. 7. Tag Präsenztag mit Theorie u Gruppen-Präsentation: Leuchtturm-Projekte als Vorbild für Innovationen von Start-ups -Firmenbesuche Bereich Life Sciences -Vermittlung von Grundlagen zu Start-up Gründungen / Entrepreneurship -Beschreibung der Grundzüge des Marketings -Berechnungen zu Finanzmathematik und Bilanzrechnung -Strategie Konzepte von Unternehmen -Betrachtung der Nachhaltigkeit / Sustainability von Firmen Beschreibung des Vorgehens: -Vorlesung: Vermittlung der Theorie und Anwendung mit Praxisbeispielen -Gruppenarbeiten erstellen und Vorträge halten -Besuche von Firmen / Netzwerken im Bereich Life Sciences -Gastvorträge von Firmen / Netzwerken im Bereich Life Sciences",
+      "bachelors": {
+        "ImmersiveTechnologies": {
+          "type": "Misc",
           "obligatory": false
         }
       }
