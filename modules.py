@@ -36,6 +36,7 @@ def map_department(department, short_name, logger):
         "Wirtschaftsinformatik": "Economics",
         "Artificial Intelligence & Machine Learning": "ArtificialIntelligence",
         "Digital Ideation": "DigitalIdeation",
+        "Immersive Technologies": "ImmersiveTechnologies",
     }
     if department in department_mapping:
         return department_mapping[department]
