@@ -21,6 +21,10 @@
         {
           "version": "0.3.0",
           "update_link": "https://github.com/Alainx277/hslu-web-helper/releases/download/0.3.0/hslu_web_helper-0.3.0.xpi"
+        },
+        {
+          "version": "0.3.1",
+          "update_link": "https://github.com/Alainx277/hslu-web-helper/releases/download/0.3.1/hslu_web_helper-0.3.1.xpi"
         }
       ]
     }
